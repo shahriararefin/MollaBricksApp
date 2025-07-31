@@ -1,0 +1,10 @@
+2025-07-19 16:19:45,362 - INFO - Successfully connected to database at data/app_data.db
+2025-07-19 16:19:45,463 - INFO - DB requires migration. Current: 0, Target: 9
+2025-07-19 16:19:47,145 - INFO - Upgraded database to version 8
+2025-07-19 16:19:47,496 - INFO - Upgraded database to version 9
+2025-07-19 16:19:47,496 - INFO - All migrations applied successfully.
+2025-07-19 16:20:29,912 - INFO - Successfully connected to database at data/app_data.db
+2025-07-20 07:51:46,041 - INFO - Successfully connected to database at data/app_data.db
+2025-07-20 08:00:52,285 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 16:51:48,758 - INFO - Successfully connected to database at data/app_data.db
+2025-07-22 15:13:22,262 - INFO - Successfully connected to database at data/app_data.db

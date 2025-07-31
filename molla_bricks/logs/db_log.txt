@@ -1,0 +1,490 @@
+2025-07-10 12:58:22,251 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 12:58:22,441 - INFO - Tables verified/created.
+2025-07-10 12:58:28,962 - INFO - Database connection closed.
+2025-07-10 13:01:15,222 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:01:15,223 - INFO - Tables verified/created.
+2025-07-10 13:03:47,004 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:03:47,005 - INFO - Tables verified/created.
+2025-07-10 13:04:05,729 - INFO - Database connection closed.
+2025-07-10 13:11:48,331 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:11:48,332 - INFO - Tables verified/created.
+2025-07-10 13:12:08,563 - INFO - Database connection closed.
+2025-07-10 13:29:56,774 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:29:56,775 - INFO - Tables verified/created.
+2025-07-10 13:31:09,423 - INFO - Database connection closed.
+2025-07-10 13:31:31,680 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:31:31,680 - INFO - Tables verified/created.
+2025-07-10 13:35:23,758 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:35:23,768 - INFO - Tables verified/created.
+2025-07-10 13:38:59,514 - INFO - Database connection closed.
+2025-07-10 13:39:01,922 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:39:01,922 - INFO - Tables verified/created.
+2025-07-10 13:42:04,867 - INFO - Database connection closed.
+2025-07-10 13:42:10,146 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:42:10,147 - INFO - Tables verified/created.
+2025-07-10 13:42:23,058 - INFO - Database connection closed.
+2025-07-10 13:43:55,480 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:43:55,480 - INFO - Tables verified/created.
+2025-07-10 13:44:23,225 - INFO - Database connection closed.
+2025-07-10 13:48:11,894 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 13:48:11,895 - INFO - Tables verified/created.
+2025-07-10 14:33:21,577 - INFO - Database connection closed.
+2025-07-10 14:33:25,323 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 14:33:25,323 - INFO - Tables verified/created.
+2025-07-10 14:39:49,271 - INFO - Database connection closed.
+2025-07-10 14:42:05,760 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 14:42:05,761 - INFO - Tables verified/created.
+2025-07-10 14:43:36,516 - INFO - Database connection closed.
+2025-07-10 14:47:15,711 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 14:47:15,711 - INFO - Tables verified/created.
+2025-07-10 14:51:52,503 - INFO - Database connection closed.
+2025-07-10 14:53:13,535 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 14:53:13,536 - INFO - Tables verified/created.
+2025-07-10 14:55:21,382 - INFO - Database connection closed.
+2025-07-10 14:55:45,060 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 14:55:45,061 - INFO - Tables verified/created.
+2025-07-10 14:57:50,125 - INFO - Database connection closed.
+2025-07-10 15:00:20,058 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:00:20,644 - INFO - Populated default brick types.
+2025-07-10 15:00:20,644 - INFO - Tables verified/created.
+2025-07-10 15:00:31,802 - INFO - Database connection closed.
+2025-07-10 15:00:34,891 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:00:34,892 - INFO - Tables verified/created.
+2025-07-10 15:01:06,408 - INFO - Database connection closed.
+2025-07-10 15:01:31,075 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:01:31,075 - INFO - Tables verified/created.
+2025-07-10 15:01:59,502 - INFO - DB backup successful: molla_bricks/backups/backup_2025-07-10_15-01-59.db
+2025-07-10 15:07:51,300 - INFO - Database connection closed.
+2025-07-10 15:07:53,479 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:07:53,479 - INFO - Tables verified/created.
+2025-07-10 15:31:49,842 - INFO - Database connection closed.
+2025-07-10 15:31:54,155 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:31:54,156 - INFO - Tables verified/created.
+2025-07-10 15:31:54,449 - CRITICAL - Application failed to start: 'NagadKhataTab' object has no attribute 'open_calendar'
+Traceback (most recent call last):
+  File "D:\MollaBricksApp\main.py", line 73, in <module>
+    app = MollaBricksApp(db_controller_instance)
+  File "D:\MollaBricksApp\main.py", line 25, in __init__
+    self.nagad_khata_tab = NagadKhataTab(self.notebook, self.db_controller)
+                           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\nagad_khata\nagad_khata_tab.py", line 45, in __init__
+    self.create_widgets(); self.load_initial_data()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\nagad_khata\nagad_khata_tab.py", line 108, in create_widgets
+    date_entry = ttk.Entry(date_entry_frame, textvariable=self.date_var, width=22); date_entry.pack(side="left"); ttk.Button(date_entry_frame, text="\U0001f4c5", width=3, command=self.open_calendar).pack(side="left")
+                                                                                                                                                                           ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NagadKhataTab' object has no attribute 'open_calendar'
+2025-07-10 15:31:58,669 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:31:58,670 - INFO - Tables verified/created.
+2025-07-10 15:31:58,963 - CRITICAL - Application failed to start: 'NagadKhataTab' object has no attribute 'open_calendar'
+Traceback (most recent call last):
+  File "D:\MollaBricksApp\main.py", line 73, in <module>
+    app = MollaBricksApp(db_controller_instance)
+  File "D:\MollaBricksApp\main.py", line 25, in __init__
+    self.nagad_khata_tab = NagadKhataTab(self.notebook, self.db_controller)
+                           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\nagad_khata\nagad_khata_tab.py", line 45, in __init__
+    self.create_widgets(); self.load_initial_data()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\nagad_khata\nagad_khata_tab.py", line 108, in create_widgets
+    date_entry = ttk.Entry(date_entry_frame, textvariable=self.date_var, width=22); date_entry.pack(side="left"); ttk.Button(date_entry_frame, text="\U0001f4c5", width=3, command=self.open_calendar).pack(side="left")
+                                                                                                                                                                           ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NagadKhataTab' object has no attribute 'open_calendar'
+2025-07-10 15:34:02,118 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:34:02,119 - INFO - Tables verified/created.
+2025-07-10 15:40:57,085 - INFO - Database connection closed.
+2025-07-10 15:41:00,397 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:41:00,397 - INFO - Tables verified/created.
+2025-07-10 15:46:10,634 - INFO - Database connection closed.
+2025-07-10 15:46:13,142 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:46:13,143 - INFO - Tables verified/created.
+2025-07-10 15:49:22,283 - INFO - Database connection closed.
+2025-07-10 15:50:54,157 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:50:54,158 - INFO - Tables verified/created.
+2025-07-10 15:51:34,808 - INFO - Database connection closed.
+2025-07-10 15:52:08,124 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:52:08,712 - INFO - Populated default brick types.
+2025-07-10 15:52:08,712 - INFO - Tables verified/created.
+2025-07-10 15:53:21,575 - INFO - Database connection closed.
+2025-07-10 15:53:28,808 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:53:28,809 - INFO - Tables verified/created.
+2025-07-10 15:59:17,696 - INFO - Database connection closed.
+2025-07-10 15:59:20,660 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 15:59:20,660 - INFO - Tables verified/created.
+2025-07-10 16:00:53,738 - INFO - Database connection closed.
+2025-07-10 16:02:30,639 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 16:02:30,640 - INFO - Tables verified/created.
+2025-07-10 16:03:56,020 - INFO - Database connection closed.
+2025-07-10 16:03:59,127 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 16:03:59,127 - INFO - Tables verified/created.
+2025-07-10 16:07:25,016 - INFO - Database connection closed.
+2025-07-10 16:07:47,779 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 16:07:47,780 - INFO - Tables verified/created.
+2025-07-10 16:11:06,996 - INFO - Database connection closed.
+2025-07-10 16:11:15,853 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 16:11:15,854 - INFO - Tables verified/created.
+2025-07-10 16:12:23,100 - INFO - Database connection closed.
+2025-07-10 16:12:25,597 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 16:12:25,598 - INFO - Tables verified/created.
+2025-07-10 16:12:25,967 - CRITICAL - Application failed to start: 'LedgerKhataTab' object has no attribute 'update_autocomplete_list'
+Traceback (most recent call last):
+  File "D:\MollaBricksApp\main.py", line 73, in <module>
+    app = MollaBricksApp(db_controller_instance)
+  File "D:\MollaBricksApp\main.py", line 27, in __init__
+    self.ledger_book_tab = LedgerKhataTab(self.notebook, self.db_controller)
+                           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\ledger_book\ledger_khata_tab.py", line 33, in __init__
+    self.create_widgets(); self.load_initial_data()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\ledger_book\ledger_khata_tab.py", line 44, in create_widgets
+    ttk.Label(form_frame, text="Party Name:").grid(row=1, column=0, sticky="w", pady=3); self.party_name_combo = ttk.Combobox(form_frame, textvariable=self.party_name_var, width=28); self.party_name_combo.grid(row=1, column=1, sticky="ew", pady=3); self.party_name_combo.bind('<KeyRelease>', self.update_autocomplete_list)
+                                                                                                                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'LedgerKhataTab' object has no attribute 'update_autocomplete_list'
+2025-07-10 16:12:58,535 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 16:12:58,536 - INFO - Tables verified/created.
+2025-07-10 16:12:58,920 - CRITICAL - Application failed to start: 'LedgerKhataTab' object has no attribute 'update_autocomplete_list'
+Traceback (most recent call last):
+  File "D:\MollaBricksApp\main.py", line 73, in <module>
+    app = MollaBricksApp(db_controller_instance)
+  File "D:\MollaBricksApp\main.py", line 27, in __init__
+    self.ledger_book_tab = LedgerKhataTab(self.notebook, self.db_controller)
+                           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\ledger_book\ledger_khata_tab.py", line 33, in __init__
+    self.create_widgets(); self.load_initial_data()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "D:\MollaBricksApp\molla_bricks\ui\views\ledger_book\ledger_khata_tab.py", line 44, in create_widgets
+    ttk.Label(form_frame, text="Party Name:").grid(row=1, column=0, sticky="w", pady=3); self.party_name_combo = ttk.Combobox(form_frame, textvariable=self.party_name_var, width=28); self.party_name_combo.grid(row=1, column=1, sticky="ew", pady=3); self.party_name_combo.bind('<KeyRelease>', self.update_autocomplete_list)
+                                                                                                                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'LedgerKhataTab' object has no attribute 'update_autocomplete_list'
+2025-07-10 16:13:54,067 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 16:13:54,067 - INFO - Tables verified/created.
+2025-07-10 21:42:48,373 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 21:42:48,373 - INFO - Tables verified/created.
+2025-07-10 21:59:34,441 - INFO - Database connection closed.
+2025-07-10 22:07:09,573 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 22:07:10,058 - INFO - Tables verified/created.
+2025-07-10 22:14:42,365 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 22:14:43,195 - INFO - Tables verified/created.
+2025-07-10 22:18:30,043 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 22:18:31,364 - INFO - Tables verified/created.
+2025-07-10 23:05:17,555 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 23:05:17,556 - INFO - Tables verified/created.
+2025-07-10 23:45:11,843 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 23:45:11,843 - INFO - Tables verified/created.
+2025-07-10 23:45:59,769 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 23:45:59,770 - INFO - Tables verified/created.
+2025-07-10 23:48:56,502 - INFO - Successfully connected to database at data/app_data.db
+2025-07-10 23:48:56,503 - INFO - Tables verified/created.
+2025-07-11 00:02:55,216 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:02:55,217 - INFO - Tables verified/created.
+2025-07-11 00:15:08,150 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:15:08,151 - INFO - Tables verified/created.
+2025-07-11 00:19:38,834 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:19:38,835 - INFO - Tables verified/created.
+2025-07-11 00:26:54,053 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:26:54,054 - INFO - Tables verified/created.
+2025-07-11 00:31:07,746 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:31:07,746 - INFO - Tables verified/created.
+2025-07-11 00:38:39,537 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:38:39,538 - INFO - Tables verified/created.
+2025-07-11 00:48:08,337 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:48:08,338 - INFO - Tables verified/created.
+2025-07-11 00:57:11,406 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 00:57:11,407 - INFO - Tables verified/created.
+2025-07-11 01:01:06,565 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 01:01:06,566 - INFO - Tables verified/created.
+2025-07-11 01:06:51,140 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 01:06:51,141 - INFO - Tables verified/created.
+2025-07-11 02:26:21,960 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 02:26:21,981 - INFO - Tables verified/created.
+2025-07-11 04:21:12,829 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:21:12,830 - INFO - Tables verified/created.
+2025-07-11 04:25:05,305 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:25:05,306 - INFO - Tables verified/created.
+2025-07-11 04:28:36,222 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:28:36,223 - INFO - Tables verified/created.
+2025-07-11 04:29:50,766 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:29:50,767 - INFO - Tables verified/created.
+2025-07-11 04:33:38,441 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:33:38,442 - INFO - Tables verified/created.
+2025-07-11 04:35:16,120 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:35:16,121 - INFO - Tables verified/created.
+2025-07-11 04:43:10,661 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:43:10,662 - INFO - Tables verified/created.
+2025-07-11 04:45:11,722 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:45:11,723 - INFO - Tables verified/created.
+2025-07-11 04:45:34,704 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:45:34,705 - INFO - Tables verified/created.
+2025-07-11 04:47:18,190 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 04:47:18,191 - INFO - Tables verified/created.
+2025-07-11 05:05:27,849 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 05:05:27,849 - INFO - Tables verified/created.
+2025-07-11 09:43:15,503 - INFO - Successfully connected to database at data/app_data.db
+2025-07-11 09:43:15,504 - INFO - Tables verified/created.
+2025-07-12 22:20:52,067 - INFO - Successfully connected to database at data/app_data.db
+2025-07-12 22:20:52,079 - INFO - Tables verified/created.
+2025-07-12 22:26:48,224 - INFO - Successfully connected to database at data/app_data.db
+2025-07-12 22:26:48,225 - INFO - Tables verified/created.
+2025-07-13 10:41:19,048 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 10:41:20,176 - INFO - Tables verified/created.
+2025-07-13 10:55:07,966 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 10:55:08,994 - INFO - Tables verified/created.
+2025-07-13 10:59:02,794 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 10:59:02,795 - INFO - Tables verified/created.
+2025-07-13 11:12:53,058 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:12:54,188 - INFO - Created default user: admin
+2025-07-13 11:12:54,188 - INFO - Tables verified/created.
+2025-07-13 11:13:22,697 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:13:22,697 - INFO - Tables verified/created.
+2025-07-13 11:13:45,396 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:13:45,398 - INFO - Tables verified/created.
+2025-07-13 11:17:41,625 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:17:41,626 - INFO - Tables verified/created.
+2025-07-13 11:24:25,573 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:24:25,573 - INFO - Tables verified/created.
+2025-07-13 11:24:51,388 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:24:51,389 - INFO - Tables verified/created.
+2025-07-13 11:26:10,807 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:26:10,808 - INFO - Tables verified/created.
+2025-07-13 11:27:01,622 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:27:02,771 - INFO - Created default user: admin
+2025-07-13 11:27:02,771 - INFO - Tables verified/created.
+2025-07-13 11:28:47,904 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:28:47,905 - INFO - Tables verified/created.
+2025-07-13 11:32:05,879 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:32:05,880 - INFO - Tables verified/created.
+2025-07-13 11:32:34,985 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:32:34,986 - INFO - Tables verified/created.
+2025-07-13 11:36:53,989 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:36:53,990 - INFO - Tables verified/created.
+2025-07-13 11:36:54,065 - CRITICAL - Application failed to start: name 'LoginFrame' is not defined
+Traceback (most recent call last):
+  File "D:\MollaBricksApp\main.py", line 135, in <module>
+    app = AppController(db_controller_instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\main.py", line 92, in __init__
+    self.main_app_frame = None; self.show_login_screen()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\main.py", line 95, in show_login_screen
+    self.login_frame = LoginFrame(self, self.db_controller, self.show_main_app)
+                       ^^^^^^^^^^
+NameError: name 'LoginFrame' is not defined
+2025-07-13 11:37:00,105 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:37:00,106 - INFO - Tables verified/created.
+2025-07-13 11:37:00,163 - CRITICAL - Application failed to start: name 'LoginFrame' is not defined
+Traceback (most recent call last):
+  File "D:\MollaBricksApp\main.py", line 135, in <module>
+    app = AppController(db_controller_instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\main.py", line 92, in __init__
+    self.main_app_frame = None; self.show_login_screen()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\MollaBricksApp\main.py", line 95, in show_login_screen
+    self.login_frame = LoginFrame(self, self.db_controller, self.show_main_app)
+                       ^^^^^^^^^^
+NameError: name 'LoginFrame' is not defined
+2025-07-13 11:40:58,935 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:40:58,936 - INFO - Tables verified/created.
+2025-07-13 11:43:19,811 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:43:19,812 - INFO - Tables verified/created.
+2025-07-13 11:54:30,579 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 11:54:30,580 - INFO - Tables verified/created.
+2025-07-13 12:00:35,008 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 12:00:35,009 - INFO - Tables verified/created.
+2025-07-13 12:05:40,862 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 12:05:40,863 - INFO - Tables verified/created.
+2025-07-13 12:06:21,961 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 12:06:21,964 - INFO - Tables verified/created.
+2025-07-13 12:33:09,828 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 12:33:09,829 - INFO - Tables verified/created.
+2025-07-13 13:55:14,294 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 13:55:14,295 - INFO - Tables verified/created.
+2025-07-13 14:00:05,991 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:00:05,992 - INFO - Current DB version: 0, Latest DB version: 7
+2025-07-13 14:00:05,992 - INFO - Database requires migration. Starting...
+2025-07-13 14:00:06,105 - INFO - Upgraded database to version 1
+2025-07-13 14:00:06,222 - INFO - Upgraded database to version 2
+2025-07-13 14:00:06,355 - INFO - Upgraded database to version 3
+2025-07-13 14:00:06,434 - INFO - Upgraded database to version 4
+2025-07-13 14:00:06,509 - INFO - Upgraded database to version 5
+2025-07-13 14:00:06,510 - ERROR - Query Failed: ALTER TABLE nagad_khata ADD COLUMN customer_id INTEGER REFERENCES customers(id) ON DELETE SET NULL; | Params: () | Error: duplicate column name: customer_id
+2025-07-13 14:00:06,510 - INFO - Added 'customer_id' to nagad_khata table.
+2025-07-13 14:00:06,584 - INFO - Upgraded database to version 6
+2025-07-13 14:00:06,584 - INFO - Applying version 7 logical updates (if any).
+2025-07-13 14:00:06,659 - INFO - Upgraded database to version 7
+2025-07-13 14:00:06,659 - INFO - All migrations applied successfully.
+2025-07-13 14:13:42,313 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:13:42,314 - INFO - Current DB version: 7, Latest DB version: 7
+2025-07-13 14:13:42,314 - INFO - Database is up to date.
+2025-07-13 14:15:40,638 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:15:40,638 - INFO - Current DB version: 7, Latest DB version: 7
+2025-07-13 14:15:40,638 - INFO - Database is up to date.
+2025-07-13 14:26:03,117 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:26:03,250 - INFO - DB requires migration. Current: 0, Target: 8
+2025-07-13 14:26:03,407 - INFO - Upgraded database to version 1
+2025-07-13 14:26:03,783 - INFO - Upgraded database to version 2
+2025-07-13 14:26:04,249 - INFO - Upgraded database to version 3
+2025-07-13 14:26:04,492 - INFO - Upgraded database to version 4
+2025-07-13 14:26:04,741 - INFO - Upgraded database to version 5
+2025-07-13 14:26:04,907 - INFO - Upgraded database to version 6
+2025-07-13 14:26:05,082 - INFO - Upgraded database to version 7
+2025-07-13 14:26:05,316 - ERROR - Query Failed: COMMIT; | Params: () | Error: cannot commit - no transaction is active
+2025-07-13 14:26:05,316 - INFO - Successfully migrated customers table to remove UNIQUE phone constraint.
+2025-07-13 14:26:05,391 - INFO - Upgraded database to version 8
+2025-07-13 14:26:05,392 - INFO - All migrations applied successfully.
+2025-07-13 14:29:37,497 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:32:29,873 - ERROR - Query Failed: INSERT INTO nagad_khata (customer_id, date, chalan_no, customer_name, address, vehicle_no, brick_type, total_amount, paid_amount, due_amount, brick_amount, rate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | Params: (None, '2024-11-22', '1', 'Ripon', 'Barigaon', '1625', 'Class 1', 27500.0, 27500.0, 0.0, 3000, 27500.0) | Error: no such table: main.customers_old
+2025-07-13 14:33:16,475 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:33:55,059 - ERROR - Query Failed: INSERT INTO nagad_khata (customer_id, date, chalan_no, customer_name, address, vehicle_no, brick_type, total_amount, paid_amount, due_amount, brick_amount, rate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | Params: (None, '2024-11-22', '1', 'Ripon', 'Barigaon', '1625', 'Class 1', 27500.0, 27500.0, 0.0, 3000, 27500.0) | Error: no such table: main.customers_old
+2025-07-13 14:38:01,645 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:38:39,093 - ERROR - Query Failed: INSERT INTO nagad_khata (customer_id, date, chalan_no, customer_name, address, vehicle_no, brick_type, total_amount, paid_amount, due_amount, brick_amount, rate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | Params: (None, '2024-11-22', '1', 'Ripon', 'Barigaon', '1625', 'Class 1', 27500.0, 27500.0, 0.0, 3000, 27500.0) | Error: no such table: main.customers_old
+2025-07-13 14:38:39,093 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 23, in execute_query
+    cursor.execute(query, params)
+sqlite3.OperationalError: no such table: main.customers_old
+
+2025-07-13 14:40:49,900 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:41:34,881 - ERROR - Query Failed: INSERT INTO nagad_khata (customer_id, date, chalan_no, customer_name, address, vehicle_no, brick_type, total_amount, paid_amount, due_amount, brick_amount, rate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | Params: (None, '2024-11-22', '1', 'Ripon', 'Barigaon', '1625', 'Class 1', 27500.0, 27500.0, 0.0, 3000, 27500.0) | Error: no such table: main.customers_old
+2025-07-13 14:41:34,882 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 23, in execute_query
+    cursor.execute(query, params)
+sqlite3.OperationalError: no such table: main.customers_old
+
+2025-07-13 14:45:37,520 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:45:37,521 - INFO - Database is up to date.
+2025-07-13 14:46:25,692 - ERROR - Query Failed: INSERT INTO nagad_khata (customer_id, date, chalan_no, customer_name, address, vehicle_no, brick_type, total_amount, paid_amount, due_amount, brick_amount, rate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | Params: (None, '2024-11-22', '1', 'Ripon', 'Barigaon', '1625', 'Class 1', 27500.0, 27500.0, 0.0, 3000, 27500.0) | Error: no such table: main.customers_old
+2025-07-13 14:46:25,693 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 23, in execute_query
+    cursor.execute(query, params)
+sqlite3.OperationalError: no such table: main.customers_old
+
+2025-07-13 14:48:49,088 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 14:48:49,184 - INFO - DB requires migration. Current: 0, Target: 8
+2025-07-13 14:48:49,392 - INFO - Upgraded database to version 1
+2025-07-13 14:48:49,809 - INFO - Upgraded database to version 2
+2025-07-13 14:48:50,307 - INFO - Upgraded database to version 3
+2025-07-13 14:48:50,541 - INFO - Upgraded database to version 4
+2025-07-13 14:48:50,791 - INFO - Upgraded database to version 5
+2025-07-13 14:48:50,958 - INFO - Upgraded database to version 6
+2025-07-13 14:48:51,025 - INFO - Added 'customer_id' column to nagad_khata table.
+2025-07-13 14:48:51,116 - INFO - Upgraded database to version 7
+2025-07-13 14:48:51,351 - ERROR - Query Failed: COMMIT; | Params: () | Error: cannot commit - no transaction is active
+2025-07-13 14:48:51,352 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 23, in execute_query
+    cursor.execute(query, params)
+sqlite3.OperationalError: cannot commit - no transaction is active
+
+2025-07-13 14:48:51,352 - INFO - Successfully migrated customers table to remove UNIQUE phone constraint.
+2025-07-13 14:48:51,443 - INFO - Upgraded database to version 8
+2025-07-13 14:48:51,443 - INFO - All migrations applied successfully.
+2025-07-13 15:18:23,514 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 15:18:23,515 - INFO - Database is up to date.
+2025-07-13 15:21:03,956 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 15:21:03,957 - INFO - Database is up to date.
+2025-07-13 15:24:02,763 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 15:24:02,764 - INFO - Database is up to date.
+2025-07-13 15:28:00,585 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 15:28:00,585 - INFO - Database is up to date.
+2025-07-13 15:35:29,853 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 15:35:29,853 - INFO - Database is up to date.
+2025-07-13 15:55:44,368 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 15:55:44,471 - INFO - DB requires migration. Current: 0, Target: 9
+2025-07-13 15:55:45,715 - INFO - Upgraded database to version 8
+2025-07-13 15:55:45,924 - INFO - Upgraded database to version 9
+2025-07-13 15:55:45,924 - INFO - All migrations applied successfully.
+2025-07-13 16:10:10,213 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 16:10:10,302 - INFO - DB requires migration. Current: 0, Target: 9
+2025-07-13 16:10:11,461 - INFO - Upgraded database to version 8
+2025-07-13 16:10:11,669 - INFO - Upgraded database to version 9
+2025-07-13 16:10:11,669 - INFO - All migrations applied successfully.
+2025-07-13 16:21:29,046 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 16:21:50,833 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 16:23:24,746 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 22:43:13,712 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 22:46:23,972 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 22:49:25,014 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 22:54:35,189 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 22:54:35,275 - INFO - DB requires migration. Current: 0, Target: 9
+2025-07-13 22:54:36,504 - INFO - Upgraded database to version 8
+2025-07-13 22:54:36,700 - INFO - Upgraded database to version 9
+2025-07-13 22:54:36,700 - INFO - All migrations applied successfully.
+2025-07-13 22:59:49,154 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:03:00,901 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:07:06,019 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:10:54,254 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:11:17,096 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:25:33,556 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:27:51,957 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:27:52,035 - INFO - DB requires migration. Current: 0, Target: 9
+2025-07-13 23:27:53,118 - INFO - Upgraded database to version 8
+2025-07-13 23:27:53,343 - INFO - Upgraded database to version 9
+2025-07-13 23:27:53,343 - INFO - All migrations applied successfully.
+2025-07-13 23:34:00,111 - INFO - Successfully connected to database at data/app_data.db
+2025-07-13 23:42:39,637 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 00:05:29,023 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 00:10:24,934 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 00:12:08,087 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 00:15:03,802 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 00:21:16,967 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 00:26:46,733 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 01:25:29,198 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 01:31:48,495 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 01:42:03,657 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 02:12:09,725 - INFO - Successfully connected to database at data/app_data.db
+2025-07-14 02:23:12,130 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 20:52:36,743 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 22:11:50,145 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 22:21:28,896 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 22:34:17,271 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 22:37:51,918 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 22:40:49,174 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 22:44:46,177 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 22:50:44,520 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 23:28:36,687 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 23:35:44,038 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 23:38:35,267 - INFO - Successfully connected to database at data/app_data.db
+2025-07-15 23:57:44,889 - INFO - Successfully connected to database at data/app_data.db
+2025-07-16 00:01:29,476 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 12:52:40,949 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 12:55:49,672 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 12:58:39,558 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 13:09:57,409 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 13:23:06,228 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 13:32:31,955 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 13:38:34,987 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 13:46:23,295 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 13:57:58,958 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:00:23,499 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:04:07,767 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:07:27,774 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:25:34,195 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:27:56,921 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:35:38,198 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:36:30,626 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:48:54,926 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 14:57:27,702 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 15:01:28,174 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 15:08:26,432 - INFO - Successfully connected to database at data/app_data.db
+2025-07-17 15:13:26,452 - INFO - Successfully connected to database at data/app_data.db
+2025-07-19 16:38:39,439 - INFO - Successfully connected to database at data/app_data.db
+2025-07-19 16:42:27,991 - INFO - Successfully connected to database at data/app_data.db
+2025-07-19 16:43:56,128 - INFO - Successfully connected to database at data/app_data.db
+2025-07-19 16:47:10,279 - INFO - Successfully connected to database at data/app_data.db
+2025-07-19 16:49:48,034 - INFO - Successfully connected to database at data/app_data.db
+2025-07-19 16:50:41,603 - INFO - Successfully connected to database at data/app_data.db
+2025-07-20 07:50:38,178 - INFO - Successfully connected to database at data/app_data.db
+2025-07-20 07:52:33,155 - INFO - Successfully connected to database at data/app_data.db
+2025-07-20 23:58:14,433 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 00:05:31,723 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 00:11:18,265 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 00:19:10,842 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 00:24:32,400 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 14:59:53,307 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 15:08:51,909 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 16:48:31,068 - INFO - Successfully connected to database at data/app_data.db
+2025-07-21 17:03:19,736 - INFO - Successfully connected to database at data/app_data.db
+2025-07-22 15:15:42,420 - INFO - Successfully connected to database at data/app_data.db
+2025-07-30 07:46:57,167 - INFO - Successfully connected to database at data/app_data.db
+2025-07-30 07:47:49,603 - INFO - Successfully connected to database at data/app_data.db
+2025-07-30 08:02:41,195 - INFO - Successfully connected to database at data/app_data.db
+2025-07-30 08:06:20,231 - INFO - Successfully connected to database at data/app_data.db
