@@ -488,3 +488,72 @@ sqlite3.OperationalError: cannot commit - no transaction is active
 2025-07-30 07:47:49,603 - INFO - Successfully connected to database at data/app_data.db
 2025-07-30 08:02:41,195 - INFO - Successfully connected to database at data/app_data.db
 2025-07-30 08:06:20,231 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:13:51,082 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:13:51,113 - WARNING -  * Debugger is active!
+2025-10-23 23:13:51,116 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:14:35,512 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:14:35,538 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-23 23:14:35,538 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-23 23:14:35,539 - INFO -  * Restarting with stat
+2025-10-23 23:14:35,792 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:14:35,809 - WARNING -  * Debugger is active!
+2025-10-23 23:14:35,812 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:14:39,141 - INFO - 127.0.0.1 - - [23/Oct/2025 23:14:39] "GET / HTTP/1.1" 200 -
+2025-10-23 23:16:06,700 - INFO -  * Detected change in 'D:\\MollaBricksApp\\app.py', reloading
+2025-10-23 23:16:06,729 - INFO -  * Restarting with stat
+2025-10-23 23:16:07,049 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:16:07,065 - WARNING -  * Debugger is active!
+2025-10-23 23:16:07,068 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:30:52,000 - INFO - 127.0.0.1 - - [23/Oct/2025 23:30:52] "GET / HTTP/1.1" 200 -
+2025-10-23 23:30:53,658 - INFO - 127.0.0.1 - - [23/Oct/2025 23:30:53] "GET /customers/add HTTP/1.1" 200 -
+2025-10-23 23:30:55,150 - INFO - 127.0.0.1 - - [23/Oct/2025 23:30:55] "GET / HTTP/1.1" 200 -
+2025-10-23 23:34:13,753 - INFO -  * Detected change in 'D:\\MollaBricksApp\\app.py', reloading
+2025-10-23 23:34:13,783 - INFO -  * Restarting with stat
+2025-10-23 23:34:14,184 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:34:14,202 - WARNING -  * Debugger is active!
+2025-10-23 23:34:14,205 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:35:11,471 - INFO - 127.0.0.1 - - [23/Oct/2025 23:35:11] "GET / HTTP/1.1" 200 -
+2025-10-23 23:37:00,771 - INFO -  * Detected change in 'D:\\MollaBricksApp\\app.py', reloading
+2025-10-23 23:37:00,798 - INFO -  * Restarting with stat
+2025-10-23 23:37:01,073 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:37:01,092 - WARNING -  * Debugger is active!
+2025-10-23 23:37:01,095 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:39:48,789 - INFO - 127.0.0.1 - - [23/Oct/2025 23:39:48] "GET / HTTP/1.1" 200 -
+2025-10-23 23:39:50,214 - INFO - 127.0.0.1 - - [23/Oct/2025 23:39:50] "GET /sales HTTP/1.1" 200 -
+2025-10-23 23:39:53,711 - INFO - 127.0.0.1 - - [23/Oct/2025 23:39:53] "GET / HTTP/1.1" 200 -
+2025-10-23 23:39:54,329 - INFO - 127.0.0.1 - - [23/Oct/2025 23:39:54] "GET /sales HTTP/1.1" 200 -
+2025-10-23 23:40:10,121 - INFO - 127.0.0.1 - - [23/Oct/2025 23:40:10] "GET /sales HTTP/1.1" 200 -
+2025-10-23 23:40:27,745 - INFO - 127.0.0.1 - - [23/Oct/2025 23:40:27] "GET / HTTP/1.1" 200 -
+2025-10-23 23:40:44,465 - INFO - 127.0.0.1 - - [23/Oct/2025 23:40:44] "GET /sales HTTP/1.1" 200 -
+2025-10-23 23:40:47,061 - INFO - 127.0.0.1 - - [23/Oct/2025 23:40:47] "GET /sales/add HTTP/1.1" 200 -
+2025-10-23 23:40:49,234 - INFO - 127.0.0.1 - - [23/Oct/2025 23:40:49] "GET /sales HTTP/1.1" 200 -
+2025-10-23 23:41:04,233 - INFO - 127.0.0.1 - - [23/Oct/2025 23:41:04] "GET /sales/add HTTP/1.1" 200 -
+2025-10-23 23:41:05,946 - INFO - 127.0.0.1 - - [23/Oct/2025 23:41:05] "GET /api/customer_balance/15 HTTP/1.1" 200 -
+2025-10-23 23:41:07,551 - INFO - 127.0.0.1 - - [23/Oct/2025 23:41:07] "GET /api/customer_balance/13 HTTP/1.1" 200 -
+2025-10-23 23:42:07,690 - INFO - 127.0.0.1 - - [23/Oct/2025 23:42:07] "GET /sales HTTP/1.1" 200 -
+2025-10-23 23:45:03,463 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-23 23:45:03,491 - INFO -  * Restarting with stat
+2025-10-23 23:45:03,862 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:45:03,882 - WARNING -  * Debugger is active!
+2025-10-23 23:45:03,885 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:45:37,237 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\customers.py', reloading
+2025-10-23 23:45:37,272 - INFO -  * Restarting with stat
+2025-10-23 23:45:37,539 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:45:37,559 - WARNING -  * Debugger is active!
+2025-10-23 23:45:37,561 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:45:53,731 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\sales.py', reloading
+2025-10-23 23:45:53,761 - INFO -  * Restarting with stat
+2025-10-23 23:45:54,035 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:45:54,053 - WARNING -  * Debugger is active!
+2025-10-23 23:45:54,056 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:46:13,250 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\api.py', reloading
+2025-10-23 23:46:13,278 - INFO -  * Restarting with stat
+2025-10-23 23:46:13,540 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:46:13,558 - WARNING -  * Debugger is active!
+2025-10-23 23:46:13,561 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:46:41,855 - INFO -  * Detected change in 'D:\\MollaBricksApp\\app.py', reloading
+2025-10-23 23:46:41,882 - INFO -  * Restarting with stat
+2025-10-23 23:46:42,166 - INFO - Successfully connected to database at data/app_data.db
+2025-10-23 23:46:42,230 - WARNING -  * Debugger is active!
+2025-10-23 23:46:42,233 - INFO -  * Debugger PIN: 536-270-118
