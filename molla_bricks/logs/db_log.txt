@@ -557,3 +557,7 @@ sqlite3.OperationalError: cannot commit - no transaction is active
 2025-10-23 23:46:42,166 - INFO - Successfully connected to database at data/app_data.db
 2025-10-23 23:46:42,230 - WARNING -  * Debugger is active!
 2025-10-23 23:46:42,233 - INFO -  * Debugger PIN: 536-270-118
+2025-10-23 23:47:44,875 - INFO - 127.0.0.1 - - [23/Oct/2025 23:47:44] "[32mGET /sales HTTP/1.1[0m" 308 -
+2025-10-23 23:47:44,911 - INFO - 127.0.0.1 - - [23/Oct/2025 23:47:44] "GET /sales/ HTTP/1.1" 200 -
+2025-10-23 23:47:45,890 - INFO - 127.0.0.1 - - [23/Oct/2025 23:47:45] "GET / HTTP/1.1" 200 -
+2025-10-23 23:47:46,641 - INFO - 127.0.0.1 - - [23/Oct/2025 23:47:46] "GET /sales/ HTTP/1.1" 200 -
