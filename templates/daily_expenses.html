@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Daily Expenses{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    
+    <div class="col-md-4">
+        <form method="POST" action="{{ url_for('expenses.add_expense') }}" class="mb-4 p-3 border rounded-3">
+            <h4>Add Daily Expense</h4>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date *</label>
+                <input type="date" class="form-control" id="date" name="date" value="{{ today }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category *</label>
+                <select class="form-select" id="category" name="category" required>
+                    {% for category in categories %}
+                        <option value="{{ category }}">{{ category }}</option>
+                    {% else %}
+                        <option value="" disabled>Please add categories via the desktop app</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description *</label>
+                <input type="text" class="form-control" id="description" name="description" required>
+            </div>
+            <div class="mb-3">
+                <label for="amount" class="form-label">Amount *</label>
+                <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Expense</button>
+        </form>
+
+        <div class="p-3 border rounded-3">
+            <h4>Expense Summary</h4>
+            <h5 class="text-danger">Total (in period): {{ "%.2f"|format(total_expenses) }} BDT</h5>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <h4>Expense History</h4>
+        
+        <form method="GET" action="{{ url_for('expenses.index') }}" class="row g-3 mb-3 p-3 border rounded-3">
+            <div class="col-md-5">
+                <label for="start_date" class="form-label">From</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" value="{{ start_date }}">
+            </div>
+            <div class="col-md-5">
+                <label for="end_date" class="form-label">To</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" value="{{ end_date }}">
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">Filter</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for t in transactions %}
+                    <tr>
+                        <td>{{ t[0] }}</td>
+                        <td>{{ t[1] }}</td>
+                        <td>{{ t[2] }}</td>
+                        <td>{{ t[3] }}</td>
+                        <td class="text-danger">{{ "%.2f"|format(t[4]) }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="5" class="text-center">No expenses found for this period.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

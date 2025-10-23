@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Personnel{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    
+    <div class="col-md-6">
+        <div class="p-3 border rounded-3 mb-3">
+            <h4>Add Monthly Staff</h4>
+            <form method="POST" action="{{ url_for('salary.add_staff') }}">
+                <div class="mb-3">
+                    <label for="staff_name" class="form-label">Name *</label>
+                    <input type="text" class="form-control" id="staff_name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="staff_salary" class="form-label">Monthly Salary *</label>
+                    <input type="number" step="0.01" class="form-control" id="staff_salary" name="salary" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Add Staff</button>
+            </form>
+        </div>
+
+        <h4>Staff List</h4>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for staff in staff_list %}
+                    <tr>
+                        <td>{{ staff[1] }}</td>
+                        <td>{{ "%.2f"|format(staff[2]) }}</td>
+                        <td>
+                            <a href="{{ url_for('salary.pay_form', person_type='staff', person_id=staff[0]) }}" class="btn btn-success btn-sm">Pay</a>
+                            </td>
+                    </tr>
+                    {% else %}
+                    <tr><td colspan="3" class="text-center">No staff added yet.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="p-3 border rounded-3 mb-3">
+            <h4>Add Contractor</h4>
+            <form method="POST" action="{{ url_for('salary.add_contractor') }}">
+                <div class="mb-3">
+                    <label for="contractor_name" class="form-label">Name *</label>
+                    <input type="text" class="form-control" id="contractor_name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contractor_section" class="form-label">Section *</label>
+                    <select class="form-select" id="contractor_section" name="section">
+                        <option>Mill Sardar</option>
+                        <option>Loader</option>
+                        <option>Unloader</option>
+                        <option>Burner</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="contractor_phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="contractor_phone" name="phone">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Add Contractor</button>
+            </form>
+        </div>
+
+        <h4>Contractor List</h4>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Section</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in contractor_list %}
+                    <tr>
+                        <td>{{ c[1] }}</td>
+                        <td>{{ c[2] }}</td>
+                        <td>{{ c[3] }}</td>
+                        <td>
+                            <a href="{{ url_for('salary.pay_form', person_type='contractor', person_id=c[0]) }}" class="btn btn-success btn-sm">Pay</a>
+                            </td>
+                    </tr>
+                    {% else %}
+                    <tr><td colspan="4" class="text-center">No contractors added yet.</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

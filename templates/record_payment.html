@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Record Payment{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h3>Record Payment for <span class="text-info">{{ name }}</span></h3>
+        
+        <form method="POST" action="{{ url_for('salary.record_payment') }}" class="p-3 border rounded-3">
+            <input type="hidden" name="person_id" value="{{ person_id }}">
+            <input type="hidden" name="person_type" value="{{ person_type }}">
+            <input type="hidden" name="payee_name" value="{{ name }}">
+            
+            <div class="mb-3">
+                <label for="date" class="form-label">Payment Date *</label>
+                <input type="date" class="form-control" id="date" name="date" value="{{ today }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="amount" class="form-label">Amount Paid *</label>
+                <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
+            </div>
+            <div class="mb-3">
+                <label for="notes" class="form-label">Notes / Description</label>
+                <input type="text" class="form-control" id="notes" name="notes">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Save Payment</button>
+            <a href="{{ url_for('salary.index') }}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
