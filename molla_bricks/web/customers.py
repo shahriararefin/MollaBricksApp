@@ -4,7 +4,7 @@ from molla_bricks.web import db_controller_instance # Import our shared DB insta
 import logging
 
 # Create a Blueprint. 'customers' is the name we'll use in url_for()
-bp = Blueprint('customers', __name__, url_prefix='/')
+bp = Blueprint('customers', __name__, url_prefix='/customers')
 
 @bp.route('/')
 def index():

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Expense{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2>Edit Expense</h2>
+        
+        <form method="POST" action="{{ url_for('expenses.edit_expense') }}" class="p-3 border rounded-3">
+            <input type="hidden" name="expense_id" value="{{ expense.id }}">
+            
+            <div class="mb-3">
+                <label for="date" class="form-label">Date *</label>
+                <input type="date" class="form-control" id="date" name="date" value="{{ expense.date }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category *</label>
+                <select class="form-select" id="category" name="category" required>
+                    {% for category in categories %}
+                        <option value="{{ category }}" {% if category == expense.category %}selected{% endif %}>{{ category }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description *</label>
+                <input type="text" class="form-control" id="description" name="description" value="{{ expense.description }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="amount" class="form-label">Amount *</label>
+                <input type="number" step="0.01" class="form-control" id="amount" name="amount" value="{{ expense.amount }}" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a href="{{ url_for('expenses.index') }}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -32,7 +32,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Add Expense</button>
         </form>
-
         <div class="p-3 border rounded-3">
             <h4>Expense Summary</h4>
             <h5 class="text-danger">Total (in period): {{ "%.2f"|format(total_expenses) }} BDT</h5>
@@ -41,7 +40,6 @@
 
     <div class="col-md-8">
         <h4>Expense History</h4>
-        
         <form method="GET" action="{{ url_for('expenses.index') }}" class="row g-3 mb-3 p-3 border rounded-3">
             <div class="col-md-5">
                 <label for="start_date" class="form-label">From</label>
@@ -65,7 +63,7 @@
                         <th>Category</th>
                         <th>Description</th>
                         <th>Amount</th>
-                    </tr>
+                        <th>Actions</th> </tr>
                 </thead>
                 <tbody>
                     {% for t in transactions %}
@@ -75,10 +73,16 @@
                         <td>{{ t[2] }}</td>
                         <td>{{ t[3] }}</td>
                         <td class="text-danger">{{ "%.2f"|format(t[4]) }}</td>
+                        <td>
+                            <a href="{{ url_for('expenses.edit_form', expense_id=t[0]) }}" class="btn btn-warning btn-sm">Edit</a>
+                            <form action="{{ url_for('expenses.delete_expense', expense_id=t[0]) }}" method="POST" style="display: inline;" onsubmit="return confirm('Are you sure?');">
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                     {% else %}
                     <tr>
-                        <td colspan="5" class="text-center">No expenses found for this period.</td>
+                        <td colspan="6" class="text-center">No expenses found for this period.</td>
                     </tr>
                     {% endfor %}
                 </tbody>

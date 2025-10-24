@@ -75,3 +75,104 @@ class NagadService:
         t.setStyle(style); t.wrapOn(c, width, height); t.drawOn(c, 0.5*inch, y - (len(table_data) * 0.25 * inch))
         
         c.save(); return file_path
+        
+        # molla_bricks/core/services/nagad_service.py
+import os
+import csv
+from datetime import datetime
+from reportlab.lib.pagesizes import A4
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib import colors
+from reportlab.lib.units import inch
+
+class NagadService:
+    @staticmethod
+    def generate_chalan_pdf(chalan_data):
+        os.makedirs("exports/chalans", exist_ok=True)
+        chalan_no = chalan_data.get('chalan_no', 'N-A')
+        file_path = os.path.abspath(f"exports/chalans/chalan_{chalan_no}_{datetime.now().strftime('%Y%m%d')}.pdf")
+        
+        doc = SimpleDocTemplate(file_path, pagesize=A4, topMargin=1.5*inch, bottomMargin=1.5*inch)
+        story = []
+        styles = getSampleStyleSheet()
+        
+        # --- Header ---
+        story.append(Paragraph("Molla Bricks", styles['h1']))
+        story.append(Paragraph("Your Company Address, Phone Number", styles['BodyText']))
+        story.append(Spacer(1, 0.25*inch))
+        story.append(Paragraph("<u>CHALAN / INVOICE</u>", styles['h2']))
+        story.append(Spacer(1, 0.25*inch))
+
+        # --- Chalan Info ---
+        info_data = [
+            [f"Chalan No: {chalan_data.get('chalan_no', 'N/A')}", f"Date: {chalan_data.get('date', 'N/A')}"],
+            [f"Customer Name: {chalan_data.get('customer_name', 'N/A')}", ""],
+            [f"Address: {chalan_data.get('address', 'N/A')}", ""],
+            [f"Vehicle No: {chalan_data.get('vehicle_no', 'N/A')}", ""],
+        ]
+        info_table = Table(info_data, colWidths=[3*inch, 3*inch])
+        info_table.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+            ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+            ('FONTNAME', (0, 0), (-1, -1), 'Helvetica'),
+            ('FONTSIZE', (0, 0), (-1, -1), 10),
+            ('ALIGN', (1, 0), (1, 0), 'RIGHT'), # Align Date to the right
+        ]))
+        story.append(info_table)
+        story.append(Spacer(1, 0.2*inch))
+
+        # --- Line Items ---
+        item_data = [
+            ["Description", "Amount (BDT)"],
+            [f"Bricks ({chalan_data.get('brick_type', '')}) - {chalan_data.get('brick_amount', 0)} pcs", f"{chalan_data.get('total_amount', 0):,.2f}"]
+        ]
+        item_table = Table(item_data, colWidths=[5*inch, 1.5*inch])
+        item_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+            ('ALIGN', (1, 0), (-1, -1), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ('BOX', (0, 0), (-1, -1), 1, colors.black),
+        ]))
+        story.append(item_table)
+        story.append(Spacer(1, 0.1*inch))
+        
+        # --- Totals ---
+        totals_data = [
+            ["Total:", f"{chalan_data.get('total_amount', 0):,.2f} BDT"],
+            ["Paid:", f"{chalan_data.get('paid_amount', 0):,.2f} BDT"],
+            ["Due:", f"{chalan_data.get('due_amount', 0):,.2f} BDT"],
+        ]
+        totals_table = Table(totals_data, colWidths=[4.5*inch, 2*inch])
+        totals_table.setStyle(TableStyle([
+            ('ALIGN', (0, 0), (-1, -1), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, -1), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, -1), 11),
+            ('TOPPADDING', (0, 0), (-1, -1), 4),
+        ]))
+        story.append(totals_table)
+        
+        doc.build(story)
+        return file_path
+    
+    @staticmethod
+    def export_to_csv(db_controller):
+        os.makedirs("exports", exist_ok=True)
+        file_path = f"exports/nagad_khata_export_{datetime.now().strftime('%Y%m%d')}.csv"
+        header = ["id", "date", "chalan_no", "customer_name", "address", "vehicle_no", "brick_type", "brick_amount", "total_amount", "paid_amount", "due_amount", "timestamp"]
+        query = "SELECT id, date, chalan_no, customer_name, address, vehicle_no, brick_type, brick_amount, total_amount, paid_amount, due_amount, timestamp FROM nagad_khata ORDER BY id DESC"
+        records = db_controller.execute_query(query, fetch="all")
+        
+        if not records:
+            return None, "No sales data to export."
+            
+        with open(file_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow(header)
+            writer.writerows(records)
+        
+        return file_path, "Export successful!"

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Business Insights{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>🏆 Most Valuable Customers (By Total Sales)</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for customer in valuable_customers %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ loop.index }}. {{ customer[0] }}
+                        <span class="badge bg-success rounded-pill">{{ "%.2f"|format(customer[1]) }} BDT</span>
+                    </li>
+                {% else %}
+                    <li class="list-group-item">Not enough sales data to show insights.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>🔄 Most Frequent Customers (By No. of Visits)</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for customer in frequent_customers %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ loop.index }}. {{ customer[0] }}
+                        <span class="badge bg-info rounded-pill">{{ customer[1] }} visits</span>
+                    </li>
+                {% else %}
+                    <li class="list-group-item">Not enough sales data to show insights.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

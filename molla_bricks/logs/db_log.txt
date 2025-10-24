@@ -678,3 +678,200 @@ sqlite3.OperationalError: cannot commit - no transaction is active
 2025-10-24 00:07:33,853 - INFO - Successfully connected to database at data/app_data.db
 2025-10-24 00:07:33,880 - WARNING -  * Debugger is active!
 2025-10-24 00:07:33,883 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:07:58,943 - INFO - 127.0.0.1 - - [24/Oct/2025 00:07:58] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 00:07:59,847 - INFO - 127.0.0.1 - - [24/Oct/2025 00:07:59] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 00:09:48,186 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\insights.py', reloading
+2025-10-24 00:09:48,214 - INFO -  * Restarting with stat
+2025-10-24 00:09:48,475 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:09:48,502 - WARNING -  * Debugger is active!
+2025-10-24 00:09:48,505 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:10:20,844 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 00:10:20,876 - INFO -  * Restarting with stat
+2025-10-24 00:10:21,153 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:10:21,191 - WARNING -  * Debugger is active!
+2025-10-24 00:10:21,193 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:10:29,294 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 00:10:29,321 - INFO -  * Restarting with stat
+2025-10-24 00:10:29,600 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:10:29,630 - WARNING -  * Debugger is active!
+2025-10-24 00:10:29,634 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:11:03,769 - INFO - 127.0.0.1 - - [24/Oct/2025 00:11:03] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 00:11:04,806 - INFO - 127.0.0.1 - - [24/Oct/2025 00:11:04] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 00:14:31,076 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\sales.py', reloading
+2025-10-24 00:14:31,110 - INFO -  * Restarting with stat
+2025-10-24 00:14:31,391 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:14:31,434 - WARNING -  * Debugger is active!
+2025-10-24 00:14:31,437 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:17:22,885 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:22] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 00:17:23,736 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:23] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 00:17:25,210 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:25] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 00:17:28,403 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:28] "GET /sales/edit/212 HTTP/1.1" 200 -
+2025-10-24 00:17:56,758 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:56] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 00:17:57,493 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:57] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 00:17:58,735 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:58] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 00:17:59,398 - INFO - 127.0.0.1 - - [24/Oct/2025 00:17:59] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 00:18:00,607 - INFO - 127.0.0.1 - - [24/Oct/2025 00:18:00] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 00:18:39,860 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\salary.py', reloading
+2025-10-24 00:18:39,888 - INFO -  * Restarting with stat
+2025-10-24 00:18:40,144 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:18:40,188 - WARNING -  * Debugger is active!
+2025-10-24 00:18:40,191 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:19:35,472 - INFO - 127.0.0.1 - - [24/Oct/2025 00:19:35] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 00:19:38,219 - INFO - 127.0.0.1 - - [24/Oct/2025 00:19:38] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 00:19:40,821 - INFO - 127.0.0.1 - - [24/Oct/2025 00:19:40] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 00:19:42,549 - INFO - 127.0.0.1 - - [24/Oct/2025 00:19:42] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 00:19:49,294 - INFO - 127.0.0.1 - - [24/Oct/2025 00:19:49] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 00:21:09,703 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\expenses.py', reloading
+2025-10-24 00:21:09,733 - INFO -  * Restarting with stat
+2025-10-24 00:21:10,002 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:21:10,048 - WARNING -  * Debugger is active!
+2025-10-24 00:21:10,050 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:21:54,235 - INFO - 127.0.0.1 - - [24/Oct/2025 00:21:54] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 00:21:55,153 - INFO - 127.0.0.1 - - [24/Oct/2025 00:21:55] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 00:21:55,920 - INFO - 127.0.0.1 - - [24/Oct/2025 00:21:55] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 00:22:16,884 - INFO - 127.0.0.1 - - [24/Oct/2025 00:22:16] "GET /expenses/?start_date=2024-09-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 00:24:21,971 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 00:24:22,001 - INFO -  * Restarting with stat
+2025-10-24 00:24:22,255 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:24:22,285 - WARNING -  * Debugger is active!
+2025-10-24 00:24:22,288 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:25:25,919 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\customers.py', reloading
+2025-10-24 00:25:25,947 - INFO -  * Restarting with stat
+2025-10-24 00:25:26,220 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:25:26,256 - WARNING -  * Debugger is active!
+2025-10-24 00:25:26,259 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:25:39,407 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\customers.py', reloading
+2025-10-24 00:25:39,437 - INFO -  * Restarting with stat
+2025-10-24 00:25:39,706 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:25:39,749 - WARNING -  * Debugger is active!
+2025-10-24 00:25:39,751 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:26:23,181 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 00:26:23,214 - INFO -  * Restarting with stat
+2025-10-24 00:26:23,497 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:26:23,546 - WARNING -  * Debugger is active!
+2025-10-24 00:26:23,549 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:26:31,651 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 00:26:31,691 - INFO -  * Restarting with stat
+2025-10-24 00:26:31,979 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:26:32,013 - WARNING -  * Debugger is active!
+2025-10-24 00:26:32,016 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:27:02,942 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:02] "GET /expenses/?start_date=2024-09-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 00:27:04,579 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 00:27:04,670 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:04] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-24 00:27:04,670 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:04] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-24 00:27:04,680 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:04] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=L76MiwdI3vbxektgWlwm HTTP/1.1" 200 -
+2025-10-24 00:27:04,704 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:04] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-24 00:27:06,084 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 00:27:06,093 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 00:27:06,094 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 00:27:06,102 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=L76MiwdI3vbxektgWlwm HTTP/1.1[0m" 304 -
+2025-10-24 00:27:06,123 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 00:27:06,471 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 00:27:06,481 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 00:27:06,483 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 00:27:06,494 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=L76MiwdI3vbxektgWlwm HTTP/1.1[0m" 304 -
+2025-10-24 00:27:06,510 - INFO - 127.0.0.1 - - [24/Oct/2025 00:27:06] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 00:28:31,018 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 00:28:31,028 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:31] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 00:28:31,030 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:31] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 00:28:31,042 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=L76MiwdI3vbxektgWlwm HTTP/1.1[0m" 304 -
+2025-10-24 00:28:31,071 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 00:28:31,201 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 00:28:31,231 - INFO -  * Restarting with stat
+2025-10-24 00:28:31,511 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 00:28:31,546 - WARNING -  * Debugger is active!
+2025-10-24 00:28:31,550 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 00:28:31,628 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:31] "GET / HTTP/1.1" 200 -
+2025-10-24 00:28:31,875 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:31] "GET / HTTP/1.1" 200 -
+2025-10-24 00:28:32,524 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:32] "GET / HTTP/1.1" 200 -
+2025-10-24 00:28:40,972 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:40] "GET /?period=This+Week HTTP/1.1" 200 -
+2025-10-24 00:28:42,288 - INFO - 127.0.0.1 - - [24/Oct/2025 00:28:42] "GET /?period=All+Time HTTP/1.1" 200 -
+2025-10-24 00:29:08,762 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:08] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 00:29:10,077 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:10] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 00:29:10,277 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:10] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 00:29:11,623 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:11] "GET / HTTP/1.1" 200 -
+2025-10-24 00:29:13,620 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:13] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 00:29:14,206 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:14] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 00:29:14,905 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:14] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 00:29:15,542 - INFO - 127.0.0.1 - - [24/Oct/2025 00:29:15] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 15:12:05,845 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:12:11,441 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 15:12:11,441 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 15:12:11,442 - INFO -  * Restarting with stat
+2025-10-24 15:12:11,715 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:12:11,945 - WARNING -  * Debugger is active!
+2025-10-24 15:12:11,947 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:13:36,986 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:36] "GET / HTTP/1.1" 200 -
+2025-10-24 15:13:37,137 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-24 15:13:39,900 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:39] "GET / HTTP/1.1" 200 -
+2025-10-24 15:13:42,226 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:42] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:13:43,355 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:43] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:13:45,257 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:45] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:13:48,684 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:48] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:13:51,562 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:51] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 15:13:52,305 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:52] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 15:13:52,888 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:52] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:13:58,560 - INFO - 127.0.0.1 - - [24/Oct/2025 15:13:58] "GET /sales/edit/189 HTTP/1.1" 200 -
+2025-10-24 15:14:05,303 - INFO - 127.0.0.1 - - [24/Oct/2025 15:14:05] "GET / HTTP/1.1" 200 -
+2025-10-24 15:14:26,641 - INFO - 127.0.0.1 - - [24/Oct/2025 15:14:26] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:15:48,295 - INFO - 127.0.0.1 - - [24/Oct/2025 15:15:48] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:15:50,548 - INFO - 127.0.0.1 - - [24/Oct/2025 15:15:50] "GET /sales/print_chalan/212 HTTP/1.1" 200 -
+2025-10-24 15:15:55,071 - INFO - 127.0.0.1 - - [24/Oct/2025 15:15:55] "GET /sales/print_chalan/212 HTTP/1.1" 200 -
+2025-10-24 15:21:58,506 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 15:21:58,555 - INFO -  * Restarting with stat
+2025-10-24 15:21:58,843 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:21:59,109 - WARNING -  * Debugger is active!
+2025-10-24 15:21:59,112 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:22:00,170 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 15:22:00,224 - INFO -  * Restarting with stat
+2025-10-24 15:22:00,523 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:22:00,782 - WARNING -  * Debugger is active!
+2025-10-24 15:22:00,786 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:22:11,792 - INFO - 127.0.0.1 - - [24/Oct/2025 15:22:11] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:22:13,566 - INFO - 127.0.0.1 - - [24/Oct/2025 15:22:13] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:22:17,259 - INFO - 127.0.0.1 - - [24/Oct/2025 15:22:17] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-09-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 15:22:27,960 - INFO - 127.0.0.1 - - [24/Oct/2025 15:22:27] "GET /ledger/?party_name=Abdur+Rouf&start_date=2024-10-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 15:23:58,246 - INFO - 127.0.0.1 - - [24/Oct/2025 15:23:58] "[35m[1mGET /ledger/?party_name=Abdur+Rouf&start_date=2024-10-24&end_date=2025-10-24 HTTP/1.1[0m" 500 -
+2025-10-24 15:23:58,327 - INFO - 127.0.0.1 - - [24/Oct/2025 15:23:58] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 15:23:58,348 - INFO - 127.0.0.1 - - [24/Oct/2025 15:23:58] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 15:23:58,395 - INFO - 127.0.0.1 - - [24/Oct/2025 15:23:58] "GET /ledger/?__debugger__=yes&cmd=resource&f=console.png&s=euiQBd0wvwUCsMgYy2Xy HTTP/1.1" 200 -
+2025-10-24 15:23:58,416 - INFO - 127.0.0.1 - - [24/Oct/2025 15:23:58] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,049 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[35m[1mGET /ledger/?party_name=Abdur+Rouf&start_date=2024-10-24&end_date=2025-10-24 HTTP/1.1[0m" 500 -
+2025-10-24 15:24:00,061 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,067 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,075 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png&s=euiQBd0wvwUCsMgYy2Xy HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,105 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,473 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[35m[1mGET /ledger/?party_name=Abdur+Rouf&start_date=2024-10-24&end_date=2025-10-24 HTTP/1.1[0m" 500 -
+2025-10-24 15:24:00,485 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,488 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,495 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png&s=euiQBd0wvwUCsMgYy2Xy HTTP/1.1[0m" 304 -
+2025-10-24 15:24:00,525 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:00] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 15:24:14,240 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:14] "[35m[1mGET /ledger/?party_name=Abdur+Rouf&start_date=2024-10-24&end_date=2025-10-24 HTTP/1.1[0m" 500 -
+2025-10-24 15:24:14,255 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:14] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 15:24:14,260 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:14] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 15:24:14,280 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:14] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png&s=euiQBd0wvwUCsMgYy2Xy HTTP/1.1[0m" 304 -
+2025-10-24 15:24:17,118 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:17] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:24:17,310 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:17] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:24:18,159 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:18] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:24:18,332 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:18] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:24:19,088 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:19] "[35m[1mGET /ledger/ HTTP/1.1[0m" 500 -
+2025-10-24 15:24:19,103 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:19] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 15:24:19,104 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:19] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 15:24:19,117 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:19] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png&s=euiQBd0wvwUCsMgYy2Xy HTTP/1.1[0m" 304 -
+2025-10-24 15:24:42,859 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:42] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:24:43,645 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:43] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 15:24:44,032 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:44] "[35m[1mGET /ledger/ HTTP/1.1[0m" 500 -
+2025-10-24 15:24:44,047 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:44] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 15:24:44,050 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:44] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 15:24:44,074 - INFO - 127.0.0.1 - - [24/Oct/2025 15:24:44] "[36mGET /ledger/?__debugger__=yes&cmd=resource&f=console.png&s=euiQBd0wvwUCsMgYy2Xy HTTP/1.1[0m" 304 -
+2025-10-24 15:26:17,034 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 15:26:17,078 - INFO -  * Restarting with stat
+2025-10-24 15:26:17,344 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:26:17,584 - WARNING -  * Debugger is active!
+2025-10-24 15:26:17,587 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:26:40,983 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\ledger.py', reloading
+2025-10-24 15:26:41,027 - INFO -  * Restarting with stat
+2025-10-24 15:26:41,303 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:26:41,599 - WARNING -  * Debugger is active!
+2025-10-24 15:26:41,601 - INFO -  * Debugger PIN: 536-270-118

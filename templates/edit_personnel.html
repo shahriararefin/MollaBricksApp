@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Edit {{ person_type.title() }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2>Edit {{ person_type.title() }}: {{ person.name }}</h2>
+        
+        <form method="POST" action="{{ url_for('salary.edit_personnel') }}" class="p-3 border rounded-3">
+            <input type="hidden" name="person_id" value="{{ person.id }}">
+            <input type="hidden" name="person_type" value="{{ person_type }}">
+            
+            <div class="mb-3">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ person.name }}" required>
+            </div>
+            
+            {% if person_type == 'staff' %}
+            <div class="mb-3">
+                <label for="detail" class="form-label">Monthly Salary *</label>
+                <input type="number" step="0.01" class="form-control" id="detail" name="detail" value="{{ person.detail }}" required>
+            </div>
+            {% else %}
+            <div class="mb-3">
+                <label for="detail" class="form-label">Section *</label>
+                <select class="form-select" id="detail" name="detail">
+                    {% set sections = ["Mill Sardar", "Loader", "Unloader", "Burner", "Other"] %}
+                    {% for section in sections %}
+                        <option value="{{ section }}" {% if section == person.detail %}selected{% endif %}>{{ section }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone" value="{{ person.phone }}">
+            </div>
+            {% endif %}
+            
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a href="{{ url_for('salary.index') }}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -8,6 +8,7 @@ def create_app():
     app = Flask(__name__, template_folder='../../templates')
     app.secret_key = 'your_super_secret_key_for_sessions'
 
+    from . import dashboard
     from . import customers
     from . import sales
     from . import api
@@ -15,7 +16,9 @@ def create_app():
     from . import ledger
     from . import salary 
     from . import expenses
+    from . import insights
 
+    app.register_blueprint(dashboard.bp)
     app.register_blueprint(customers.bp)
     app.register_blueprint(sales.bp)
     app.register_blueprint(api.bp)
@@ -23,5 +26,6 @@ def create_app():
     app.register_blueprint(ledger.bp)
     app.register_blueprint(salary.bp) 
     app.register_blueprint(expenses.bp)
+    app.register_blueprint(insights.bp)
 
     return app

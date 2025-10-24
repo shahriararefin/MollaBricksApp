@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Dashboard</h2>
+    <form method="GET" action="{{ url_for('dashboard.index') }}" class="d-flex">
+        <select class="form-select me-2" name="period" onchange="this.form.submit()">
+            {% set periods = ["This Month", "This Week", "Today", "This Year", "All Time"] %}
+            {% for p in periods %}
+                <option value="{{ p }}" {% if p == summary.period %}selected{% endif %}>{{ p }}</option>
+            {% endfor %}
+        </select>
+    </form>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+                <h5 class="card-title">Total Revenue (Sales)</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.revenue) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-warning text-dark">
+            <div class="card-body">
+                <h5 class="card-title">Total Expenses</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.total_expenses) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-danger text-white">
+            <div class="card-body">
+                <h5 class="card-title">Outstanding Dues</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.total_dues) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card {% if summary.net_profit >= 0 %}bg-primary{% else %}bg-secondary{% endif %} text-white">
+            <div class="card-body">
+                <h5 class="card-title">Net Profit / Loss</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.net_profit) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h4>🔔 Alerts & Reminders</h4>
+        <div class="list-group">
+            {% for alert in alerts %}
+                <div class="list-group-item list-group-item-{{ alert.type }}">
+                    {{ alert.text }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
