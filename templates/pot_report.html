@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Pot Report') }}{% endblock %}
+{% block header_title %}{{ _('Pot Report') }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">{{ _('Filter Pot Report') }}</h5>
+    </div>
+    <div class="card-body">
+        <form method="GET" action="{{ url_for('pot.pot_report') }}" class="row g-3 mb-3">
+            <div class="col-md-4">
+                <label for="start_date" class="form-label">{{ _('From') }}</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" value="{{ start_date }}">
+            </div>
+            <div class="col-md-4">
+                <label for="end_date" class="form-label">{{ _('To') }}</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" value="{{ end_date }}">
+            </div>
+            <div class="col-md-3">
+                <label for="status" class="form-label">{{ _('Status') }}</label>
+                <select class="form-select" id="status" name="status">
+                    <option value="">{{ _('All Statuses') }}</option>
+                    <option value="Drying" {% if status_filter == 'Drying' %}selected{% endif %}>{{ _('Drying') }}</option>
+                    <option value="Ready for Firing" {% if status_filter == 'Ready for Firing' %}selected{% endif %}>{{ _('Ready for Firing') }}</option>
+                </select>
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">{{ _('Filter') }}</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ _('Pot Production Summary') }}</h5>
+        <span class="badge bg-primary rounded-pill fs-6">
+            {{ _('Total Shaped Bricks') }}: {{ total_bricks }}
+        </span>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>{{ _('Date') }}</th>
+                        <th>{{ _('Pot Name') }}</th>
+                        <th>{{ _('Mill No.') }}</th>
+                        <th>{{ _('Quantity Shaped') }}</th>
+                        <th>{{ _('Status') }}</th>
+                        <th>{{ _('Notes') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in entries %}
+                    <tr>
+                        <td>{{ entry[1] }}</td>
+                        <td>{{ entry[2] }}</td>
+                        <td>{{ entry[3] }}</td>
+                        <td>{{ entry[4] }}</td>
+                        <td>
+                            {% if entry[5] == 'Ready for Firing' %}
+                                <span class="badge bg-success">{{ _('Ready for Firing') }}</span>
+                            {% else %}
+                                <span class="badge bg-info">{{ _(entry[5]) }}</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ entry[6] }}</td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="6" class="text-center">{{ _('No pot entries found for this period.') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Mobile Bank List') }}{% endblock %}
+{% block header_title %}{{ _('Mobile Bank List') }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ _('Mobile Bank List') }}</h5>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addModal">
+            {{ _('Add new') }}
+        </button>
+    </div>
+    <div class="card-body">
+        
+        <form method="GET" action="{{ url_for('accounts.mobile_bank') }}" class="row g-3 mb-3">
+            <div class="col-md-3">
+                <label for="provider_name" class="form-label">{{ _('Mobile bank name') }}</label>
+                <input type="text" class="form-control" id="provider_name" name="provider_name" value="{{ provider_name }}">
+            </div>
+            <div class="col-md-3">
+                <label for="account_name" class="form-label">{{ _('Account name') }}</label>
+                <input type="text" class="form-control" id="account_name" name="account_name" value="{{ account_name }}">
+            </div>
+            <div class="col-md-3">
+                <label for="account_number" class="form-label">{{ _('Account number') }}</label>
+                <input type="text" class="form-control" id="account_number" name="account_number" value="{{ account_number }}">
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">{{ _('Filter') }}</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ _('No.') }}</th>
+                        <th>{{ _('Bank name') }}</th>
+                        <th>{{ _('Account name') }}</th>
+                        <th>{{ _('Account number') }}</th>
+                        <th>{{ _('Status') }}</th>
+                        <th>{{ _('Action') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in records %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ row[1] }}</td> <td>{{ row[2] }}</td> <td>{{ row[3] }}</td> <td><span class="badge bg-success">{{ _('Active') }}</span></td> <td>
+                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal-{{ row[0] }}">
+                                {{ _('Edit') }}
+                            </button>
+                            <form action="{{ url_for('accounts.delete_mobile_bank', account_id=row[0]) }}" method="POST" style="display: inline;" onsubmit="return confirm('{{ _('Are you sure?') }}');">
+                                <button type="submit" class="btn btn-danger btn-sm">{{ _('Delete') }}</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="6" class="text-center">{{ _('Nothing found.') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ _('Add Mobile Bank Account') }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST" action="{{ url_for('accounts.add_mobile_bank') }}">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="add_provider_name" class="form-label">{{ _('Provider Name') }} *</label>
+                <input type="text" class="form-control" id="add_provider_name" name="provider_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="add_account_name" class="form-label">{{ _('Account Name') }} *</label>
+                <input type="text" class="form-control" id="add_account_name" name="account_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="add_account_number" class="form-label">{{ _('Account Number') }}</label>
+                <input type="text" class="form-control" id="add_account_number" name="account_number">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button>
+          <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% for row in records %}
+<div class="modal fade" id="editModal-{{ row[0] }}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ _('Edit Mobile Bank Account') }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST" action="{{ url_for('accounts.edit_mobile_bank') }}">
+        <input type="hidden" name="id" value="{{ row[0] }}">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="edit_provider_name_{{ row[0] }}" class="form-label">{{ _('Provider Name') }} *</label>
+                <input type="text" class="form-control" id="edit_provider_name_{{ row[0] }}" name="provider_name" value="{{ row[1] }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="edit_account_name_{{ row[0] }}" class="form-label">{{ _('Account Name') }} *</label>
+                <input type="text" class="form-control" id="edit_account_name_{{ row[0] }}" name="account_name" value="{{ row[2] }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="edit_account_number_{{ row[0] }}" class="form-label">{{ _('Account Number') }}</label>
+                <input type="text" class="form-control" id="edit_account_number_{{ row[0] }}" name="account_number" value="{{ row[3] }}">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button>
+          <button type="submit" class="btn btn-primary">{{ _('Save Changes') }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Chart of Head') }}{% endblock %}
+{% block header_title %}{{ _('Chart of Head') }}{% endblock %}
+{% block content %}
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header"><h4>{{ _('Add New Head') }}</h4></div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('accounts.add_head') }}">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">{{ _('Name') }} *</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="type" class="form-label">{{ _('Type') }} *</label>
+                        <select class="form-select" id="type" name="type" required>
+                            <option value="Asset">{{ _('Asset') }}</option>
+                            <option value="Liability">{{ _('Liability') }}</option>
+                            <option value="Equity">{{ _('Equity') }}</option>
+                            <option value="Revenue">{{ _('Revenue') }}</option>
+                            <option value="Expense">{{ _('Expense') }}</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">{{ _('Add Head') }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header"><h4>{{ _('Account Heads') }}</h4></div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>{{ _('Name') }}</th>
+                            <th>{{ _('Type') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in records %}
+                        <tr>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ _(row[2]) }}</td>
+                        </tr>
+                        {% else %}
+                        <tr><td colspan="2" class="text-center">{{ _('No account heads found.') }}</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

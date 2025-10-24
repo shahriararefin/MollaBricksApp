@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Edit Customer{% endblock %}
+{% block title %}{{ _('Edit Customer') }}{% endblock %}
 
 {% block content %}
-<h2>Edit Customer: {{ customer[1] }}</h2>
+<h2>{{ _('Edit Customer') }}: {{ customer[1] }}</h2>
 
 <form method="POST" action="{{ url_for('customers.edit') }}">
     <input type="hidden" name="customer_id" value="{{ customer[0] }}">
     <div class="mb-3">
-        <label for="name" class="form-label">Customer Name *</label>
+        <label for="name" class="form-label">{{ _('Customer Name') }} *</label>
         <input type="text" class="form-control" id="name" name="name" value="{{ customer[1] }}" required>
     </div>
     <div class="mb-3">
-        <label for="address" class="form-label">Address</label>
+        <label for="address" class="form-label">{{ _('Address') }}</label>
         <input type="text" class="form-control" id="address" name="address" value="{{ customer[2] }}">
     </div>
     <div class="mb-3">
-        <label for="phone" class="form-label">Phone</label>
+        <label for="phone" class="form-label">{{ _('Phone') }}</label>
         <input type="text" class="form-control" id="phone" name="phone" value="{{ customer[3] }}">
     </div>
-    <button type="submit" class="btn btn-primary">Save Changes</button>
-    <a href="{{ url_for('customers.index') }}" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-primary">{{ _('Save Changes') }}</button>
+    <a href="{{ url_for('customers.index') }}" class="btn btn-secondary">{{ _('Cancel') }}</a>
 </form>
 {% endblock %}

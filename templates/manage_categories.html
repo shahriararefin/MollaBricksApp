@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Manage Expense Categories') }}{% endblock %}
+{% block header_title %}{{ _('Manage Expense Categories') }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>{{ _('Add New Category') }}</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('categories.add_category') }}">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">{{ _('Category Name') }} *</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">{{ _('Add Category') }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4>{{ _('Existing Categories') }}</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>{{ _('Name') }}</th>
+                            <th class="text-end">{{ _('Actions') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for category in categories %}
+                        <tr>
+                            <form method="POST" action="{{ url_for('categories.edit_category') }}">
+                                <input type="hidden" name="id" value="{{ category[0] }}">
+                                <td>
+                                    <input type="text" class="form-control" name="name" value="{{ category[1] }}">
+                                </td>
+                                <td class="text-end">
+                                    <button type="submit" class="btn btn-warning btn-sm">{{ _('Update') }}</button>
+                                    <a href="#" class="btn btn-danger btn-sm"
+                                       onclick="if(confirm('{{ _('Are you sure?') }}')) { 
+                                           document.getElementById('delete-form-{{ category[0] }}').submit(); 
+                                       }">{{ _('Delete') }}</a>
+                                </td>
+                            </form>
+                            <form id="delete-form-{{ category[0] }}" method="POST" action="{{ url_for('categories.delete_category', category_id=category[0]) }}" style="display: none;"></form>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="2" class="text-center">{{ _('No categories found.') }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

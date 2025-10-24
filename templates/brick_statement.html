@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Brick statement') }}{% endblock %}
+{% block header_title %}{{ _('Brick statement') }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ _('Brick statement') }}</h5>
+        </div>
+    <div class="card-body">
+        
+        <form method="GET" action="{{ url_for('reports.brick_statement') }}" class="row g-3 mb-3">
+            <div class="col-md-4">
+                <label for="start_date" class="form-label">{{ _('Start date') }}</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" value="{{ start_date }}">
+            </div>
+            <div class="col-md-4">
+                <label for="end_date" class="form-label">{{ _('Deadline') }}</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" value="{{ end_date }}">
+            </div>
+            <div class="col-md-3">
+                <label for="brick_type" class="form-label">{{ _('Class') }} *</label>
+                <select class="form-select" id="brick_type" name="brick_type">
+                    <option value="">-- {{ _('All Classes') }} --</option>
+                    {% for type in brick_types %}
+                        <option value="{{ type }}" {% if type == selected_brick_type %}selected{% endif %}>{{ type }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">{{ _('Filter') }}</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>{{ _('No.') }}</th>
+                        <th>{{ _('Products') }}</th>
+                        <th>{{ _('Quantity') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in records %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ row[0] }}</td> <td>{{ row[1] }}</td> </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="3" class="text-center">{{ _('No Data Found') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr class="fw-bold">
+                        <td colspan="2" class="text-end">{{ _('Total') }}</td>
+                        <td>{{ total_quantity }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

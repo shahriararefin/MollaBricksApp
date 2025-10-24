@@ -2,16 +2,19 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from molla_bricks.web import db_controller_instance
 from datetime import datetime
+from flask_login import login_required # <-- ADDED
 
 bp = Blueprint('salary', __name__, url_prefix='/salary')
 
 @bp.route('/')
+@login_required # <-- ADDED
 def index():
     staff = db_controller_instance.execute_query("SELECT id, name, monthly_salary FROM staff ORDER BY name ASC", fetch="all")
     contractors = db_controller_instance.execute_query("SELECT id, name, section, phone FROM contractors ORDER BY section, name", fetch="all")
     return render_template('manage_personnel.html', staff_list=staff, contractor_list=contractors)
 
 @bp.route('/add_staff', methods=['POST'])
+@login_required # <-- ADDED
 def add_staff():
     name = request.form.get('name'); salary = request.form.get('salary', type=float)
     if not name or not salary or salary <= 0:
@@ -23,6 +26,7 @@ def add_staff():
     return redirect(url_for('salary.index'))
 
 @bp.route('/add_contractor', methods=['POST'])
+@login_required # <-- ADDED
 def add_contractor():
     name = request.form.get('name'); section = request.form.get('section'); phone = request.form.get('phone')
     if not name or not section:
@@ -34,6 +38,7 @@ def add_contractor():
     return redirect(url_for('salary.index'))
 
 @bp.route('/pay/<person_type>/<int:person_id>')
+@login_required # <-- ADDED
 def pay_form(person_type, person_id):
     if person_type == 'staff':
         record = db_controller_instance.execute_query("SELECT name FROM staff WHERE id = ?", (person_id,), fetch="one"); name = record[0]
@@ -43,6 +48,7 @@ def pay_form(person_type, person_id):
     return render_template('record_payment.html', person_id=person_id, name=name, person_type=person_type, today=datetime.now().strftime('%Y-%m-%d'))
 
 @bp.route('/pay', methods=['POST'])
+@login_required # <-- ADDED
 def record_payment():
     person_id = request.form.get('person_id', type=int); person_type = request.form.get('person_type'); payee_name = request.form.get('payee_name')
     payment_date = request.form.get('date'); notes = request.form.get('notes')
@@ -63,8 +69,8 @@ def record_payment():
     except Exception as e: flash(f'Error saving payment: {e}', 'danger')
     return redirect(url_for('salary.index'))
 
-# --- NEW: Routes for Editing Personnel ---
 @bp.route('/edit/<person_type>/<int:person_id>')
+@login_required # <-- ADDED
 def edit_form(person_type, person_id):
     if person_type == 'staff':
         record = db_controller_instance.execute_query("SELECT id, name, monthly_salary FROM staff WHERE id = ?", (person_id,), fetch="one")
@@ -75,6 +81,7 @@ def edit_form(person_type, person_id):
     return render_template('edit_personnel.html', person=person, person_type=person_type)
 
 @bp.route('/edit', methods=['POST'])
+@login_required # <-- ADDED
 def edit_personnel():
     person_id = request.form.get('person_id', type=int); person_type = request.form.get('person_type')
     name = request.form.get('name'); detail = request.form.get('detail')
@@ -91,8 +98,8 @@ def edit_personnel():
     except Exception as e: flash(f"Error updating: {e}", 'danger')
     return redirect(url_for('salary.index'))
 
-# --- NEW: Routes for Deleting Personnel ---
 @bp.route('/delete/<person_type>/<int:person_id>', methods=['POST'])
+@login_required # <-- ADDED
 def delete_personnel(person_type, person_id):
     try:
         if person_type == 'staff':

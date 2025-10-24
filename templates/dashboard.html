@@ -1,64 +1,116 @@
 {% extends "base.html" %}
 
 {% block title %}Dashboard{% endblock %}
+{% block header_title %}Dashboard{% endblock %}
 
 {% block content %}
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>Dashboard</h2>
-    <form method="GET" action="{{ url_for('dashboard.index') }}" class="d-flex">
-        <select class="form-select me-2" name="period" onchange="this.form.submit()">
+<form method="GET" action="{{ url_for('dashboard.index') }}" class="row g-3 mb-4">
+    <div class="col-auto">
+        <label for="period" class="col-form-label">{{ _('Show stats for') }}:</label>
+    </div>
+    <div class="col-auto">
+        <select class="form-select" name="period" onchange="this.form.submit()">
             {% set periods = ["This Month", "This Week", "Today", "This Year", "All Time"] %}
             {% for p in periods %}
-                <option value="{{ p }}" {% if p == summary.period %}selected{% endif %}>{{ p }}</option>
+                <option value="{{ p }}" {% if p == summary.period %}selected{% endif %}>{{ _(p) }}</option>
             {% endfor %}
         </select>
-    </form>
-</div>
+    </div>
+</form>
 
+<h5 class="mb-3">{{ _('Income') }}</h5>
 <div class="row g-4">
-    <div class="col-md-6 col-lg-3">
+    <div class="col-md-4">
         <div class="card bg-success text-white">
             <div class="card-body">
-                <h5 class="card-title">Total Revenue (Sales)</h5>
-                <h3 class="card-text">{{ "%.2f"|format(summary.revenue) }} BDT</h3>
+                <h5 class="card-title">{{ _('Total Revenue (Sales)') }}</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.total_income) }} BDT</h3>
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-3">
-        <div class="card bg-warning text-dark">
-            <div class="card-body">
-                <h5 class="card-title">Total Expenses</h5>
-                <h3 class="card-text">{{ "%.2f"|format(summary.total_expenses) }} BDT</h3>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
+    <div class="col-md-4">
         <div class="card bg-danger text-white">
             <div class="card-body">
-                <h5 class="card-title">Outstanding Dues</h5>
-                <h3 class="card-text">{{ "%.2f"|format(summary.total_dues) }} BDT</h3>
+                <h5 class="card-title">{{ _('Outstanding Dues') }}</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.total_outstanding) }} BDT</h3>
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-lg-3">
-        <div class="card {% if summary.net_profit >= 0 %}bg-primary{% else %}bg-secondary{% endif %} text-white">
+    <div class="col-md-4">
+        {% set profit_class = 'info' if summary.net_profit >= 0 else 'secondary' %}
+        <div class="card bg-{{ profit_class }} text-white">
             <div class="card-body">
-                <h5 class="card-title">Net Profit / Loss</h5>
+                <h5 class="card-title">{{ _('Net Profit / Loss') }}</h5>
                 <h3 class="card-text">{{ "%.2f"|format(summary.net_profit) }} BDT</h3>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row mt-4">
-    <div class="col-md-12">
-        <h4>🔔 Alerts & Reminders</h4>
-        <div class="list-group">
-            {% for alert in alerts %}
-                <div class="list-group-item list-group-item-{{ alert.type }}">
-                    {{ alert.text }}
-                </div>
-            {% endfor %}
+<h5 class="mb-3 mt-4">{{ _('Production') }}</h5>
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card" style="background-color: #ffadad;">
+            <div class="card-body text-dark">
+                <h5 class="card-title">{{ _('Bricks Shaped (Pot)') }}</h5>
+                <h3 class="card-text">{{ summary.prod_shaped }} pcs</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="background-color: #caffbf;">
+            <div class="card-body text-dark">
+                <h5 class="card-title">{{ _('Bricks Loaded (Firing)') }}</h5>
+                <h3 class="card-text">{{ summary.prod_loaded }} pcs</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="background-color: #ffd6a5;">
+            <div class="card-body text-dark">
+                <h5 class="card-title">{{ _('Firing Rounds') }}</h5>
+                <h3 class="card-text">{{ summary.prod_rounds }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h5 class="mb-3 mt-4">{{ _('Costs') }}</h5>
+<div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="card bg-warning text-dark">
+            <div class="card-body">
+                <h5 class="card-title">{{ _('Total Costs') }}</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.total_costs) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card text-white" style="background-color: #fd7e14;"> <div class="card-body">
+                <h5 class="card-title">{{ _('Load / Unload Cost') }}</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.cost_load_unload) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card text-white" style="background-color: #6c757d;"> <div class="card-body">
+                <h5 class="card-title">{{ _('Coal Cost') }}</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.cost_coal) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+     <div class="col-md-6 col-lg-3">
+        <div class="card text-white" style="background-color: #dc3545;"> <div class="card-body">
+                <h5 class="card-title">{{ _('Salaries & Labor') }}</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.cost_salary) }} BDT</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="card text-white" style="background-color: #0dcaf0;"> <div class="card-body">
+                <h5 class="card-title">{{ _('Daily Expenses') }}</h5>
+                <h3 class="card-text">{{ "%.2f"|format(summary.cost_daily) }} BDT</h3>
+            </div>
         </div>
     </div>
 </div>

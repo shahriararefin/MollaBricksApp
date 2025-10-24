@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Bank Accounts') }}{% endblock %}
+{% block header_title %}{{ _('Bank Accounts') }}{% endblock %}
+{% block content %}
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header"><h4>{{ _('Add Bank Account') }}</h4></div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('accounts.add_bank') }}">
+                    <div class="mb-3">
+                        <label for="bank_name" class="form-label">{{ _('Bank Name') }} *</label>
+                        <input type="text" class="form-control" id="bank_name" name="bank_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="account_name" class="form-label">{{ _('Account Name') }} *</label>
+                        <input type="text" class="form-control" id="account_name" name="account_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="account_number" class="form-label">{{ _('Account Number') }}</label>
+                        <input type="text" class="form-control" id="account_number" name="account_number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="branch" class="form-label">{{ _('Branch') }}</label>
+                        <input type="text" class="form-control" id="branch" name="branch">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">{{ _('Add Account') }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header"><h4>{{ _('Account List') }}</h4></div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>{{ _('Bank') }}</th>
+                            <th>{{ _('Account Name') }}</th>
+                            <th>{{ _('Account Number') }}</th>
+                            <th>{{ _('Branch') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in records %}
+                        <tr>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                            <td>{{ row[4] }}</td>
+                        </tr>
+                        {% else %}
+                        <tr><td colspan="4" class="text-center">{{ _('No bank accounts found.') }}</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

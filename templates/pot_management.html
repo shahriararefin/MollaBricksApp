@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Manage Pot') }}{% endblock %}
+{% block header_title %}{{ _('Manage Pot') }}{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h4>{{ _('Add Pot Entry') }}</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('pot.add_entry') }}">
+                    <div class="mb-3">
+                        <label for="date" class="form-label">{{ _('Date') }} *</label>
+                        <input type="date" class="form-control" id="date" name="date" value="{{ today }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pot_name" class="form-label">{{ _('Pot Name/Number') }} *</label>
+                        <input type="text" class="form-control" id="pot_name" name="pot_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mill_number" class="form-label">{{ _('Mill Number') }}</label>
+                        <input type="number" class="form-control" id="mill_number" name="mill_number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity_shaped" class="form-label">{{ _('Quantity Shaped') }}</label>
+                        <input type="number" class="form-control" id="quantity_shaped" name="quantity_shaped" value="0">
+                    </div>
+                    <div class="mb-3">
+                        <label for="status" class="form-label">{{ _('Status') }} *</label>
+                        <select class="form-select" id="status" name="status" required>
+                            <option value="Drying">{{ _('Drying') }}</option>
+                            <option value="Ready for Firing">{{ _('Ready for Firing') }}</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">{{ _('Notes') }}</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">{{ _('Add Entry') }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4>{{ _('Pot Entry History') }}</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>{{ _('Date') }}</th>
+                                <th>{{ _('Pot Name') }}</th>
+                                <th>{{ _('Mill No.') }}</th>
+                                <th>{{ _('Quantity') }}</th>
+                                <th>{{ _('Status') }}</th>
+                                <th>{{ _('Actions') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for entry in entries %}
+                            <tr>
+                                <td>{{ entry[1] }}</td>
+                                <td>{{ entry[2] }}</td>
+                                <td>{{ entry[3] }}</td>
+                                <td>{{ entry[4] }}</td>
+                                <td>
+                                    {% if entry[5] == 'Ready for Firing' %}
+                                        <span class="badge bg-success">{{ _('Ready for Firing') }}</span>
+                                    {% else %}
+                                        <span class="badge bg-info">{{ _(entry[5]) }}</span>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <form action="{{ url_for('pot.delete_entry', entry_id=entry[0]) }}" method="POST" style="display: inline;" onsubmit="return confirm('{{ _('Are you sure?') }}');">
+                                        <button type="submit" class="btn btn-danger btn-sm">{{ _('Delete') }}</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="6" class="text-center">{{ _('No pot entries found.') }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

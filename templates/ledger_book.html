@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}Ledger Book{% endblock %}
+{% block title %}{{ _('Ledger Book') }}{% endblock %}
 
 {% block content %}
 <div class="row g-4">
     
     <div class="col-md-4">
         <form method="POST" action="{{ url_for('ledger.add_entry') }}" class="mb-4 p-3 border rounded-3">
-            <h4>Add Ledger Entry</h4>
+            <h4>{{ _('Add Ledger Entry') }}</h4>
             <div class="mb-3">
-                <label for="date" class="form-label">Date *</label>
+                <label for="date" class="form-label">{{ _('Date') }} *</label>
                 <input type="date" class="form-control" id="date" name="date" value="{{ now.strftime('%Y-%m-%d') }}" required>
             </div>
             <div class="mb-3">
-                <label for="party_name" class="form-label">Party Name *</label>
+                <label for="party_name" class="form-label">{{ _('Party Name') }} *</label>
                 <input type="text" class="form-control" id="party_name" name="party_name" list="party_list" required>
                 <datalist id="party_list">
                     {% for party in all_parties %}
@@ -22,72 +22,72 @@
                 </datalist>
             </div>
             <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
+                <label for="description" class="form-label">{{ _('Description') }}</label>
                 <input type="text" class="form-control" id="description" name="description">
             </div>
             <div class="mb-3">
-                <label for="credit" class="form-label">Credit (Joma)</label>
-                <input type_="number" step="0.01" class="form-control" id="credit" name="credit" value="0.0">
+                <label for="credit" class="form-label">{{ _('Credit (Joma)') }}</label>
+                <input type="number" step="0.01" class="form-control" id="credit" name="credit" value="0.0">
             </div>
             <div class="mb-3">
-                <label for="debit" class="form-label">Debit (Khoroch)</label>
+                <label for="debit" class="form-label">{{ _('Debit (Khoroch)') }}</label>
                 <input type="number" step="0.01" class="form-control" id="debit" name="debit" value="0.0">
             </div>
-            <button type="submit" class="btn btn-primary">Add Entry</button>
+            <button type="submit" class="btn btn-primary">{{ _('Add Entry') }}</button>
         </form>
 
         <div class="p-3 border rounded-3">
-            <h4>Ledger Summary</h4>
-            <h5 class="text-success">Total Credit (in period): {{ "%.2f"|format(total_credit) }} BDT</h5>
-            <h5 class="text-danger">Total Debit (in period): {{ "%.2f"|format(total_debit) }} BDT</h5>
+            <h4>{{ _('Ledger Summary') }}</h4>
+            <h5 class="text-success">{{ _('Total Credit (in period)') }}: {{ "%.2f"|format(total_credit) }} BDT</h5>
+            <h5 class="text-danger">{{ _('Total Debit (in period)') }}: {{ "%.2f"|format(total_debit) }} BDT</h5>
             <hr>
             <h4 class="{% if balance >= 0 %}text-success{% else %}text-danger{% endif %}">
-                Closing Balance: {{ "%.2f"|format(balance) }} BDT
+                {{ _('Closing Balance') }}: {{ "%.2f"|format(balance) }} BDT
             </h4>
         </div>
     </div>
 
     <div class="col-md-8">
-        <h4>Transaction History</h4>
+        <h4>{{ _('Transaction History') }}</h4>
         
         <form method="GET" action="{{ url_for('ledger.ledger_book') }}" class="row g-3 mb-3 p-3 border rounded-3" id="filter-form">
             <div class="col-md-4">
-                <label for="party_name_filter" class="form-label">Party</label>
+                <label for="party_name_filter" class="form-label">{{ _('Party') }}</label>
                 <select class="form-select" id="party_name_filter" name="party_name">
-                    <option value="">-- All Parties --</option>
+                    <option value="">-- {{ _('All Parties') }} --</option>
                     {% for party in all_parties %}
                         <option value="{{ party }}" {% if party == selected_party %}selected{% endif %}>{{ party }}</option>
                     {% endfor %}
                 </select>
             </div>
             <div class="col-md-3">
-                <label for="start_date" class="form-label">From</label>
+                <label for="start_date" class="form-label">{{ _('From') }}</label>
                 <input type="date" class="form-control" id="start_date" name="start_date" value="{{ start_date }}">
             </div>
             <div class="col-md-3">
-                <label for="end_date" class="form-label">To</label>
+                <label for="end_date" class="form-label">{{ _('To') }}</label>
                 <input type="date" class="form-control" id="end_date" name="end_date" value="{{ end_date }}">
             </div>
             <div class="col-md-2 d-flex align-items-end">
-                <button type="submit" class="btn btn-primary w-100">Filter</button>
+                <button type="submit" class="btn btn-primary w-100">{{ _('Filter') }}</button>
             </div>
         </form>
 
         <div class="mb-3">
-            <button id="print-statement-btn" class="btn btn-info">🖨️ Print Statement</button>
-            <a href="{{ url_for('ledger.export_csv') }}" class="btn btn-secondary">📄 Export All to CSV</a>
+            <button id="print-statement-btn" class="btn btn-info">🖨️ {{ _('Print Statement') }}</button>
+            <a href="{{ url_for('ledger.export_csv') }}" class="btn btn-secondary">📄 {{ _('Export All to CSV') }}</a>
         </div>
 
         <div class="table-responsive">
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Date</th>
-                        <th>Party</th>
-                        <th>Description</th>
-                        <th>Credit</th>
-                        <th>Debit</th>
+                        <th>{{ _('ID') }}</th>
+                        <th>{{ _('Date') }}</th>
+                        <th>{{ _('Party') }}</th>
+                        <th>{{ _('Description') }}</th>
+                        <th>{{ _('Credit') }}</th>
+                        <th>{{ _('Debit') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -102,7 +102,7 @@
                     </tr>
                     {% else %}
                     <tr>
-                        <td colspan="6" class="text-center">No transactions found for this period.</td>
+                        <td colspan="6" class="text-center">{{ _('No transactions found for this period.') }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -115,20 +115,14 @@
 {% block scripts %}
 <script>
     document.getElementById('print-statement-btn').addEventListener('click', function() {
-        // Get current values from the filter form
         let party = document.getElementById('party_name_filter').value;
         let start = document.getElementById('start_date').value;
         let end = document.getElementById('end_date').value;
-
         if (!party) {
-            alert('Please select a party to generate a statement.');
+            alert('{{ _('Please select a party to generate a statement.') }}');
             return;
         }
-        
-        // Build the URL with query parameters
         let url = `{{ url_for('ledger.print_statement') }}?party_name=${encodeURIComponent(party)}&start_date=${start}&end_date=${end}`;
-        
-        // Open the URL in a new tab to trigger the download
         window.open(url, '_blank');
     });
 </script>

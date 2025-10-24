@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Financial year end') }}{% endblock %}
+{% block header_title %}{{ _('Financial year end') }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ _('Financial year end') }}</h5>
+        </div>
+    <div class="card-body">
+        
+        <form method="GET" action="{{ url_for('fiscal_year.financial_year_end') }}" class="row g-3 mb-3">
+            <div class="col-md-6">
+                <label for="fiscal_year_id" class="form-label">{{ _('Fiscal year') }} *</label>
+                <select class="form-select" id="fiscal_year_id" name="fiscal_year_id" required>
+                    <option value="">{{ _('Please select') }}</option>
+                    {% for fy in fiscal_years %}
+                        <option value="{{ fy[0] }}" {% if fy[0] == selected_fiscal_year_id %}selected{% endif %}>
+                            {{ fy[1] }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">{{ _('Filter') }}</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ _('No.') }}</th>
+                        <th>{{ _('Fiscal year') }}</th>
+                        <th>{{ _('Customer left') }}</th>
+                        <th>{{ _('Cash in hand') }}</th>
+                        <th>{{ _('Cash in the bank') }}</th>
+                        <th>{{ _('Cash in mobile bank') }}</th>
+                        <th>{{ _('Supplier payable') }}</th>
+                        <th>{{ _('Cost') }}</th>
+                        <th>{{ _('Owner provided') }}</th>
+                        <th>{{ _('Owner accepted') }}</th>
+                        <th>{{ _('Status') }}</th>
+                        <th>{{ _('Action') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if record %}
+                    <tr>
+                        <td>1</td>
+                        <td>{{ record[1] }}</td> <td>{{ "%.2f"|format(record[3]) }}</td> <td>{{ "%.2f"|format(record[4]) }}</td> <td>{{ "%.2f"|format(record[5]) }}</td> <td>{{ "%.2f"|format(record[6]) }}</td> <td>{{ "%.2f"|format(record[7]) }}</td> <td>{{ "%.2f"|format(record[8]) }}</td> <td>{{ "%.2f"|format(record[9]) }}</td> <td>{{ "%.2f"|format(record[10]) }}</td> <td>
+                            {% if record[2] == 'Active' %}
+                                <span class="badge bg-success">{{ _('Active') }}</span>
+                            {% else %}
+                                <span class="badge bg-danger">{{ _('Inactive') }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">{{ _('Edit') }}</button>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="12" class="text-center">{{ _('No Data Found') }}</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

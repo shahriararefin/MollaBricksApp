@@ -1,0 +1,100 @@
+/* molla_bricks/web/static/css/style.css */
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    /* Use Bootstrap's dark background variable */
+    background-color: var(--bs-dark);
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+.sidebar-header a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar .nav-link {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+}
+.sidebar .menu-heading {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #888;
+    text-transform: uppercase;
+    padding: 1rem 1rem 0.5rem;
+    letter-spacing: 0.05em;
+}
+.sidebar .nav-link .submenu-toggle::after {
+    content: ' \25BC'; /* Down arrow */
+    float: right;
+    font-size: 0.7rem;
+    transition: transform 0.2s;
+}
+.sidebar .nav-link[aria-expanded="true"] .submenu-toggle::after {
+    transform: rotate(-180deg); /* Flip arrow up */
+}
+.sidebar .nav-second-level {
+    padding-left: 1.5rem;
+    display: none; /* Hidden by default */
+}
+.sidebar .nav-second-level.show {
+    display: block; /* Show when 'show' class is added */
+}
+.sidebar .nav-second-level .nav-link {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    color: #adb5bd;
+}
+.sidebar .nav-second-level .nav-link:hover,
+.sidebar .nav-second-level .nav-link.active {
+    color: #fff;
+    background-color: transparent;
+    border-left: 2px solid var(--bs-primary);
+}
+
+
+/* --- Main Content Area --- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--bs-body-bg);
+}
+
+/* --- Top Header Bar --- */
+.header {
+    flex-shrink: 0;
+    background-color: var(--bs-body-color);
+    color: var(--bs-body-bg);
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Page Content (Scrollable) --- */
+.page-content {
+    flex-grow: 1;
+    overflow-y: auto; /* This makes the content area scrollable */
+    padding: 1.5rem;
+}

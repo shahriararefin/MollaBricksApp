@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Load Unload Management') }}{% endblock %}
+{% block header_title %}{{ _('Load - Unload') }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ _('Load unloading management') }}</h5>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addModal">
+            {{ _('Add new') }}
+        </button>
+    </div>
+    <div class="card-body">
+        
+        <form method="GET" action="{{ url_for('load_unload.management') }}" class="row g-3 mb-3">
+            <div class="col-md-4">
+                <label for="chamber" class="form-label">{{ _('Chamber') }}</label>
+                <input type="text" class="form-control" id="chamber" name="chamber" value="{{ chamber_filter }}">
+            </div>
+            <div class="col-md-4">
+                <label for="category" class="form-label">{{ _('Category') }}</label>
+                <select class="form-select" id="category" name="category">
+                    <option value="">{{ _('Please select') }}</option>
+                    <option value="Load" {% if category_filter == 'Load' %}selected{% endif %}>{{ _('Load') }}</option>
+                    <option value="Unload" {% if category_filter == 'Unload' %}selected{% endif %}>{{ _('Unload') }}</option>
+                </select>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">{{ _('Filter') }}</button>
+                 <a href="{{ url_for('load_unload.management') }}" class="btn btn-secondary ms-2">{{ _('Clear') }}</a>
+            </div>
+        </form>
+        
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ _('No.') }}</th>
+                        <th>{{ _('Fiscal year') }}</th>
+                        <th>{{ _('Date') }}</th>
+                        <th>{{ _('Chamber') }}</th>
+                        <th>{{ _('Quantity') }}</th>
+                        <th>{{ _('Total') }}</th>
+                        <th>{{ _('Category') }}</th>
+                        <th>{{ _('Status') }}</th>
+                        <th>{{ _('Action') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in entries %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ entry[3] }}</td> <td>{{ entry[1] }}</td> <td>{{ entry[4] }}</td> <td>{{ entry[5] }}</td> <td>{{ "%.2f"|format(entry[7]) }}</td> <td>
+                            {% if entry[2] == 'Load' %}
+                                <span class="badge bg-danger">{{ _('Load') }}</span>
+                            {% else %}
+                                <span class="badge bg-success">{{ _('Unload') }}</span>
+                            {% endif %}
+                        </td>
+                        <td><span class="badge bg-success">{{ _('Active') }}</span></td>
+                        <td>
+                            <form action="{{ url_for('load_unload.delete_entry', entry_id=entry[0]) }}" method="POST" style="display: inline;" onsubmit="return confirm('{{ _('Are you sure?') }}');">
+                                <button type="submit" class="btn btn-danger btn-sm">{{ _('Delete') }}</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="9" class="text-center">{{ _('No Data Found') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ _('Add new load - unload') }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST" action="{{ url_for('load_unload.add_entry') }}">
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="date" class="form-label">{{ _('Date') }} *</label>
+                <input type="date" class="form-control" id="date" name="date" value="{{ today }}" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="fiscal_year" class="form-label">{{ _('Fiscal year') }} *</label>
+                <select class="form-select" id="fiscal_year" name="fiscal_year" required>
+                    <option value="">-- {{ _('Please select') }} --</option>
+                    {% for fy in fiscal_years %}
+                    <option value="{{ fy }}">{{ fy }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="category" class="form-label">{{ _('Category') }} *</label>
+                <select class="form-select" id="category" name="category" required>
+                    <option value="">-- {{ _('Please select') }} --</option>
+                    <option value="Load">{{ _('Load') }}</option>
+                    <option value="Unload">{{ _('Unload') }}</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="contractor_name" class="form-label">{{ _('Contractor') }} *</label>
+                <select class="form-select" id="contractor_name" name="contractor_name" required>
+                    <option value="">-- {{ _('Select Contractor') }} --</option>
+                    {% for c in contractors %}
+                    <option value="{{ c }}">{{ c }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="brick_type" class="form-label">{{ _('Chamber') }}</label>
+                <input type="text" class="form-control" id="brick_type" name="brick_type">
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="quantity" class="form-label">{{ _('Quantity') }} *</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" required>
+                </div>
+                <div class="col-6">
+                    <label for="total" class="form-label">{{ _('Total') }} *</label>
+                    <input type="number" step="0.01" class="form-control" id="total" name="total" required>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button>
+          <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -875,3 +875,1912 @@ sqlite3.OperationalError: cannot commit - no transaction is active
 2025-10-24 15:26:41,303 - INFO - Successfully connected to database at data/app_data.db
 2025-10-24 15:26:41,599 - WARNING -  * Debugger is active!
 2025-10-24 15:26:41,601 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:26:52,845 - INFO - 127.0.0.1 - - [24/Oct/2025 15:26:52] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:26:58,380 - INFO - 127.0.0.1 - - [24/Oct/2025 15:26:58] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-09-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 15:27:11,847 - INFO - 127.0.0.1 - - [24/Oct/2025 15:27:11] "GET /ledger/?party_name=Abdur+Rouf&start_date=2024-07-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 15:27:14,135 - INFO - 127.0.0.1 - - [24/Oct/2025 15:27:14] "GET /ledger/print_statement?party_name=Abdur%20Rouf&start_date=2024-07-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 15:27:17,132 - INFO - 127.0.0.1 - - [24/Oct/2025 15:27:17] "GET /ledger/print_statement?party_name=Abdur%20Rouf&start_date=2024-07-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 15:32:31,469 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:32:31,723 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 15:32:31,723 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 15:32:31,724 - INFO -  * Restarting with stat
+2025-10-24 15:32:32,019 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:32:32,260 - WARNING -  * Debugger is active!
+2025-10-24 15:32:32,263 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:32:36,313 - INFO - 127.0.0.1 - - [24/Oct/2025 15:32:36] "GET / HTTP/1.1" 200 -
+2025-10-24 15:32:37,563 - INFO - 127.0.0.1 - - [24/Oct/2025 15:32:37] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:32:39,443 - INFO - 127.0.0.1 - - [24/Oct/2025 15:32:39] "GET / HTTP/1.1" 200 -
+2025-10-24 15:32:40,310 - INFO - 127.0.0.1 - - [24/Oct/2025 15:32:40] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 15:33:24,299 - INFO - 127.0.0.1 - - [24/Oct/2025 15:33:24] "GET / HTTP/1.1" 200 -
+2025-10-24 15:36:55,945 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 15:36:55,994 - INFO -  * Restarting with stat
+2025-10-24 15:36:56,282 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:36:56,534 - WARNING -  * Debugger is active!
+2025-10-24 15:36:56,537 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:37:08,782 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\customers.py', reloading
+2025-10-24 15:37:08,851 - INFO -  * Restarting with stat
+2025-10-24 15:37:09,126 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:37:09,372 - WARNING -  * Debugger is active!
+2025-10-24 15:37:09,374 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:37:19,577 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\sales.py', reloading
+2025-10-24 15:37:19,622 - INFO -  * Restarting with stat
+2025-10-24 15:37:19,898 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:37:20,128 - WARNING -  * Debugger is active!
+2025-10-24 15:37:20,131 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:37:30,332 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dues.py', reloading
+2025-10-24 15:37:30,380 - INFO -  * Restarting with stat
+2025-10-24 15:37:30,655 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:37:30,894 - WARNING -  * Debugger is active!
+2025-10-24 15:37:30,897 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:37:39,078 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\ledger.py', reloading
+2025-10-24 15:37:39,125 - INFO -  * Restarting with stat
+2025-10-24 15:37:39,406 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:37:39,633 - WARNING -  * Debugger is active!
+2025-10-24 15:37:39,636 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:37:50,846 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\salary.py', reloading
+2025-10-24 15:37:50,890 - INFO -  * Restarting with stat
+2025-10-24 15:37:51,161 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:37:51,422 - WARNING -  * Debugger is active!
+2025-10-24 15:37:51,424 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:38:00,611 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\expenses.py', reloading
+2025-10-24 15:38:00,652 - INFO -  * Restarting with stat
+2025-10-24 15:38:00,929 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:38:01,179 - WARNING -  * Debugger is active!
+2025-10-24 15:38:01,181 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:38:09,353 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\insights.py', reloading
+2025-10-24 15:38:09,398 - INFO -  * Restarting with stat
+2025-10-24 15:38:09,685 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:38:09,928 - WARNING -  * Debugger is active!
+2025-10-24 15:38:09,931 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:38:16,067 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\api.py', reloading
+2025-10-24 15:38:16,112 - INFO -  * Restarting with stat
+2025-10-24 15:38:16,393 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:38:16,624 - WARNING -  * Debugger is active!
+2025-10-24 15:38:16,626 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:38:27,892 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-10-24 15:38:27,912 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:27] "GET /auth/login?next=/ HTTP/1.1" 200 -
+2025-10-24 15:38:36,790 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:36] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-24 15:38:36,821 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:36] "GET / HTTP/1.1" 200 -
+2025-10-24 15:38:42,754 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:42] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:38:43,760 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:43] "GET / HTTP/1.1" 200 -
+2025-10-24 15:38:45,282 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:45] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:38:46,272 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:46] "GET / HTTP/1.1" 200 -
+2025-10-24 15:38:48,135 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:48] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:38:49,156 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:49] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:38:50,045 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:50] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 15:38:51,837 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:51] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:38:54,100 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:54] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:38:59,106 - INFO - 127.0.0.1 - - [24/Oct/2025 15:38:59] "GET /dues/?customer_id=38 HTTP/1.1" 200 -
+2025-10-24 15:39:03,357 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:03] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:39:05,152 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:05] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 15:39:09,203 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:09] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 15:39:11,650 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:11] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 15:39:40,312 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:40] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-10-24 15:39:40,316 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:40] "GET /auth/login HTTP/1.1" 200 -
+2025-10-24 15:39:45,070 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:45] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-24 15:39:45,076 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:45] "GET / HTTP/1.1" 200 -
+2025-10-24 15:39:48,342 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:48] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-10-24 15:39:48,346 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:48] "GET /auth/login HTTP/1.1" 200 -
+2025-10-24 15:39:49,670 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:49] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-24 15:39:49,675 - INFO - 127.0.0.1 - - [24/Oct/2025 15:39:49] "GET / HTTP/1.1" 200 -
+2025-10-24 15:41:00,853 - INFO - 127.0.0.1 - - [24/Oct/2025 15:41:00] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:41:02,690 - INFO - 127.0.0.1 - - [24/Oct/2025 15:41:02] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:41:13,053 - INFO - 127.0.0.1 - - [24/Oct/2025 15:41:13] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 15:41:18,519 - INFO - 127.0.0.1 - - [24/Oct/2025 15:41:18] "GET /salary/pay/staff/6 HTTP/1.1" 200 -
+2025-10-24 15:41:20,281 - INFO - 127.0.0.1 - - [24/Oct/2025 15:41:20] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 15:41:25,742 - INFO - 127.0.0.1 - - [24/Oct/2025 15:41:25] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:42:08,499 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dues.py', reloading
+2025-10-24 15:42:08,549 - INFO -  * Restarting with stat
+2025-10-24 15:42:08,831 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:42:09,103 - WARNING -  * Debugger is active!
+2025-10-24 15:42:09,105 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:42:28,214 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:28] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 15:42:29,461 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:29] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:42:32,226 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:32] "[32mGET /dues/print_report HTTP/1.1[0m" 302 -
+2025-10-24 15:42:32,236 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:32] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:42:37,493 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:37] "GET /dues/?customer_id=38 HTTP/1.1" 200 -
+2025-10-24 15:42:39,769 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:39] "[32mGET /dues/print_report?customer_id=38 HTTP/1.1[0m" 302 -
+2025-10-24 15:42:39,778 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:39] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:42:57,477 - INFO - 127.0.0.1 - - [24/Oct/2025 15:42:57] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:43:00,760 - INFO - 127.0.0.1 - - [24/Oct/2025 15:43:00] "GET /dues/?customer_id=38 HTTP/1.1" 200 -
+2025-10-24 15:43:02,250 - INFO - 127.0.0.1 - - [24/Oct/2025 15:43:02] "[32mGET /dues/print_report?customer_id=38 HTTP/1.1[0m" 302 -
+2025-10-24 15:43:02,259 - INFO - 127.0.0.1 - - [24/Oct/2025 15:43:02] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:44:25,436 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 15:44:25,488 - INFO -  * Restarting with stat
+2025-10-24 15:44:25,776 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:44:26,017 - WARNING -  * Debugger is active!
+2025-10-24 15:44:26,020 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:44:31,539 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:31] "GET /dues/?customer_id=38 HTTP/1.1" 200 -
+2025-10-24 15:44:32,512 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:32] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:44:32,960 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:32] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:44:33,907 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:33] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:44:36,095 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:36] "[32mGET /dues/print_report HTTP/1.1[0m" 302 -
+2025-10-24 15:44:36,103 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:36] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:44:43,144 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:43] "GET /dues/?customer_id=36 HTTP/1.1" 200 -
+2025-10-24 15:44:44,043 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:44] "[32mGET /dues/print_report?customer_id=36 HTTP/1.1[0m" 302 -
+2025-10-24 15:44:44,053 - INFO - 127.0.0.1 - - [24/Oct/2025 15:44:44] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:46:11,816 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 15:46:11,865 - INFO -  * Restarting with stat
+2025-10-24 15:46:12,158 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:46:12,428 - WARNING -  * Debugger is active!
+2025-10-24 15:46:12,430 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:46:16,730 - INFO - 127.0.0.1 - - [24/Oct/2025 15:46:16] "GET /dues/?customer_id=36 HTTP/1.1" 200 -
+2025-10-24 15:46:19,795 - INFO - 127.0.0.1 - - [24/Oct/2025 15:46:19] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:46:22,662 - INFO - 127.0.0.1 - - [24/Oct/2025 15:46:22] "GET /dues/?customer_id=12 HTTP/1.1" 200 -
+2025-10-24 15:46:23,856 - INFO - 127.0.0.1 - - [24/Oct/2025 15:46:23] "GET /dues/print_report?customer_id=12 HTTP/1.1" 200 -
+2025-10-24 15:46:23,940 - INFO - 127.0.0.1 - - [24/Oct/2025 15:46:23] "GET /dues/print_report?customer_id=12 HTTP/1.1" 200 -
+2025-10-24 15:49:21,709 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 15:49:21,760 - INFO -  * Restarting with stat
+2025-10-24 15:49:22,041 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:49:22,279 - WARNING -  * Debugger is active!
+2025-10-24 15:49:22,282 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:49:22,416 - INFO - 127.0.0.1 - - [24/Oct/2025 15:49:22] "GET /dues/?customer_id=12 HTTP/1.1" 200 -
+2025-10-24 15:49:25,047 - INFO - 127.0.0.1 - - [24/Oct/2025 15:49:25] "GET /dues/?customer_id=50 HTTP/1.1" 200 -
+2025-10-24 15:49:26,066 - INFO - 127.0.0.1 - - [24/Oct/2025 15:49:26] "GET /dues/print_report?customer_id=50 HTTP/1.1" 200 -
+2025-10-24 15:49:26,154 - INFO - 127.0.0.1 - - [24/Oct/2025 15:49:26] "GET /dues/print_report?customer_id=50 HTTP/1.1" 200 -
+2025-10-24 15:53:27,403 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 15:53:27,456 - INFO -  * Restarting with stat
+2025-10-24 15:53:27,729 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:53:27,977 - WARNING -  * Debugger is active!
+2025-10-24 15:53:27,980 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:53:55,454 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 15:53:55,505 - INFO -  * Restarting with stat
+2025-10-24 15:53:55,813 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:53:56,056 - WARNING -  * Debugger is active!
+2025-10-24 15:53:56,059 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:54:09,314 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 15:54:09,357 - INFO -  * Restarting with stat
+2025-10-24 15:54:09,640 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 15:54:09,885 - WARNING -  * Debugger is active!
+2025-10-24 15:54:09,888 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 15:54:16,049 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:16] "GET /dues/?customer_id=50 HTTP/1.1" 200 -
+2025-10-24 15:54:16,832 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:16] "GET /dues/?customer_id=50 HTTP/1.1" 200 -
+2025-10-24 15:54:17,608 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:17] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 15:54:19,217 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:19] "GET /sales/print_chalan/212 HTTP/1.1" 200 -
+2025-10-24 15:54:28,469 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:28] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 15:54:31,719 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:31] "GET /dues/?customer_id=23 HTTP/1.1" 200 -
+2025-10-24 15:54:32,905 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:32] "GET /dues/print_report?customer_id=23 HTTP/1.1" 200 -
+2025-10-24 15:54:32,990 - INFO - 127.0.0.1 - - [24/Oct/2025 15:54:32] "GET /dues/print_report?customer_id=23 HTTP/1.1" 200 -
+2025-10-24 16:02:02,807 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 16:02:02,862 - INFO -  * Restarting with stat
+2025-10-24 16:02:03,196 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:02:03,471 - WARNING -  * Debugger is active!
+2025-10-24 16:02:03,474 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:02:18,758 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 16:02:18,802 - INFO -  * Restarting with stat
+2025-10-24 16:02:19,072 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:02:19,319 - WARNING -  * Debugger is active!
+2025-10-24 16:02:19,322 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:02:25,353 - INFO - 127.0.0.1 - - [24/Oct/2025 16:02:25] "GET /dues/?customer_id=23 HTTP/1.1" 200 -
+2025-10-24 16:02:26,597 - INFO - 127.0.0.1 - - [24/Oct/2025 16:02:26] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:02:27,086 - INFO - 127.0.0.1 - - [24/Oct/2025 16:02:27] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:02:31,076 - INFO - 127.0.0.1 - - [24/Oct/2025 16:02:31] "GET /sales/print_chalan/212 HTTP/1.1" 200 -
+2025-10-24 16:02:39,050 - INFO - 127.0.0.1 - - [24/Oct/2025 16:02:39] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:02:40,663 - INFO - 127.0.0.1 - - [24/Oct/2025 16:02:40] "GET /dues/print_report HTTP/1.1" 200 -
+2025-10-24 16:02:40,773 - INFO - 127.0.0.1 - - [24/Oct/2025 16:02:40] "GET /dues/print_report HTTP/1.1" 200 -
+2025-10-24 16:03:12,038 - INFO - 127.0.0.1 - - [24/Oct/2025 16:03:12] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:03:13,671 - INFO - 127.0.0.1 - - [24/Oct/2025 16:03:13] "GET /sales/print_chalan/212 HTTP/1.1" 200 -
+2025-10-24 16:05:14,377 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 16:05:14,429 - INFO -  * Restarting with stat
+2025-10-24 16:05:14,710 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:05:14,963 - WARNING -  * Debugger is active!
+2025-10-24 16:05:14,966 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:05:27,217 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 16:05:27,270 - INFO -  * Restarting with stat
+2025-10-24 16:05:27,560 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:05:27,796 - WARNING -  * Debugger is active!
+2025-10-24 16:05:27,799 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:05:34,637 - INFO - 127.0.0.1 - - [24/Oct/2025 16:05:34] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:05:35,906 - INFO - 127.0.0.1 - - [24/Oct/2025 16:05:35] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:05:36,286 - INFO - 127.0.0.1 - - [24/Oct/2025 16:05:36] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 16:05:49,260 - INFO - 127.0.0.1 - - [24/Oct/2025 16:05:49] "GET /ledger/?party_name=Akash+Enterprise&start_date=2024-06-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:05:50,558 - INFO - 127.0.0.1 - - [24/Oct/2025 16:05:50] "GET /ledger/print_statement?party_name=Akash%20Enterprise&start_date=2024-06-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:05:50,659 - INFO - 127.0.0.1 - - [24/Oct/2025 16:05:50] "GET /ledger/print_statement?party_name=Akash%20Enterprise&start_date=2024-06-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:07:44,254 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 16:07:44,309 - INFO -  * Restarting with stat
+2025-10-24 16:07:44,595 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:07:44,874 - WARNING -  * Debugger is active!
+2025-10-24 16:07:44,877 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:07:55,107 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 16:07:55,155 - INFO -  * Restarting with stat
+2025-10-24 16:07:55,445 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:07:55,702 - WARNING -  * Debugger is active!
+2025-10-24 16:07:55,704 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:08:00,111 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:00] "GET /ledger/?party_name=Akash+Enterprise&start_date=2024-06-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:08:01,734 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:01] "GET /ledger/print_statement?party_name=Akash%20Enterprise&start_date=2024-06-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:08:08,880 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:08:09,108 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 16:08:09,108 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 16:08:09,109 - INFO -  * Restarting with stat
+2025-10-24 16:08:09,376 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:08:09,606 - WARNING -  * Debugger is active!
+2025-10-24 16:08:09,608 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:08:14,014 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:14] "GET /ledger/?party_name=Akash+Enterprise&start_date=2024-06-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:08:14,629 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:14] "GET / HTTP/1.1" 200 -
+2025-10-24 16:08:16,885 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:16] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:08:19,579 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:19] "GET /dues/?customer_id=38 HTTP/1.1" 200 -
+2025-10-24 16:08:20,323 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:20] "GET /dues/print_report?customer_id=38 HTTP/1.1" 200 -
+2025-10-24 16:08:20,413 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:20] "GET /dues/print_report?customer_id=38 HTTP/1.1" 200 -
+2025-10-24 16:08:30,144 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:30] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:08:31,309 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:31] "GET /sales/print_chalan/212 HTTP/1.1" 200 -
+2025-10-24 16:08:49,029 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:49] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:08:50,553 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:50] "GET /dues/print_report HTTP/1.1" 200 -
+2025-10-24 16:08:57,300 - INFO - 127.0.0.1 - - [24/Oct/2025 16:08:57] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 16:09:00,130 - INFO - 127.0.0.1 - - [24/Oct/2025 16:09:00] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-09-24&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:09:05,764 - INFO - 127.0.0.1 - - [24/Oct/2025 16:09:05] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-09-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:09:09,980 - INFO - 127.0.0.1 - - [24/Oct/2025 16:09:09] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-01-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:09:11,226 - INFO - 127.0.0.1 - - [24/Oct/2025 16:09:11] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-01-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:09:20,530 - INFO - 127.0.0.1 - - [24/Oct/2025 16:09:20] "GET /ledger/?party_name=Abdur+Rouf&start_date=2024-05-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:09:21,417 - INFO - 127.0.0.1 - - [24/Oct/2025 16:09:21] "GET /ledger/print_statement?party_name=Abdur%20Rouf&start_date=2024-05-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:09:21,504 - INFO - 127.0.0.1 - - [24/Oct/2025 16:09:21] "GET /ledger/print_statement?party_name=Abdur%20Rouf&start_date=2024-05-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:10:58,520 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 16:10:58,573 - INFO -  * Restarting with stat
+2025-10-24 16:10:58,859 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:10:59,125 - WARNING -  * Debugger is active!
+2025-10-24 16:10:59,128 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:11:07,311 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 16:11:07,358 - INFO -  * Restarting with stat
+2025-10-24 16:11:07,651 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:11:07,908 - WARNING -  * Debugger is active!
+2025-10-24 16:11:07,911 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:11:12,612 - INFO - 127.0.0.1 - - [24/Oct/2025 16:11:12] "GET /ledger/?party_name=Abdur+Rouf&start_date=2024-05-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:11:13,324 - INFO - 127.0.0.1 - - [24/Oct/2025 16:11:13] "GET /ledger/?party_name=Abdur+Rouf&start_date=2024-05-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:11:14,307 - INFO - 127.0.0.1 - - [24/Oct/2025 16:11:14] "GET /ledger/print_statement?party_name=Abdur%20Rouf&start_date=2024-05-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:11:22,700 - INFO - 127.0.0.1 - - [24/Oct/2025 16:11:22] "GET / HTTP/1.1" 200 -
+2025-10-24 16:17:03,176 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:18:41,847 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:18:44,704 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:20:07,534 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:20:11,122 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:20:17,676 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:21:54,260 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:21:54,486 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 16:21:54,486 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 16:21:54,487 - INFO -  * Restarting with stat
+2025-10-24 16:21:54,795 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:21:55,025 - WARNING -  * Debugger is active!
+2025-10-24 16:21:55,027 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:21:56,777 - INFO - 127.0.0.1 - - [24/Oct/2025 16:21:56] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-01-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:21:58,188 - INFO - 127.0.0.1 - - [24/Oct/2025 16:21:58] "GET /ledger/?party_name=Abdur+Rouf&start_date=2025-01-01&end_date=2025-10-24 HTTP/1.1" 200 -
+2025-10-24 16:21:58,955 - INFO - 127.0.0.1 - - [24/Oct/2025 16:21:58] "GET / HTTP/1.1" 200 -
+2025-10-24 16:21:59,522 - INFO - 127.0.0.1 - - [24/Oct/2025 16:21:59] "GET / HTTP/1.1" 200 -
+2025-10-24 16:22:00,135 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:00] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:22:00,610 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:00] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:22:03,894 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:03] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 16:22:03,910 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:03] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:22:06,541 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:06] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:22:08,611 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:08] "[32mGET /lang/en HTTP/1.1[0m" 302 -
+2025-10-24 16:22:08,625 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:08] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:22:09,529 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:09] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 16:22:11,372 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:11] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 16:22:11,378 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:11] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 16:22:13,107 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:13] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 16:22:14,167 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:14] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 16:22:14,941 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:14] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 16:22:15,404 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:15] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:22:18,649 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:18] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 16:22:18,656 - INFO - 127.0.0.1 - - [24/Oct/2025 16:22:18] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:25:39,559 - INFO -  * Detected change in 'D:\\MollaBricksApp\\main.py', reloading
+2025-10-24 16:25:39,606 - INFO -  * Restarting with stat
+2025-10-24 16:25:39,956 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:25:40,187 - WARNING -  * Debugger is active!
+2025-10-24 16:25:40,189 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:26:06,684 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\ui\\views\\nagad_khata\\nagad_khata_tab.py', reloading
+2025-10-24 16:26:06,729 - INFO -  * Restarting with stat
+2025-10-24 16:26:07,064 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:26:07,311 - WARNING -  * Debugger is active!
+2025-10-24 16:26:07,313 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:26:12,969 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:12] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:26:13,860 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:13] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:26:14,535 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:14] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:26:15,251 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:15] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:26:16,566 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:16] "[32mGET /lang/en HTTP/1.1[0m" 302 -
+2025-10-24 16:26:16,573 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:16] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:26:18,175 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:18] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:26:19,493 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:19] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 16:26:20,209 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:20] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 16:26:21,617 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:21] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 16:26:21,623 - INFO - 127.0.0.1 - - [24/Oct/2025 16:26:21] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 16:27:30,864 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\ui\\views\\nagad_khata\\nagad_khata_tab.py', reloading
+2025-10-24 16:27:30,921 - INFO -  * Restarting with stat
+2025-10-24 16:27:31,359 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:27:31,633 - WARNING -  * Debugger is active!
+2025-10-24 16:27:31,636 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:27:33,712 - INFO -  * Detected change in 'D:\\MollaBricksApp\\main.py', reloading
+2025-10-24 16:27:33,776 - INFO -  * Restarting with stat
+2025-10-24 16:27:34,116 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:27:34,362 - WARNING -  * Debugger is active!
+2025-10-24 16:27:34,364 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:30:59,539 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:30:59,775 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 16:30:59,775 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 16:30:59,777 - INFO -  * Restarting with stat
+2025-10-24 16:31:00,088 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:31:00,318 - WARNING -  * Debugger is active!
+2025-10-24 16:31:00,321 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:31:01,700 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:01] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 16:31:04,797 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:04] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:31:05,843 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:05] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:31:07,336 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:07] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:31:10,107 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:10] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 16:31:10,116 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:10] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:31:12,482 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:12] "GET /customers/add HTTP/1.1" 200 -
+2025-10-24 16:31:14,702 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:14] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:31:15,917 - INFO - 127.0.0.1 - - [24/Oct/2025 16:31:15] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:34:53,840 - INFO - 127.0.0.1 - - [24/Oct/2025 16:34:53] "GET / HTTP/1.1" 200 -
+2025-10-24 16:34:55,487 - INFO - 127.0.0.1 - - [24/Oct/2025 16:34:55] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:34:56,203 - INFO - 127.0.0.1 - - [24/Oct/2025 16:34:56] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 16:34:58,004 - INFO - 127.0.0.1 - - [24/Oct/2025 16:34:58] "[32mGET /lang/en HTTP/1.1[0m" 302 -
+2025-10-24 16:34:58,011 - INFO - 127.0.0.1 - - [24/Oct/2025 16:34:58] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 16:34:59,506 - INFO - 127.0.0.1 - - [24/Oct/2025 16:34:59] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:35:01,041 - INFO - 127.0.0.1 - - [24/Oct/2025 16:35:01] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:35:02,550 - INFO - 127.0.0.1 - - [24/Oct/2025 16:35:02] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 16:35:02,561 - INFO - 127.0.0.1 - - [24/Oct/2025 16:35:02] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:35:04,282 - INFO - 127.0.0.1 - - [24/Oct/2025 16:35:04] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:38:51,487 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:38:51,747 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 16:38:51,747 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 16:38:51,749 - INFO -  * Restarting with stat
+2025-10-24 16:38:52,105 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 16:38:52,336 - WARNING -  * Debugger is active!
+2025-10-24 16:38:52,338 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 16:38:54,063 - INFO - 127.0.0.1 - - [24/Oct/2025 16:38:54] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:38:54,863 - INFO - 127.0.0.1 - - [24/Oct/2025 16:38:54] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:38:55,251 - INFO - 127.0.0.1 - - [24/Oct/2025 16:38:55] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:38:56,778 - INFO - 127.0.0.1 - - [24/Oct/2025 16:38:56] "GET / HTTP/1.1" 200 -
+2025-10-24 16:38:58,417 - INFO - 127.0.0.1 - - [24/Oct/2025 16:38:58] "GET / HTTP/1.1" 200 -
+2025-10-24 16:39:01,028 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:01] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 16:39:01,033 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:01] "GET / HTTP/1.1" 200 -
+2025-10-24 16:39:01,885 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:01] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 16:39:03,334 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:03] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 16:39:04,464 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:04] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 16:39:05,501 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:05] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 16:39:06,926 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:06] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 16:39:07,553 - INFO - 127.0.0.1 - - [24/Oct/2025 16:39:07] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 17:03:09,665 - INFO - 127.0.0.1 - - [24/Oct/2025 17:03:09] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 17:03:33,106 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 17:03:33,159 - INFO -  * Restarting with stat
+2025-10-24 17:03:33,544 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:03:33,771 - WARNING -  * Debugger is active!
+2025-10-24 17:03:33,773 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:03:57,407 - INFO - 127.0.0.1 - - [24/Oct/2025 17:03:57] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 17:03:57,465 - INFO - 127.0.0.1 - - [24/Oct/2025 17:03:57] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-24 17:04:05,309 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:05] "[32mGET /lang/en HTTP/1.1[0m" 302 -
+2025-10-24 17:04:05,314 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:05] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 17:04:05,328 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:08,079 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:08] "GET / HTTP/1.1" 200 -
+2025-10-24 17:04:08,092 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:09,533 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:09] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 17:04:09,547 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:10,038 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:10] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:04:10,053 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:11,383 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:11] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:04:11,397 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:12,788 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:12] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:04:12,803 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:13,228 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:13] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 17:04:13,266 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:15,447 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:15] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:04:15,463 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:16,231 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:16] "GET / HTTP/1.1" 200 -
+2025-10-24 17:04:16,251 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:23,956 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:23] "GET / HTTP/1.1" 200 -
+2025-10-24 17:04:23,967 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:24,702 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:24] "GET / HTTP/1.1" 200 -
+2025-10-24 17:04:24,715 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:54,649 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:54] "GET / HTTP/1.1" 200 -
+2025-10-24 17:04:54,660 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:57,247 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:57] "GET / HTTP/1.1" 200 -
+2025-10-24 17:04:57,260 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:57,667 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:57] "GET / HTTP/1.1" 200 -
+2025-10-24 17:04:57,679 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:58,051 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:58] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 17:04:58,066 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:04:58,707 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:58] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:04:58,722 - INFO - 127.0.0.1 - - [24/Oct/2025 17:04:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:05:00,275 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:00] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:05:00,290 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:05:01,768 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:01] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 17:05:01,782 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:05:02,849 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:02] "GET / HTTP/1.1" 200 -
+2025-10-24 17:05:02,864 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:05:54,731 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:54] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:05:54,750 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:05:57,916 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:57] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 17:05:57,933 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:05:59,680 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:59] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 17:05:59,686 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:59] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 17:05:59,700 - INFO - 127.0.0.1 - - [24/Oct/2025 17:05:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:06:03,332 - INFO - 127.0.0.1 - - [24/Oct/2025 17:06:03] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 17:06:03,345 - INFO - 127.0.0.1 - - [24/Oct/2025 17:06:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:06:06,633 - INFO - 127.0.0.1 - - [24/Oct/2025 17:06:06] "GET / HTTP/1.1" 200 -
+2025-10-24 17:06:06,648 - INFO - 127.0.0.1 - - [24/Oct/2025 17:06:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:06:59,635 - INFO - 127.0.0.1 - - [24/Oct/2025 17:06:59] "GET / HTTP/1.1" 200 -
+2025-10-24 17:06:59,648 - INFO - 127.0.0.1 - - [24/Oct/2025 17:06:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:07:00,564 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:00] "GET / HTTP/1.1" 200 -
+2025-10-24 17:07:00,577 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:07:08,864 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:08] "GET / HTTP/1.1" 200 -
+2025-10-24 17:07:08,875 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:07:09,472 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:09] "GET / HTTP/1.1" 200 -
+2025-10-24 17:07:09,482 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:07:11,429 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:11] "GET /?period=All+Time HTTP/1.1" 200 -
+2025-10-24 17:07:11,445 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:07:53,249 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:53] "GET /?period=All+Time HTTP/1.1" 200 -
+2025-10-24 17:07:53,262 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:07:59,329 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:59] "GET /?period=All+Time HTTP/1.1" 200 -
+2025-10-24 17:07:59,339 - INFO - 127.0.0.1 - - [24/Oct/2025 17:07:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:11,592 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 17:13:11,654 - INFO -  * Restarting with stat
+2025-10-24 17:13:12,002 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:13:12,255 - WARNING -  * Debugger is active!
+2025-10-24 17:13:12,258 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:13:32,716 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\nagad_service.py', reloading
+2025-10-24 17:13:32,770 - INFO -  * Restarting with stat
+2025-10-24 17:13:33,119 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:13:33,454 - WARNING -  * Debugger is active!
+2025-10-24 17:13:33,457 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:13:40,311 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:40] "GET /?period=All+Time HTTP/1.1" 200 -
+2025-10-24 17:13:40,373 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:41,210 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:41] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 17:13:41,225 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:42,717 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:42] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:13:42,731 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:46,826 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:46] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:13:46,839 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:48,242 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:48] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 17:13:48,257 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:49,900 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:49] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 17:13:49,913 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:51,553 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:51] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 17:13:51,567 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:52,532 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:52] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:13:52,546 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:13:53,837 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:53] "GET / HTTP/1.1" 200 -
+2025-10-24 17:13:53,851 - INFO - 127.0.0.1 - - [24/Oct/2025 17:13:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:01,862 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:01] "GET / HTTP/1.1" 200 -
+2025-10-24 17:16:01,876 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:09,331 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:09] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 17:16:09,345 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:13,006 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:13] "GET / HTTP/1.1" 200 -
+2025-10-24 17:16:13,022 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:14,184 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:14] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 17:16:14,199 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:15,277 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:15] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:16:15,291 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:16,528 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:16] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:16:16,542 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:18,952 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:18] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 17:16:18,968 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:23,951 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:23] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 17:16:23,966 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:26,322 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:26] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:16:26,336 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:33,698 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:33] "[32mGET /lang/en HTTP/1.1[0m" 302 -
+2025-10-24 17:16:33,704 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:33] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:16:33,721 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:16:34,827 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:34] "[32mGET /lang/bn HTTP/1.1[0m" 302 -
+2025-10-24 17:16:34,832 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:34] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:16:34,846 - INFO - 127.0.0.1 - - [24/Oct/2025 17:16:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:26:13,863 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:13] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:26:13,876 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:26:16,653 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:16] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 17:26:16,674 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:26:18,291 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:18] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:26:18,312 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:26:19,287 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:19] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 17:26:19,302 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:26:21,615 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:21] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 17:26:21,632 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:26:22,374 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:22] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:26:22,390 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:26:27,185 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:27] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:26:27,200 - INFO - 127.0.0.1 - - [24/Oct/2025 17:26:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:28:51,088 - INFO - 127.0.0.1 - - [24/Oct/2025 17:28:51] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:28:51,104 - INFO - 127.0.0.1 - - [24/Oct/2025 17:28:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:29:16,383 - INFO - 127.0.0.1 - - [24/Oct/2025 17:29:16] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 17:29:16,417 - INFO - 127.0.0.1 - - [24/Oct/2025 17:29:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:29:19,822 - INFO - 127.0.0.1 - - [24/Oct/2025 17:29:19] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 17:29:19,838 - INFO - 127.0.0.1 - - [24/Oct/2025 17:29:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:32:26,108 - INFO - 127.0.0.1 - - [24/Oct/2025 17:32:26] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:32:26,122 - INFO - 127.0.0.1 - - [24/Oct/2025 17:32:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:32:37,092 - INFO - 127.0.0.1 - - [24/Oct/2025 17:32:37] "GET / HTTP/1.1" 200 -
+2025-10-24 17:32:37,109 - INFO - 127.0.0.1 - - [24/Oct/2025 17:32:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:35:07,863 - INFO - 127.0.0.1 - - [24/Oct/2025 17:35:07] "GET / HTTP/1.1" 200 -
+2025-10-24 17:35:07,874 - INFO - 127.0.0.1 - - [24/Oct/2025 17:35:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:37:31,065 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\language.py', reloading
+2025-10-24 17:37:31,116 - INFO -  * Restarting with stat
+2025-10-24 17:37:31,539 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:37:31,815 - WARNING -  * Debugger is active!
+2025-10-24 17:37:31,818 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:38:01,219 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:01] "GET / HTTP/1.1" 200 -
+2025-10-24 17:38:01,278 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:01] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-24 17:38:08,780 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:08] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:38:08,796 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:38:14,222 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:14] "[32mGET /theme/litera HTTP/1.1[0m" 302 -
+2025-10-24 17:38:14,250 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:14] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:38:14,274 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:38:26,708 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:26] "[32mGET /lang/en HTTP/1.1[0m" 302 -
+2025-10-24 17:38:26,741 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:26] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:38:26,766 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:38:27,852 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:27] "[32mGET /theme/superhero HTTP/1.1[0m" 302 -
+2025-10-24 17:38:27,882 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:27] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 17:38:27,906 - INFO - 127.0.0.1 - - [24/Oct/2025 17:38:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:40:51,579 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\language.py', reloading
+2025-10-24 17:40:51,626 - INFO -  * Restarting with stat
+2025-10-24 17:40:51,970 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:40:52,230 - WARNING -  * Debugger is active!
+2025-10-24 17:40:52,233 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:43:44,341 - INFO - 127.0.0.1 - - [24/Oct/2025 17:43:44] "GET / HTTP/1.1" 200 -
+2025-10-24 17:43:44,406 - INFO - 127.0.0.1 - - [24/Oct/2025 17:43:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:43:48,213 - INFO - 127.0.0.1 - - [24/Oct/2025 17:43:48] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:43:48,228 - INFO - 127.0.0.1 - - [24/Oct/2025 17:43:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:45:15,949 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 17:45:15,995 - INFO -  * Restarting with stat
+2025-10-24 17:45:16,369 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:45:16,369 - INFO - DB requires migration. Current: 9, Target: 10
+2025-10-24 17:45:16,497 - INFO - Upgraded database to version 10
+2025-10-24 17:45:16,497 - INFO - All migrations applied successfully.
+2025-10-24 17:45:16,743 - WARNING -  * Debugger is active!
+2025-10-24 17:45:16,745 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:45:37,142 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\fiscal_year.py', reloading
+2025-10-24 17:45:37,195 - INFO -  * Restarting with stat
+2025-10-24 17:45:37,535 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:45:37,536 - INFO - Database is up to date.
+2025-10-24 17:45:37,772 - WARNING -  * Debugger is active!
+2025-10-24 17:45:37,775 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:47:59,193 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 17:47:59,262 - INFO -  * Restarting with stat
+2025-10-24 17:47:59,607 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:47:59,608 - INFO - Database is up to date.
+2025-10-24 17:47:59,860 - WARNING -  * Debugger is active!
+2025-10-24 17:47:59,863 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:49:32,684 - INFO - 127.0.0.1 - - [24/Oct/2025 17:49:32] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 17:49:32,745 - INFO - 127.0.0.1 - - [24/Oct/2025 17:49:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:49:34,596 - INFO - 127.0.0.1 - - [24/Oct/2025 17:49:34] "GET /fiscal-year/end HTTP/1.1" 200 -
+2025-10-24 17:49:34,610 - INFO - 127.0.0.1 - - [24/Oct/2025 17:49:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:55:01,589 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 17:55:01,637 - INFO -  * Restarting with stat
+2025-10-24 17:55:01,993 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:55:01,994 - INFO - Database is up to date.
+2025-10-24 17:55:02,256 - WARNING -  * Debugger is active!
+2025-10-24 17:55:02,259 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:55:12,485 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 17:55:12,544 - INFO -  * Restarting with stat
+2025-10-24 17:55:12,887 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:55:12,888 - INFO - Database is up to date.
+2025-10-24 17:55:13,111 - WARNING -  * Debugger is active!
+2025-10-24 17:55:13,113 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 17:56:52,130 - INFO - 127.0.0.1 - - [24/Oct/2025 17:56:52] "[33mGET /fiscal-year/end HTTP/1.1[0m" 404 -
+2025-10-24 17:56:53,163 - INFO - 127.0.0.1 - - [24/Oct/2025 17:56:53] "[33mGET /fiscal-year/end HTTP/1.1[0m" 404 -
+2025-10-24 17:57:22,234 - INFO - 127.0.0.1 - - [24/Oct/2025 17:57:22] "[33mGET /fiscal-year/end HTTP/1.1[0m" 404 -
+2025-10-24 17:57:22,730 - INFO - 127.0.0.1 - - [24/Oct/2025 17:57:22] "[33mGET /fiscal-year/end HTTP/1.1[0m" 404 -
+2025-10-24 17:57:24,828 - INFO - 127.0.0.1 - - [24/Oct/2025 17:57:24] "GET / HTTP/1.1" 200 -
+2025-10-24 17:57:24,890 - INFO - 127.0.0.1 - - [24/Oct/2025 17:57:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:57:26,837 - INFO - 127.0.0.1 - - [24/Oct/2025 17:57:26] "GET / HTTP/1.1" 200 -
+2025-10-24 17:57:26,851 - INFO - 127.0.0.1 - - [24/Oct/2025 17:57:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 17:59:30,713 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\categories.py', reloading
+2025-10-24 17:59:30,769 - INFO -  * Restarting with stat
+2025-10-24 17:59:31,107 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 17:59:31,107 - INFO - Database is up to date.
+2025-10-24 17:59:31,355 - WARNING -  * Debugger is active!
+2025-10-24 17:59:31,357 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:00:11,117 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\brick_types.py', reloading
+2025-10-24 18:00:11,163 - INFO -  * Restarting with stat
+2025-10-24 18:00:11,567 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:00:11,568 - INFO - Database is up to date.
+2025-10-24 18:00:11,855 - WARNING -  * Debugger is active!
+2025-10-24 18:00:11,858 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:00:46,561 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 18:00:46,619 - INFO -  * Restarting with stat
+2025-10-24 18:00:46,962 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:00:46,962 - INFO - Database is up to date.
+2025-10-24 18:00:47,212 - WARNING -  * Debugger is active!
+2025-10-24 18:00:47,215 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:02:39,078 - INFO - 127.0.0.1 - - [24/Oct/2025 18:02:39] "GET / HTTP/1.1" 200 -
+2025-10-24 18:02:39,137 - INFO - 127.0.0.1 - - [24/Oct/2025 18:02:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:02:43,345 - INFO - 127.0.0.1 - - [24/Oct/2025 18:02:43] "GET / HTTP/1.1" 200 -
+2025-10-24 18:02:43,358 - INFO - 127.0.0.1 - - [24/Oct/2025 18:02:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:02:59,891 - INFO - 127.0.0.1 - - [24/Oct/2025 18:02:59] "GET / HTTP/1.1" 200 -
+2025-10-24 18:02:59,903 - INFO - 127.0.0.1 - - [24/Oct/2025 18:02:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:00,841 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:00] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 18:03:00,858 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:26,332 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:26] "[32mPOST /categories/add HTTP/1.1[0m" 302 -
+2025-10-24 18:03:26,337 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:26] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 18:03:26,353 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:29,790 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:29] "[32mPOST /categories/edit HTTP/1.1[0m" 302 -
+2025-10-24 18:03:29,796 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:29] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 18:03:29,810 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:32,590 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:32] "[32mPOST /categories/edit HTTP/1.1[0m" 302 -
+2025-10-24 18:03:32,596 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:32] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 18:03:32,612 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:34,332 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:34] "[32mPOST /categories/edit HTTP/1.1[0m" 302 -
+2025-10-24 18:03:34,337 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:34] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 18:03:34,351 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:37,111 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:37] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 18:03:37,126 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:55,190 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:55] "[32mPOST /brick-types/delete/4 HTTP/1.1[0m" 302 -
+2025-10-24 18:03:55,195 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:55] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 18:03:55,211 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:57,356 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:57] "[32mPOST /brick-types/delete/5 HTTP/1.1[0m" 302 -
+2025-10-24 18:03:57,361 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:57] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 18:03:57,377 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:03:59,989 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:59] "[32mPOST /brick-types/delete/6 HTTP/1.1[0m" 302 -
+2025-10-24 18:03:59,994 - INFO - 127.0.0.1 - - [24/Oct/2025 18:03:59] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 18:04:00,011 - INFO - 127.0.0.1 - - [24/Oct/2025 18:04:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:04:15,639 - INFO - 127.0.0.1 - - [24/Oct/2025 18:04:15] "[32mPOST /brick-types/add HTTP/1.1[0m" 302 -
+2025-10-24 18:04:15,644 - INFO - 127.0.0.1 - - [24/Oct/2025 18:04:15] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 18:04:15,660 - INFO - 127.0.0.1 - - [24/Oct/2025 18:04:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:04:48,189 - INFO - 127.0.0.1 - - [24/Oct/2025 18:04:48] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 18:04:48,207 - INFO - 127.0.0.1 - - [24/Oct/2025 18:04:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:05:27,552 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:27] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 18:05:27,567 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:05:31,355 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:31] "GET /sales/add HTTP/1.1" 200 -
+2025-10-24 18:05:31,369 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:05:49,325 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:49] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 18:05:49,346 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:05:51,917 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:51] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 18:05:51,933 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:05:54,909 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:54] "GET /dues/?customer_id=23 HTTP/1.1" 200 -
+2025-10-24 18:05:54,923 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:05:59,243 - INFO - 127.0.0.1 - - [24/Oct/2025 18:05:59] "GET /dues/print_report?customer_id=23 HTTP/1.1" 200 -
+2025-10-24 18:06:38,622 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 18:06:38,680 - INFO -  * Restarting with stat
+2025-10-24 18:06:39,035 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:06:39,036 - INFO - DB requires migration. Current: 10, Target: 11
+2025-10-24 18:06:39,343 - INFO - Upgraded database to version 11
+2025-10-24 18:06:39,343 - INFO - All migrations applied successfully.
+2025-10-24 18:06:39,597 - WARNING -  * Debugger is active!
+2025-10-24 18:06:39,600 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:08:28,551 - INFO - 127.0.0.1 - - [24/Oct/2025 18:08:28] "GET /dues/?customer_id=23 HTTP/1.1" 200 -
+2025-10-24 18:08:28,609 - INFO - 127.0.0.1 - - [24/Oct/2025 18:08:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:08:29,913 - INFO - 127.0.0.1 - - [24/Oct/2025 18:08:29] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 18:08:29,928 - INFO - 127.0.0.1 - - [24/Oct/2025 18:08:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:12:32,021 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 18:12:32,069 - INFO -  * Restarting with stat
+2025-10-24 18:12:32,432 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:12:32,433 - INFO - Database is up to date.
+2025-10-24 18:12:32,679 - WARNING -  * Debugger is active!
+2025-10-24 18:12:32,681 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:12:56,149 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\pot.py', reloading
+2025-10-24 18:12:56,204 - INFO -  * Restarting with stat
+2025-10-24 18:12:56,559 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:12:56,560 - INFO - Database is up to date.
+2025-10-24 18:12:56,817 - WARNING -  * Debugger is active!
+2025-10-24 18:12:56,821 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:13:32,482 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 18:13:32,550 - INFO -  * Restarting with stat
+2025-10-24 18:13:32,899 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:13:32,900 - INFO - Database is up to date.
+2025-10-24 18:13:33,154 - WARNING -  * Debugger is active!
+2025-10-24 18:13:33,156 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:16:03,053 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:03] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 18:16:03,113 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:04,293 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:04] "GET /expenses/ HTTP/1.1" 200 -
+2025-10-24 18:16:04,307 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:05,997 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:05] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:06,010 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:06,658 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:06] "[32mGET /pot/report HTTP/1.1[0m" 302 -
+2025-10-24 18:16:06,663 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:06] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:06,677 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:15,818 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:15] "[32mGET /pot/report HTTP/1.1[0m" 302 -
+2025-10-24 18:16:15,825 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:15] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:15,840 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:17,168 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:17] "[32mGET /pot/report HTTP/1.1[0m" 302 -
+2025-10-24 18:16:17,174 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:17] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:17,189 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:30,641 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:30] "[32mGET /pot/report HTTP/1.1[0m" 302 -
+2025-10-24 18:16:30,646 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:30] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:30,659 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:31,140 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "[32mGET /pot/report HTTP/1.1[0m" 302 -
+2025-10-24 18:16:31,145 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:31,159 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:31,499 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:31,510 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:31,916 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "[32mGET /pot/report HTTP/1.1[0m" 302 -
+2025-10-24 18:16:31,922 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:31,935 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:16:33,971 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:33] "[32mGET /pot/report HTTP/1.1[0m" 302 -
+2025-10-24 18:16:33,976 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:33] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:16:33,990 - INFO - 127.0.0.1 - - [24/Oct/2025 18:16:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:18:20,256 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\pot.py', reloading
+2025-10-24 18:18:20,306 - INFO -  * Restarting with stat
+2025-10-24 18:18:20,667 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:18:20,667 - INFO - Database is up to date.
+2025-10-24 18:18:20,940 - WARNING -  * Debugger is active!
+2025-10-24 18:18:20,943 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:18:40,951 - INFO - 127.0.0.1 - - [24/Oct/2025 18:18:40] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 18:18:41,010 - INFO - 127.0.0.1 - - [24/Oct/2025 18:18:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:18:41,787 - INFO - 127.0.0.1 - - [24/Oct/2025 18:18:41] "GET /pot/report HTTP/1.1" 200 -
+2025-10-24 18:18:41,803 - INFO - 127.0.0.1 - - [24/Oct/2025 18:18:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:22:11,115 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\round.py', reloading
+2025-10-24 18:22:11,164 - INFO -  * Restarting with stat
+2025-10-24 18:22:11,573 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:22:11,574 - INFO - Database is up to date.
+2025-10-24 18:22:11,877 - WARNING -  * Debugger is active!
+2025-10-24 18:22:11,880 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:22:55,711 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 18:22:55,772 - INFO -  * Restarting with stat
+2025-10-24 18:22:56,176 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:22:56,176 - INFO - Database is up to date.
+2025-10-24 18:22:56,448 - WARNING -  * Debugger is active!
+2025-10-24 18:22:56,451 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:23:08,709 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 18:23:08,767 - INFO -  * Restarting with stat
+2025-10-24 18:23:09,129 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:23:09,130 - INFO - Database is up to date.
+2025-10-24 18:23:09,370 - WARNING -  * Debugger is active!
+2025-10-24 18:23:09,373 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:23:35,451 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:35] "GET /pot/report HTTP/1.1" 200 -
+2025-10-24 18:23:35,512 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:23:37,202 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:23:37,202 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:23:37,202 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:23:37,203 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:23:37,234 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:37] "[35m[1mGET /round/ HTTP/1.1[0m" 500 -
+2025-10-24 18:23:37,248 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:37] "GET /round/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-24 18:23:37,254 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:37] "GET /round/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-24 18:23:37,291 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:37] "GET /round/?__debugger__=yes&cmd=resource&f=console.png&s=BxL8QdGn3tSll2Bq8s95 HTTP/1.1" 200 -
+2025-10-24 18:23:37,320 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:37] "GET /round/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-24 18:23:41,428 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:23:41,429 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:23:41,429 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:23:41,429 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:23:41,440 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:41] "[35m[1mGET /round/ HTTP/1.1[0m" 500 -
+2025-10-24 18:23:41,459 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:41] "[36mGET /round/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:23:41,461 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:41] "[36mGET /round/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 18:23:41,468 - INFO - 127.0.0.1 - - [24/Oct/2025 18:23:41] "[36mGET /round/?__debugger__=yes&cmd=resource&f=console.png&s=BxL8QdGn3tSll2Bq8s95 HTTP/1.1[0m" 304 -
+2025-10-24 18:23:59,301 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 18:23:59,351 - INFO -  * Restarting with stat
+2025-10-24 18:23:59,718 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:23:59,718 - INFO - Database is up to date.
+2025-10-24 18:23:59,986 - WARNING -  * Debugger is active!
+2025-10-24 18:23:59,989 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:24:02,652 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:24:02,653 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:24:02,653 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:24:02,653 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:24:02,699 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:02] "[35m[1mGET /round/ HTTP/1.1[0m" 500 -
+2025-10-24 18:24:02,783 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:02] "[36mGET /round/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:24:02,784 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:02] "[36mGET /round/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 18:24:02,799 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:02] "GET /round/?__debugger__=yes&cmd=resource&f=console.png&s=Hwj2fcVMtFLBTGSvl9Zg HTTP/1.1" 200 -
+2025-10-24 18:24:02,817 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:02] "[36mGET /round/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 18:24:07,178 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:24:07,179 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:24:07,179 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:24:07,179 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:24:07,190 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:07] "[35m[1mGET /round/ HTTP/1.1[0m" 500 -
+2025-10-24 18:24:07,206 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:07] "[36mGET /round/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:24:07,207 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:07] "[36mGET /round/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 18:24:07,232 - INFO - 127.0.0.1 - - [24/Oct/2025 18:24:07] "[36mGET /round/?__debugger__=yes&cmd=resource&f=console.png&s=Hwj2fcVMtFLBTGSvl9Zg HTTP/1.1[0m" 304 -
+2025-10-24 18:26:20,557 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\round.py', reloading
+2025-10-24 18:26:20,616 - INFO -  * Restarting with stat
+2025-10-24 18:26:20,966 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:26:20,966 - INFO - Database is up to date.
+2025-10-24 18:26:21,246 - WARNING -  * Debugger is active!
+2025-10-24 18:26:21,249 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:26:24,062 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:26:24,063 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:26:24,063 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:26:24,063 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:26:24,111 - INFO - 127.0.0.1 - - [24/Oct/2025 18:26:24] "GET /round/ HTTP/1.1" 200 -
+2025-10-24 18:26:24,172 - INFO - 127.0.0.1 - - [24/Oct/2025 18:26:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:26:26,524 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:26:26,524 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:26:26,525 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:26:26,525 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:26:26,527 - INFO - 127.0.0.1 - - [24/Oct/2025 18:26:26] "GET /round/ HTTP/1.1" 200 -
+2025-10-24 18:26:26,539 - INFO - 127.0.0.1 - - [24/Oct/2025 18:26:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:37:38,186 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\fiscal_year.py', reloading
+2025-10-24 18:37:38,239 - INFO -  * Restarting with stat
+2025-10-24 18:37:38,590 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:37:38,591 - INFO - Database is up to date.
+2025-10-24 18:37:38,834 - WARNING -  * Debugger is active!
+2025-10-24 18:37:38,837 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:38:08,455 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 18:38:08,508 - INFO -  * Restarting with stat
+2025-10-24 18:38:09,014 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:38:09,014 - INFO - Database is up to date.
+2025-10-24 18:38:09,296 - WARNING -  * Debugger is active!
+2025-10-24 18:38:09,299 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:38:52,050 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:38:52,051 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:38:52,051 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:38:52,051 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:38:52,101 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:52] "GET /round/ HTTP/1.1" 200 -
+2025-10-24 18:38:52,164 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:38:54,014 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:54] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:38:54,027 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:38:55,028 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:55] "[32mGET /fiscal-year/financial-year-end HTTP/1.1[0m" 302 -
+2025-10-24 18:38:55,034 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:55] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:38:55,047 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:38:55,849 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:55] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:38:55,861 - INFO - 127.0.0.1 - - [24/Oct/2025 18:38:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:39:02,332 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:02] "[32mGET /fiscal-year/financial-year-end HTTP/1.1[0m" 302 -
+2025-10-24 18:39:02,338 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:02] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:39:02,353 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:39:05,671 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:05] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:39:05,684 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:39:47,017 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:47] "[32mGET /fiscal-year/financial-year-end HTTP/1.1[0m" 302 -
+2025-10-24 18:39:47,024 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:47] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:39:47,038 - INFO - 127.0.0.1 - - [24/Oct/2025 18:39:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:42:11,737 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\fiscal_year.py', reloading
+2025-10-24 18:42:11,787 - INFO -  * Restarting with stat
+2025-10-24 18:42:12,147 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:42:12,147 - INFO - Database is up to date.
+2025-10-24 18:42:12,412 - WARNING -  * Debugger is active!
+2025-10-24 18:42:12,415 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:42:37,930 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 18:42:37,986 - INFO -  * Restarting with stat
+2025-10-24 18:42:38,485 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:42:38,485 - INFO - Database is up to date.
+2025-10-24 18:42:38,734 - WARNING -  * Debugger is active!
+2025-10-24 18:42:38,736 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:42:47,967 - INFO - 127.0.0.1 - - [24/Oct/2025 18:42:47] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:42:48,028 - INFO - 127.0.0.1 - - [24/Oct/2025 18:42:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:42:49,707 - INFO - 127.0.0.1 - - [24/Oct/2025 18:42:49] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:42:49,721 - INFO - 127.0.0.1 - - [24/Oct/2025 18:42:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:45:38,182 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 18:45:38,241 - INFO -  * Restarting with stat
+2025-10-24 18:45:38,591 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:45:38,592 - INFO - DB requires migration. Current: 11, Target: 12
+2025-10-24 18:45:38,795 - INFO - Upgraded database to version 12
+2025-10-24 18:45:38,795 - INFO - All migrations applied successfully.
+2025-10-24 18:45:39,042 - WARNING -  * Debugger is active!
+2025-10-24 18:45:39,045 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:45:53,333 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\fiscal_year.py', reloading
+2025-10-24 18:45:53,389 - INFO -  * Restarting with stat
+2025-10-24 18:45:53,735 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:45:53,736 - INFO - Database is up to date.
+2025-10-24 18:45:54,006 - WARNING -  * Debugger is active!
+2025-10-24 18:45:54,008 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:46:08,515 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:08] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:46:08,573 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:46:09,437 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:09] "[32mGET /fiscal-year/financial-year-end HTTP/1.1[0m" 302 -
+2025-10-24 18:46:09,450 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:09] "GET / HTTP/1.1" 200 -
+2025-10-24 18:46:09,465 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:46:18,396 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:18] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:46:18,413 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:46:28,999 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:28] "[32mGET /fiscal-year/financial-year-end HTTP/1.1[0m" 302 -
+2025-10-24 18:46:29,005 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:29] "GET / HTTP/1.1" 200 -
+2025-10-24 18:46:29,022 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:46:33,069 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:33] "[32mGET /fiscal-year/financial-year-end HTTP/1.1[0m" 302 -
+2025-10-24 18:46:33,075 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:33] "GET / HTTP/1.1" 200 -
+2025-10-24 18:46:33,090 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:46:34,683 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:34] "[32mGET /fiscal-year/financial-year-end HTTP/1.1[0m" 302 -
+2025-10-24 18:46:34,689 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:34] "GET / HTTP/1.1" 200 -
+2025-10-24 18:46:34,702 - INFO - 127.0.0.1 - - [24/Oct/2025 18:46:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:47:26,066 - INFO - 127.0.0.1 - - [24/Oct/2025 18:47:26] "[32mGET /theme/litera HTTP/1.1[0m" 302 -
+2025-10-24 18:47:26,076 - INFO - 127.0.0.1 - - [24/Oct/2025 18:47:26] "GET / HTTP/1.1" 200 -
+2025-10-24 18:47:26,099 - INFO - 127.0.0.1 - - [24/Oct/2025 18:47:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:47:33,555 - INFO - 127.0.0.1 - - [24/Oct/2025 18:47:33] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 18:47:33,575 - INFO - 127.0.0.1 - - [24/Oct/2025 18:47:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:47:37,599 - INFO - 127.0.0.1 - - [24/Oct/2025 18:47:37] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 18:47:37,615 - INFO - 127.0.0.1 - - [24/Oct/2025 18:47:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:48:06,419 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\fiscal_year.py', reloading
+2025-10-24 18:48:06,469 - INFO -  * Restarting with stat
+2025-10-24 18:48:06,827 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:48:06,827 - INFO - Database is up to date.
+2025-10-24 18:48:07,095 - WARNING -  * Debugger is active!
+2025-10-24 18:48:07,098 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:48:38,299 - INFO - 127.0.0.1 - - [24/Oct/2025 18:48:38] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 18:48:38,357 - INFO - 127.0.0.1 - - [24/Oct/2025 18:48:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:48:40,900 - INFO - 127.0.0.1 - - [24/Oct/2025 18:48:40] "GET /fiscal-year/financial-year-end HTTP/1.1" 200 -
+2025-10-24 18:48:40,914 - INFO - 127.0.0.1 - - [24/Oct/2025 18:48:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:48:46,891 - INFO - 127.0.0.1 - - [24/Oct/2025 18:48:46] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:48:46,904 - INFO - 127.0.0.1 - - [24/Oct/2025 18:48:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:49:18,084 - INFO - 127.0.0.1 - - [24/Oct/2025 18:49:18] "[32mPOST /fiscal-year/add HTTP/1.1[0m" 302 -
+2025-10-24 18:49:18,088 - INFO - 127.0.0.1 - - [24/Oct/2025 18:49:18] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:49:18,103 - INFO - 127.0.0.1 - - [24/Oct/2025 18:49:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:50:05,190 - INFO - 127.0.0.1 - - [24/Oct/2025 18:50:05] "[32mPOST /fiscal-year/add HTTP/1.1[0m" 302 -
+2025-10-24 18:50:05,195 - INFO - 127.0.0.1 - - [24/Oct/2025 18:50:05] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:50:05,211 - INFO - 127.0.0.1 - - [24/Oct/2025 18:50:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:57:07,636 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\fiscal_year.py', reloading
+2025-10-24 18:57:07,702 - INFO -  * Restarting with stat
+2025-10-24 18:57:08,079 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 18:57:08,079 - INFO - Database is up to date.
+2025-10-24 18:57:08,343 - WARNING -  * Debugger is active!
+2025-10-24 18:57:08,346 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 18:57:25,513 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:25] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:57:25,571 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:57:31,411 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:31] "[32mPOST /fiscal-year/edit HTTP/1.1[0m" 302 -
+2025-10-24 18:57:31,415 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:31] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:57:31,431 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:57:39,869 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:39] "[32mPOST /fiscal-year/delete/2 HTTP/1.1[0m" 302 -
+2025-10-24 18:57:39,874 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:39] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 18:57:39,889 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:57:48,454 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:48] "GET /fiscal-year/financial-year-end HTTP/1.1" 200 -
+2025-10-24 18:57:48,468 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:57:51,496 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:51] "GET /fiscal-year/financial-year-end HTTP/1.1" 200 -
+2025-10-24 18:57:51,507 - INFO - 127.0.0.1 - - [24/Oct/2025 18:57:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 18:58:37,761 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 18:58:37,762 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 18:58:37,762 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 18:58:37,762 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 18:58:37,778 - INFO - 127.0.0.1 - - [24/Oct/2025 18:58:37] "GET /round/ HTTP/1.1" 200 -
+2025-10-24 18:58:37,794 - INFO - 127.0.0.1 - - [24/Oct/2025 18:58:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:00:01,643 - INFO - 127.0.0.1 - - [24/Oct/2025 19:00:01] "GET /pot/report HTTP/1.1" 200 -
+2025-10-24 19:00:01,657 - INFO - 127.0.0.1 - - [24/Oct/2025 19:00:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:00:05,539 - INFO - 127.0.0.1 - - [24/Oct/2025 19:00:05] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 19:00:05,553 - INFO - 127.0.0.1 - - [24/Oct/2025 19:00:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:00:25,916 - INFO - 127.0.0.1 - - [24/Oct/2025 19:00:25] "GET /pot/report HTTP/1.1" 200 -
+2025-10-24 19:00:25,930 - INFO - 127.0.0.1 - - [24/Oct/2025 19:00:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:03:11,874 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\load_unload.py', reloading
+2025-10-24 19:03:11,932 - INFO -  * Restarting with stat
+2025-10-24 19:03:12,264 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:03:12,265 - INFO - Database is up to date.
+2025-10-24 19:03:12,616 - WARNING -  * Debugger is active!
+2025-10-24 19:03:12,618 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:03:43,204 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 19:03:43,256 - INFO -  * Restarting with stat
+2025-10-24 19:03:43,597 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:03:43,598 - INFO - Database is up to date.
+2025-10-24 19:03:43,843 - WARNING -  * Debugger is active!
+2025-10-24 19:03:43,845 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:04:10,827 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:10] "[35m[1mGET /pot/report HTTP/1.1[0m" 500 -
+2025-10-24 19:04:10,914 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:10] "GET /pot/report?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-24 19:04:10,915 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:10] "GET /pot/report?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-24 19:04:10,937 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:10] "GET /pot/report?__debugger__=yes&cmd=resource&f=console.png&s=W8SwJPHMaVcTl1bt2uUN HTTP/1.1" 200 -
+2025-10-24 19:04:11,008 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:11] "GET /pot/report?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-24 19:04:15,038 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:15] "[35m[1mGET /pot/report HTTP/1.1[0m" 500 -
+2025-10-24 19:04:15,052 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:15] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:04:15,054 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:15] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 19:04:15,064 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:15] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=console.png&s=W8SwJPHMaVcTl1bt2uUN HTTP/1.1[0m" 304 -
+2025-10-24 19:04:15,094 - INFO - 127.0.0.1 - - [24/Oct/2025 19:04:15] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 19:06:11,578 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:11] "[35m[1mGET /pot/report HTTP/1.1[0m" 500 -
+2025-10-24 19:06:11,592 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:11] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:06:11,595 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:11] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 19:06:11,606 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:11] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=console.png&s=W8SwJPHMaVcTl1bt2uUN HTTP/1.1[0m" 304 -
+2025-10-24 19:06:11,640 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:11] "[36mGET /pot/report?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 19:06:13,781 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 19:06:13,797 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:13] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:06:13,802 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:13] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 19:06:13,823 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:13] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=W8SwJPHMaVcTl1bt2uUN HTTP/1.1" 200 -
+2025-10-24 19:06:13,852 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:13] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 19:06:17,373 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:17] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 19:06:17,388 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:17] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:06:17,392 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:17] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 19:06:17,414 - INFO - 127.0.0.1 - - [24/Oct/2025 19:06:17] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=W8SwJPHMaVcTl1bt2uUN HTTP/1.1[0m" 304 -
+2025-10-24 19:07:55,338 - INFO - 127.0.0.1 - - [24/Oct/2025 19:07:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 19:07:55,357 - INFO - 127.0.0.1 - - [24/Oct/2025 19:07:55] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:07:55,363 - INFO - 127.0.0.1 - - [24/Oct/2025 19:07:55] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 19:07:55,386 - INFO - 127.0.0.1 - - [24/Oct/2025 19:07:55] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=W8SwJPHMaVcTl1bt2uUN HTTP/1.1[0m" 304 -
+2025-10-24 19:09:42,476 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 19:09:42,529 - INFO -  * Restarting with stat
+2025-10-24 19:09:42,871 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:09:42,872 - INFO - Database is up to date.
+2025-10-24 19:09:43,159 - WARNING -  * Debugger is active!
+2025-10-24 19:09:43,162 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:09:46,672 - INFO - 127.0.0.1 - - [24/Oct/2025 19:09:46] "GET / HTTP/1.1" 200 -
+2025-10-24 19:09:46,733 - INFO - 127.0.0.1 - - [24/Oct/2025 19:09:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:09:49,212 - INFO - 127.0.0.1 - - [24/Oct/2025 19:09:49] "GET /load-unload/ HTTP/1.1" 200 -
+2025-10-24 19:09:49,228 - INFO - 127.0.0.1 - - [24/Oct/2025 19:09:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:10:04,720 - INFO - 127.0.0.1 - - [24/Oct/2025 19:10:04] "GET /load-unload/ HTTP/1.1" 200 -
+2025-10-24 19:10:04,732 - INFO - 127.0.0.1 - - [24/Oct/2025 19:10:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:10:20,175 - INFO - 127.0.0.1 - - [24/Oct/2025 19:10:20] "GET /load-unload/?start_date=2025-09-24&end_date=2025-10-24&category=Unload HTTP/1.1" 200 -
+2025-10-24 19:10:20,190 - INFO - 127.0.0.1 - - [24/Oct/2025 19:10:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:11:42,287 - INFO - 127.0.0.1 - - [24/Oct/2025 19:11:42] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 19:11:42,303 - INFO - 127.0.0.1 - - [24/Oct/2025 19:11:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:12:04,894 - INFO - 127.0.0.1 - - [24/Oct/2025 19:12:04] "GET / HTTP/1.1" 200 -
+2025-10-24 19:12:04,908 - INFO - 127.0.0.1 - - [24/Oct/2025 19:12:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:12:07,439 - INFO - 127.0.0.1 - - [24/Oct/2025 19:12:07] "GET /salary/ HTTP/1.1" 200 -
+2025-10-24 19:12:07,458 - INFO - 127.0.0.1 - - [24/Oct/2025 19:12:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:12:09,185 - INFO - 127.0.0.1 - - [24/Oct/2025 19:12:09] "GET /load-unload/ HTTP/1.1" 200 -
+2025-10-24 19:12:09,204 - INFO - 127.0.0.1 - - [24/Oct/2025 19:12:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:13:01,810 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\load_unload.py', reloading
+2025-10-24 19:13:01,859 - INFO -  * Restarting with stat
+2025-10-24 19:13:02,201 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:13:02,202 - INFO - Database is up to date.
+2025-10-24 19:13:02,499 - WARNING -  * Debugger is active!
+2025-10-24 19:13:02,502 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:14:51,745 - INFO - 127.0.0.1 - - [24/Oct/2025 19:14:51] "[33mGET /load-unload/ HTTP/1.1[0m" 404 -
+2025-10-24 19:14:53,160 - INFO - 127.0.0.1 - - [24/Oct/2025 19:14:53] "[33mGET /load-unload/ HTTP/1.1[0m" 404 -
+2025-10-24 19:14:53,473 - INFO - 127.0.0.1 - - [24/Oct/2025 19:14:53] "[33mGET /load-unload/ HTTP/1.1[0m" 404 -
+2025-10-24 19:14:55,812 - INFO - 127.0.0.1 - - [24/Oct/2025 19:14:55] "GET / HTTP/1.1" 200 -
+2025-10-24 19:14:55,875 - INFO - 127.0.0.1 - - [24/Oct/2025 19:14:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:14:57,516 - INFO - 127.0.0.1 - - [24/Oct/2025 19:14:57] "GET / HTTP/1.1" 200 -
+2025-10-24 19:14:57,531 - INFO - 127.0.0.1 - - [24/Oct/2025 19:14:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:15:00,620 - INFO - 127.0.0.1 - - [24/Oct/2025 19:15:00] "GET /load-unload/report HTTP/1.1" 200 -
+2025-10-24 19:15:00,636 - INFO - 127.0.0.1 - - [24/Oct/2025 19:15:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:15:07,117 - INFO - 127.0.0.1 - - [24/Oct/2025 19:15:07] "GET /load-unload/manage HTTP/1.1" 200 -
+2025-10-24 19:15:07,132 - INFO - 127.0.0.1 - - [24/Oct/2025 19:15:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:17:12,760 - INFO - 127.0.0.1 - - [24/Oct/2025 19:17:12] "GET /load-unload/report HTTP/1.1" 200 -
+2025-10-24 19:17:12,776 - INFO - 127.0.0.1 - - [24/Oct/2025 19:17:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:17:13,999 - INFO - 127.0.0.1 - - [24/Oct/2025 19:17:13] "GET /load-unload/manage HTTP/1.1" 200 -
+2025-10-24 19:17:14,014 - INFO - 127.0.0.1 - - [24/Oct/2025 19:17:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:19:01,380 - INFO - 127.0.0.1 - - [24/Oct/2025 19:19:01] "GET /load-unload/manage HTTP/1.1" 200 -
+2025-10-24 19:19:01,396 - INFO - 127.0.0.1 - - [24/Oct/2025 19:19:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:21:14,533 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\load_unload.py', reloading
+2025-10-24 19:21:14,592 - INFO -  * Restarting with stat
+2025-10-24 19:21:14,940 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:21:14,941 - INFO - Database is up to date.
+2025-10-24 19:21:15,209 - WARNING -  * Debugger is active!
+2025-10-24 19:21:15,212 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:21:32,801 - INFO - 127.0.0.1 - - [24/Oct/2025 19:21:32] "GET /load-unload/manage HTTP/1.1" 200 -
+2025-10-24 19:21:32,860 - INFO - 127.0.0.1 - - [24/Oct/2025 19:21:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:21:41,283 - INFO - 127.0.0.1 - - [24/Oct/2025 19:21:41] "GET /load-unload/report HTTP/1.1" 200 -
+2025-10-24 19:21:41,297 - INFO - 127.0.0.1 - - [24/Oct/2025 19:21:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:25:37,178 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 19:25:37,236 - INFO -  * Restarting with stat
+2025-10-24 19:25:37,636 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:25:37,637 - INFO - Database is up to date.
+2025-10-24 19:25:37,912 - WARNING -  * Debugger is active!
+2025-10-24 19:25:37,914 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:25:59,357 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\owner.py', reloading
+2025-10-24 19:25:59,423 - INFO -  * Restarting with stat
+2025-10-24 19:25:59,795 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:25:59,796 - INFO - Database is up to date.
+2025-10-24 19:26:00,060 - WARNING -  * Debugger is active!
+2025-10-24 19:26:00,063 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:26:43,040 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 19:26:43,086 - INFO -  * Restarting with stat
+2025-10-24 19:26:43,449 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:26:43,450 - INFO - Database is up to date.
+2025-10-24 19:26:43,722 - WARNING -  * Debugger is active!
+2025-10-24 19:26:43,725 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:27:04,025 - INFO - 127.0.0.1 - - [24/Oct/2025 19:27:04] "GET /load-unload/report HTTP/1.1" 200 -
+2025-10-24 19:27:04,084 - INFO - 127.0.0.1 - - [24/Oct/2025 19:27:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:27:06,453 - ERROR - Query Failed: SELECT * FROM owners ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 19:27:06,453 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 19:27:06,468 - INFO - 127.0.0.1 - - [24/Oct/2025 19:27:06] "GET /owner/ HTTP/1.1" 200 -
+2025-10-24 19:27:06,482 - INFO - 127.0.0.1 - - [24/Oct/2025 19:27:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:27:09,695 - ERROR - Query Failed: SELECT id, name FROM owners WHERE status = 'Active' ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 19:27:09,696 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 19:27:09,696 - ERROR - Query Failed: 
+        SELECT o.date, own.name, o.voucher_no, o.description, o.amount, o.type, o.id
+        FROM owner_cash o
+        LEFT JOIN owners own ON o.owner_id = own.id
+     ORDER BY o.date DESC, o.id DESC | Params: () | Error: no such table: owners
+2025-10-24 19:27:09,696 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 19:27:09,719 - INFO - 127.0.0.1 - - [24/Oct/2025 19:27:09] "GET /owner/cash HTTP/1.1" 200 -
+2025-10-24 19:27:09,734 - INFO - 127.0.0.1 - - [24/Oct/2025 19:27:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:31:16,786 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 19:31:16,836 - INFO -  * Restarting with stat
+2025-10-24 19:31:17,207 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:31:17,208 - INFO - DB requires migration. Current: 12, Target: 13
+2025-10-24 19:31:17,491 - INFO - Upgraded database to version 13
+2025-10-24 19:31:17,491 - INFO - All migrations applied successfully.
+2025-10-24 19:31:17,764 - WARNING -  * Debugger is active!
+2025-10-24 19:31:17,767 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:31:43,275 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\accounts.py', reloading
+2025-10-24 19:31:43,323 - INFO -  * Restarting with stat
+2025-10-24 19:31:43,675 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:31:43,675 - INFO - Database is up to date.
+2025-10-24 19:31:43,917 - WARNING -  * Debugger is active!
+2025-10-24 19:31:43,920 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:32:46,074 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 19:32:46,122 - INFO -  * Restarting with stat
+2025-10-24 19:32:46,457 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:32:46,457 - INFO - Database is up to date.
+2025-10-24 19:32:46,697 - WARNING -  * Debugger is active!
+2025-10-24 19:32:46,699 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:33:08,818 - ERROR - Query Failed: SELECT id, name FROM owners WHERE status = 'Active' ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 19:33:08,819 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 19:33:08,819 - ERROR - Query Failed: 
+        SELECT o.date, own.name, o.voucher_no, o.description, o.amount, o.type, o.id
+        FROM owner_cash o
+        LEFT JOIN owners own ON o.owner_id = own.id
+     ORDER BY o.date DESC, o.id DESC | Params: () | Error: no such table: owners
+2025-10-24 19:33:08,820 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 19:33:08,883 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:08] "GET /owner/cash HTTP/1.1" 200 -
+2025-10-24 19:33:08,942 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:33:12,557 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:12] "GET /accounts/chart-of-head HTTP/1.1" 200 -
+2025-10-24 19:33:12,570 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:33:18,974 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:18] "[32mGET /accounts/transactions HTTP/1.1[0m" 302 -
+2025-10-24 19:33:18,987 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:18] "GET / HTTP/1.1" 200 -
+2025-10-24 19:33:19,003 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:33:23,349 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:23] "GET /accounts/bank HTTP/1.1" 200 -
+2025-10-24 19:33:23,362 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:33:25,135 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:25] "[32mGET /accounts/transactions HTTP/1.1[0m" 302 -
+2025-10-24 19:33:25,141 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:25] "GET / HTTP/1.1" 200 -
+2025-10-24 19:33:25,157 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:33:31,281 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:31] "[32mGET /accounts/brick-statement HTTP/1.1[0m" 302 -
+2025-10-24 19:33:31,287 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:31] "GET / HTTP/1.1" 200 -
+2025-10-24 19:33:31,301 - INFO - 127.0.0.1 - - [24/Oct/2025 19:33:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:38:36,136 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\reports.py', reloading
+2025-10-24 19:38:36,185 - INFO -  * Restarting with stat
+2025-10-24 19:38:36,541 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:38:36,542 - INFO - Database is up to date.
+2025-10-24 19:38:36,810 - WARNING -  * Debugger is active!
+2025-10-24 19:38:36,812 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:39:13,526 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\transactions.py', reloading
+2025-10-24 19:39:13,583 - INFO -  * Restarting with stat
+2025-10-24 19:39:13,952 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:39:13,953 - INFO - Database is up to date.
+2025-10-24 19:39:14,223 - WARNING -  * Debugger is active!
+2025-10-24 19:39:14,226 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:39:24,452 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 19:39:24,507 - INFO -  * Restarting with stat
+2025-10-24 19:39:24,883 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 19:39:24,884 - INFO - Database is up to date.
+2025-10-24 19:39:25,168 - WARNING -  * Debugger is active!
+2025-10-24 19:39:25,171 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 19:40:45,218 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:45] "GET / HTTP/1.1" 200 -
+2025-10-24 19:40:45,285 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:40:48,841 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:48] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 19:40:53,450 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:53] "GET /accounts/bank HTTP/1.1" 200 -
+2025-10-24 19:40:53,466 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:40:58,194 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:58] "GET /accounts/chart-of-head HTTP/1.1" 200 -
+2025-10-24 19:40:58,208 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:40:59,954 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:59] "[32mGET /transactions/opening-balance HTTP/1.1[0m" 302 -
+2025-10-24 19:40:59,961 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:59] "GET / HTTP/1.1" 200 -
+2025-10-24 19:40:59,976 - INFO - 127.0.0.1 - - [24/Oct/2025 19:40:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:41:06,313 - INFO - 127.0.0.1 - - [24/Oct/2025 19:41:06] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 19:41:06,327 - INFO - 127.0.0.1 - - [24/Oct/2025 19:41:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:41:54,944 - INFO - 127.0.0.1 - - [24/Oct/2025 19:41:54] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 19:41:54,956 - INFO - 127.0.0.1 - - [24/Oct/2025 19:41:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:41:56,876 - INFO - 127.0.0.1 - - [24/Oct/2025 19:41:56] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 19:41:56,890 - INFO - 127.0.0.1 - - [24/Oct/2025 19:41:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:42:03,656 - INFO - 127.0.0.1 - - [24/Oct/2025 19:42:03] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 19:42:15,419 - INFO - 127.0.0.1 - - [24/Oct/2025 19:42:15] "GET /reports/brick-statement HTTP/1.1" 200 -
+2025-10-24 19:42:15,434 - INFO - 127.0.0.1 - - [24/Oct/2025 19:42:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:42:18,249 - INFO - 127.0.0.1 - - [24/Oct/2025 19:42:18] "GET /reports/brick-statement?start_date=2025-09-24&end_date=2025-10-24&brick_type=Adhla HTTP/1.1" 200 -
+2025-10-24 19:42:18,265 - INFO - 127.0.0.1 - - [24/Oct/2025 19:42:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 19:42:48,685 - INFO - 127.0.0.1 - - [24/Oct/2025 19:42:48] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:35:11,017 - INFO - 127.0.0.1 - - [24/Oct/2025 20:35:11] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:36:50,748 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\accounts.py', reloading
+2025-10-24 20:36:50,826 - INFO -  * Restarting with stat
+2025-10-24 20:36:52,900 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 20:36:52,901 - INFO - Database is up to date.
+2025-10-24 20:36:53,704 - WARNING -  * Debugger is active!
+2025-10-24 20:36:53,707 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 20:38:19,907 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:19] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:38:19,974 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:38:22,043 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:22] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:38:22,056 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:38:22,615 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:22] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 20:38:22,629 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:38:23,164 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:23] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:38:23,178 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:38:35,463 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:35] "GET /accounts/bank HTTP/1.1" 200 -
+2025-10-24 20:38:35,477 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:38:36,516 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:36] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 20:38:36,534 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:38:39,269 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:39] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:38:39,284 - INFO - 127.0.0.1 - - [24/Oct/2025 20:38:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:03,880 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:03] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:03,892 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:05,163 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:05] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:05,175 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:06,293 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:06] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:06,307 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:08,149 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:08] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:08,161 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:20,194 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:20] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:20,207 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:21,347 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:21] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:21,360 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:22,528 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:22] "GET /reports/brick-statement HTTP/1.1" 200 -
+2025-10-24 20:40:22,543 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:24,864 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:24] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:24,879 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:33,277 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:33] "[32mGET /theme/litera HTTP/1.1[0m" 302 -
+2025-10-24 20:40:33,283 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:33] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:33,301 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:34,199 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:34] "[32mGET /theme/litera HTTP/1.1[0m" 302 -
+2025-10-24 20:40:34,205 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:34] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:34,220 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:35,012 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:35] "[32mGET /theme/superhero HTTP/1.1[0m" 302 -
+2025-10-24 20:40:35,019 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:35] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 20:40:35,036 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:38,321 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:38] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 20:40:38,336 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:40:49,734 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:49] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 20:40:49,746 - INFO - 127.0.0.1 - - [24/Oct/2025 20:40:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:41:06,452 - INFO - 127.0.0.1 - - [24/Oct/2025 20:41:06] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 20:41:06,468 - INFO - 127.0.0.1 - - [24/Oct/2025 20:41:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:44:00,381 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\reports.py', reloading
+2025-10-24 20:44:00,442 - INFO -  * Restarting with stat
+2025-10-24 20:44:00,821 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 20:44:00,821 - INFO - Database is up to date.
+2025-10-24 20:44:01,123 - WARNING -  * Debugger is active!
+2025-10-24 20:44:01,127 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 20:45:35,884 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\reports.py', reloading
+2025-10-24 20:45:35,933 - INFO -  * Restarting with stat
+2025-10-24 20:45:36,289 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 20:45:36,290 - INFO - Database is up to date.
+2025-10-24 20:45:36,547 - WARNING -  * Debugger is active!
+2025-10-24 20:45:36,550 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 20:47:57,605 - INFO - 127.0.0.1 - - [24/Oct/2025 20:47:57] "GET /insights/ HTTP/1.1" 200 -
+2025-10-24 20:47:57,664 - INFO - 127.0.0.1 - - [24/Oct/2025 20:47:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:47:58,734 - INFO - 127.0.0.1 - - [24/Oct/2025 20:47:58] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 20:47:58,750 - INFO - 127.0.0.1 - - [24/Oct/2025 20:47:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:48:00,486 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:00] "GET /reports/owner-cash-report HTTP/1.1" 200 -
+2025-10-24 20:48:00,503 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:48:01,437 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:01] "GET /reports/cash-book HTTP/1.1" 200 -
+2025-10-24 20:48:01,452 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:48:01,873 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:01] "GET /reports/bank-book HTTP/1.1" 200 -
+2025-10-24 20:48:01,888 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:48:02,280 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:02] "GET /reports/income-report HTTP/1.1" 200 -
+2025-10-24 20:48:02,295 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:48:02,702 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:02] "GET /reports/expense-report HTTP/1.1" 200 -
+2025-10-24 20:48:02,719 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:48:03,140 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:03] "GET /reports/profit-and-loss HTTP/1.1" 200 -
+2025-10-24 20:48:03,158 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:48:05,565 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:05] "GET /reports/expense-due-report HTTP/1.1" 200 -
+2025-10-24 20:48:05,581 - INFO - 127.0.0.1 - - [24/Oct/2025 20:48:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:54:54,504 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 20:54:54,554 - INFO -  * Restarting with stat
+2025-10-24 20:54:54,923 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 20:54:54,923 - INFO - DB requires migration. Current: 13, Target: 14
+2025-10-24 20:54:55,235 - INFO - Upgraded database to version 14
+2025-10-24 20:54:55,236 - INFO - All migrations applied successfully.
+2025-10-24 20:54:55,534 - WARNING -  * Debugger is active!
+2025-10-24 20:54:55,537 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 20:55:11,882 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\reports.py', reloading
+2025-10-24 20:55:11,972 - INFO -  * Restarting with stat
+2025-10-24 20:55:12,380 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 20:55:12,380 - INFO - Database is up to date.
+2025-10-24 20:55:12,669 - WARNING -  * Debugger is active!
+2025-10-24 20:55:12,672 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 20:56:17,953 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\reports.py', reloading
+2025-10-24 20:56:18,012 - INFO -  * Restarting with stat
+2025-10-24 20:56:18,346 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 20:56:18,347 - INFO - Database is up to date.
+2025-10-24 20:56:18,629 - WARNING -  * Debugger is active!
+2025-10-24 20:56:18,632 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 20:56:38,354 - INFO - 127.0.0.1 - - [24/Oct/2025 20:56:38] "GET /reports/expense-due-report HTTP/1.1" 200 -
+2025-10-24 20:56:38,414 - INFO - 127.0.0.1 - - [24/Oct/2025 20:56:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:56:41,445 - INFO - 127.0.0.1 - - [24/Oct/2025 20:56:41] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 20:56:41,459 - INFO - 127.0.0.1 - - [24/Oct/2025 20:56:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 20:56:51,774 - INFO - 127.0.0.1 - - [24/Oct/2025 20:56:51] "GET /reports/owner-cash-report HTTP/1.1" 200 -
+2025-10-24 20:56:51,790 - INFO - 127.0.0.1 - - [24/Oct/2025 20:56:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:00:10,571 - INFO - 127.0.0.1 - - [24/Oct/2025 21:00:10] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 21:00:10,588 - INFO - 127.0.0.1 - - [24/Oct/2025 21:00:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:02:51,842 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:02:51,842 - INFO - Database is up to date.
+2025-10-24 21:02:52,109 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 21:02:52,109 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 21:02:52,110 - INFO -  * Restarting with stat
+2025-10-24 21:02:52,424 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:02:52,425 - INFO - Database is up to date.
+2025-10-24 21:02:52,664 - WARNING -  * Debugger is active!
+2025-10-24 21:02:52,667 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:02:59,550 - INFO - 127.0.0.1 - - [24/Oct/2025 21:02:59] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 21:02:59,609 - INFO - 127.0.0.1 - - [24/Oct/2025 21:02:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:03:00,768 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:00] "GET / HTTP/1.1" 200 -
+2025-10-24 21:03:00,783 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:03:04,465 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:04] "GET /fiscal-year/manage HTTP/1.1" 200 -
+2025-10-24 21:03:04,480 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:03:06,751 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:06] "GET /fiscal-year/financial-year-end HTTP/1.1" 200 -
+2025-10-24 21:03:06,766 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:03:09,287 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:09] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:03:09,302 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:03:21,102 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:21] "GET /reports/owner-cash-report HTTP/1.1" 200 -
+2025-10-24 21:03:21,119 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:03:22,107 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:22] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 21:03:22,121 - INFO - 127.0.0.1 - - [24/Oct/2025 21:03:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:06:12,605 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\services\\ledger_service.py', reloading
+2025-10-24 21:06:12,660 - INFO -  * Restarting with stat
+2025-10-24 21:06:13,013 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:06:13,013 - INFO - Database is up to date.
+2025-10-24 21:06:13,297 - WARNING -  * Debugger is active!
+2025-10-24 21:06:13,299 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:06:30,678 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\reports.py', reloading
+2025-10-24 21:06:30,731 - INFO -  * Restarting with stat
+2025-10-24 21:06:31,083 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:06:31,084 - INFO - Database is up to date.
+2025-10-24 21:06:31,335 - WARNING -  * Debugger is active!
+2025-10-24 21:06:31,338 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:06:54,913 - INFO - 127.0.0.1 - - [24/Oct/2025 21:06:54] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 21:06:54,973 - INFO - 127.0.0.1 - - [24/Oct/2025 21:06:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:06:55,834 - INFO - 127.0.0.1 - - [24/Oct/2025 21:06:55] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 21:06:55,847 - INFO - 127.0.0.1 - - [24/Oct/2025 21:06:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:06:59,618 - INFO - 127.0.0.1 - - [24/Oct/2025 21:06:59] "[32mGET /reports/print-coal-statement?start_date=2025-09-24&end_date=2025-10-24&sector= HTTP/1.1[0m" 302 -
+2025-10-24 21:06:59,631 - INFO - 127.0.0.1 - - [24/Oct/2025 21:06:59] "GET /reports/coal-statement HTTP/1.1" 200 -
+2025-10-24 21:06:59,648 - INFO - 127.0.0.1 - - [24/Oct/2025 21:06:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:07:05,701 - INFO - 127.0.0.1 - - [24/Oct/2025 21:07:05] "GET /reports/owner-cash-report HTTP/1.1" 200 -
+2025-10-24 21:07:05,716 - INFO - 127.0.0.1 - - [24/Oct/2025 21:07:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:07:24,879 - INFO - 127.0.0.1 - - [24/Oct/2025 21:07:24] "GET /reports/owner-cash-report HTTP/1.1" 200 -
+2025-10-24 21:07:24,894 - INFO - 127.0.0.1 - - [24/Oct/2025 21:07:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:07:52,699 - INFO - 127.0.0.1 - - [24/Oct/2025 21:07:52] "GET /reports/cash-book HTTP/1.1" 200 -
+2025-10-24 21:07:52,716 - INFO - 127.0.0.1 - - [24/Oct/2025 21:07:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:11:56,878 - INFO - 127.0.0.1 - - [24/Oct/2025 21:11:56] "GET /reports/cash-book HTTP/1.1" 200 -
+2025-10-24 21:11:56,891 - INFO - 127.0.0.1 - - [24/Oct/2025 21:11:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:12:02,902 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:02] "GET /customers/ HTTP/1.1" 200 -
+2025-10-24 21:12:02,916 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:12:07,110 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:07] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 21:12:07,127 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:12:17,174 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:17] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 21:12:17,188 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:12:18,340 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:18] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 21:12:18,353 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:12:19,738 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:19] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 21:12:19,751 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:12:28,149 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:28] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 21:12:28,163 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:12:34,634 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:34] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 21:12:34,650 - INFO - 127.0.0.1 - - [24/Oct/2025 21:12:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:13:09,115 - INFO - 127.0.0.1 - - [24/Oct/2025 21:13:09] "GET /accounts/mobile-bank HTTP/1.1" 200 -
+2025-10-24 21:13:09,126 - INFO - 127.0.0.1 - - [24/Oct/2025 21:13:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:13:10,902 - INFO - 127.0.0.1 - - [24/Oct/2025 21:13:10] "GET /ledger/ HTTP/1.1" 200 -
+2025-10-24 21:13:10,917 - INFO - 127.0.0.1 - - [24/Oct/2025 21:13:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:14:29,548 - INFO - 127.0.0.1 - - [24/Oct/2025 21:14:29] "GET / HTTP/1.1" 200 -
+2025-10-24 21:14:29,566 - INFO - 127.0.0.1 - - [24/Oct/2025 21:14:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:14:35,538 - INFO - 127.0.0.1 - - [24/Oct/2025 21:14:35] "GET /?period=This+Year HTTP/1.1" 200 -
+2025-10-24 21:14:35,555 - INFO - 127.0.0.1 - - [24/Oct/2025 21:14:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:16:48,913 - ERROR - Query Failed: SELECT id, name FROM owners WHERE status = 'Active' ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 21:16:48,914 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 21:16:48,914 - ERROR - Query Failed: 
+        SELECT o.date, own.name, o.voucher_no, o.description, o.amount, o.type, o.id
+        FROM owner_cash o
+        LEFT JOIN owners own ON o.owner_id = own.id
+     ORDER BY o.date DESC, o.id DESC | Params: () | Error: no such table: owners
+2025-10-24 21:16:48,914 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 21:16:48,936 - INFO - 127.0.0.1 - - [24/Oct/2025 21:16:48] "GET /owner/cash HTTP/1.1" 200 -
+2025-10-24 21:16:48,955 - INFO - 127.0.0.1 - - [24/Oct/2025 21:16:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:17:01,999 - ERROR - Query Failed: SELECT * FROM owners ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 21:17:01,999 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 21:17:02,008 - INFO - 127.0.0.1 - - [24/Oct/2025 21:17:02] "GET /owner/ HTTP/1.1" 200 -
+2025-10-24 21:17:02,023 - INFO - 127.0.0.1 - - [24/Oct/2025 21:17:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:17:05,194 - ERROR - Query Failed: SELECT * FROM owners ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 21:17:05,195 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 21:17:05,197 - INFO - 127.0.0.1 - - [24/Oct/2025 21:17:05] "GET /owner/ HTTP/1.1" 200 -
+2025-10-24 21:17:05,210 - INFO - 127.0.0.1 - - [24/Oct/2025 21:17:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:18:18,608 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 21:18:18,667 - INFO -  * Restarting with stat
+2025-10-24 21:18:19,049 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:18:19,050 - INFO - Database is up to date.
+2025-10-24 21:18:19,342 - WARNING -  * Debugger is active!
+2025-10-24 21:18:19,345 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:18:23,147 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:18:23,148 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:18:23,154 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 21:18:23,244 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:23] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:18:23,272 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:23] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 21:18:23,291 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:23] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=F00KKCExGqn1mcIVxRP9 HTTP/1.1" 200 -
+2025-10-24 21:18:23,317 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:23] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 21:18:51,738 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:18:51,739 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:18:51,744 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 21:18:51,755 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:51] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:18:51,760 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:51] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 21:18:51,775 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:51] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=F00KKCExGqn1mcIVxRP9 HTTP/1.1[0m" 304 -
+2025-10-24 21:18:51,801 - INFO - 127.0.0.1 - - [24/Oct/2025 21:18:51] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 21:19:58,164 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\customers.py', reloading
+2025-10-24 21:19:58,220 - INFO -  * Restarting with stat
+2025-10-24 21:19:58,568 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:19:58,569 - INFO - Database is up to date.
+2025-10-24 21:19:58,850 - WARNING -  * Debugger is active!
+2025-10-24 21:19:58,853 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:20:09,080 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\__init__.py', reloading
+2025-10-24 21:20:09,130 - INFO -  * Restarting with stat
+2025-10-24 21:20:09,458 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:20:09,458 - INFO - Database is up to date.
+2025-10-24 21:20:09,703 - WARNING -  * Debugger is active!
+2025-10-24 21:20:09,706 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:20:30,392 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:20:30,393 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:20:30,399 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 21:20:30,486 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 21:20:30,487 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:20:30,498 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=ZrNEcHDb7YiNSyVuGKvd HTTP/1.1" 200 -
+2025-10-24 21:20:30,521 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 21:20:30,911 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:20:30,911 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:20:30,915 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 21:20:30,927 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:20:30,928 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 21:20:30,933 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=ZrNEcHDb7YiNSyVuGKvd HTTP/1.1[0m" 304 -
+2025-10-24 21:20:30,964 - INFO - 127.0.0.1 - - [24/Oct/2025 21:20:30] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 21:25:47,261 - INFO - 127.0.0.1 - - [24/Oct/2025 21:25:47] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:25:47,279 - INFO - 127.0.0.1 - - [24/Oct/2025 21:25:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-24 21:28:09,109 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 21:28:09,163 - INFO -  * Restarting with stat
+2025-10-24 21:28:09,541 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:28:09,541 - INFO - Database is up to date.
+2025-10-24 21:28:09,830 - WARNING -  * Debugger is active!
+2025-10-24 21:28:09,832 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:28:10,294 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:28:10,295 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:28:10,295 - ERROR - Query Failed: SELECT SUM(bricks_loaded) FROM round_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: bricks_loaded
+2025-10-24 21:28:10,295 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bricks_loaded
+
+2025-10-24 21:28:10,375 - INFO - 127.0.0.1 - - [24/Oct/2025 21:28:10] "GET / HTTP/1.1" 200 -
+2025-10-24 21:28:10,437 - INFO - 127.0.0.1 - - [24/Oct/2025 21:28:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:28:18,257 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries  | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:28:18,258 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:28:18,258 - ERROR - Query Failed: SELECT SUM(bricks_loaded) FROM round_entries  | Params: () | Error: no such column: bricks_loaded
+2025-10-24 21:28:18,258 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bricks_loaded
+
+2025-10-24 21:28:18,262 - INFO - 127.0.0.1 - - [24/Oct/2025 21:28:18] "GET /?period=All+Time HTTP/1.1" 200 -
+2025-10-24 21:28:18,280 - INFO - 127.0.0.1 - - [24/Oct/2025 21:28:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:29:03,271 - INFO - 127.0.0.1 - - [24/Oct/2025 21:29:03] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:29:03,285 - INFO - 127.0.0.1 - - [24/Oct/2025 21:29:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:37:18,359 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 21:37:18,423 - INFO -  * Restarting with stat
+2025-10-24 21:37:18,857 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:37:18,857 - INFO - DB requires migration. Current: 14, Target: 15
+2025-10-24 21:37:19,376 - INFO - Upgraded database to version 15
+2025-10-24 21:37:19,376 - INFO - All migrations applied successfully.
+2025-10-24 21:37:19,672 - WARNING -  * Debugger is active!
+2025-10-24 21:37:19,674 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:37:39,055 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\brick_types.py', reloading
+2025-10-24 21:37:39,113 - INFO -  * Restarting with stat
+2025-10-24 21:37:39,453 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:37:39,454 - INFO - Database is up to date.
+2025-10-24 21:37:39,765 - WARNING -  * Debugger is active!
+2025-10-24 21:37:39,768 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:38:01,499 - INFO - 127.0.0.1 - - [24/Oct/2025 21:38:01] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:38:01,606 - INFO - 127.0.0.1 - - [24/Oct/2025 21:38:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:40:02,622 - INFO - 127.0.0.1 - - [24/Oct/2025 21:40:02] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:40:02,638 - INFO - 127.0.0.1 - - [24/Oct/2025 21:40:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:40:28,143 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 21:40:28,196 - INFO -  * Restarting with stat
+2025-10-24 21:40:28,549 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:40:28,549 - INFO - Database is up to date.
+2025-10-24 21:40:28,824 - WARNING -  * Debugger is active!
+2025-10-24 21:40:28,827 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:40:44,665 - INFO - 127.0.0.1 - - [24/Oct/2025 21:40:44] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:40:44,728 - INFO - 127.0.0.1 - - [24/Oct/2025 21:40:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:40:45,739 - INFO - 127.0.0.1 - - [24/Oct/2025 21:40:45] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:40:45,754 - INFO - 127.0.0.1 - - [24/Oct/2025 21:40:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:41:04,127 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 21:41:04,128 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 21:41:04,182 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 21:41:04,198 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:04] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:41:04,202 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:04] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 21:41:04,220 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:04] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=MSSJeDNylPQo80zS1Aq1 HTTP/1.1" 200 -
+2025-10-24 21:41:04,257 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:04] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 21:41:09,235 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 21:41:09,235 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 21:41:09,256 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 21:41:09,272 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:09] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:41:09,277 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:09] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 21:41:09,294 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=MSSJeDNylPQo80zS1Aq1 HTTP/1.1[0m" 304 -
+2025-10-24 21:41:09,317 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:09] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 21:41:16,757 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 21:41:16,813 - INFO -  * Restarting with stat
+2025-10-24 21:41:17,138 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:41:17,139 - INFO - Database is up to date.
+2025-10-24 21:41:17,394 - WARNING -  * Debugger is active!
+2025-10-24 21:41:17,396 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:41:17,424 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:41:17,424 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:41:17,424 - ERROR - Query Failed: SELECT SUM(bricks_loaded) FROM round_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: bricks_loaded
+2025-10-24 21:41:17,425 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bricks_loaded
+
+2025-10-24 21:41:17,478 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:17] "GET / HTTP/1.1" 200 -
+2025-10-24 21:41:17,539 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:41:21,258 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:21] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:41:21,274 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:41:22,013 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:22] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:41:22,028 - INFO - 127.0.0.1 - - [24/Oct/2025 21:41:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:43:11,173 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:11] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:43:11,188 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:43:12,897 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:12] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:43:12,909 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:43:22,647 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:22] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:43:22,664 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:43:26,541 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:26] "[32mPOST /categories/add HTTP/1.1[0m" 302 -
+2025-10-24 21:43:26,547 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:26] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:43:26,562 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:43:28,304 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:28] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:43:28,320 - INFO - 127.0.0.1 - - [24/Oct/2025 21:43:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:44:22,412 - INFO - 127.0.0.1 - - [24/Oct/2025 21:44:22] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:44:22,430 - INFO - 127.0.0.1 - - [24/Oct/2025 21:44:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:44:23,381 - INFO - 127.0.0.1 - - [24/Oct/2025 21:44:23] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:44:23,395 - INFO - 127.0.0.1 - - [24/Oct/2025 21:44:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:44:24,117 - INFO - 127.0.0.1 - - [24/Oct/2025 21:44:24] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:44:24,133 - INFO - 127.0.0.1 - - [24/Oct/2025 21:44:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:53:02,219 - ERROR - Query Failed: SELECT SUM(quantity_shaped) FROM pot_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: quantity_shaped
+2025-10-24 21:53:02,220 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: quantity_shaped
+
+2025-10-24 21:53:02,220 - ERROR - Query Failed: SELECT SUM(bricks_loaded) FROM round_entries WHERE date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: bricks_loaded
+2025-10-24 21:53:02,220 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: bricks_loaded
+
+2025-10-24 21:53:02,223 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:02] "GET / HTTP/1.1" 200 -
+2025-10-24 21:53:02,240 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:53:05,320 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:05] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 21:53:05,336 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:53:09,785 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:09] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 21:53:09,800 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:53:12,162 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 21:53:12,163 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 21:53:12,163 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 21:53:12,163 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 21:53:12,176 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:12] "GET /round/ HTTP/1.1" 200 -
+2025-10-24 21:53:12,191 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:53:37,936 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:37] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 21:53:37,949 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:53:59,789 - ERROR - Query Failed: INSERT INTO pot_entries (date, pot_name, mill_number, quantity_shaped, status, notes) VALUES (?, ?, ?, ?, ?, ?) | Params: ('2025-10-24', 'Pot 1', 1, 5000, 'Ready for Firing', '') | Error: table pot_entries has no column named pot_name
+2025-10-24 21:53:59,789 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: table pot_entries has no column named pot_name
+
+2025-10-24 21:53:59,789 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:59] "[32mPOST /pot/add HTTP/1.1[0m" 302 -
+2025-10-24 21:53:59,798 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:59] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 21:53:59,813 - INFO - 127.0.0.1 - - [24/Oct/2025 21:53:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:54:03,446 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:03] "GET /pot/report HTTP/1.1" 200 -
+2025-10-24 21:54:03,462 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:54:04,903 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:04] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 21:54:04,918 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:54:05,716 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:05] "GET /pot/manage HTTP/1.1" 200 -
+2025-10-24 21:54:05,728 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:54:07,947 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 21:54:07,947 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 21:54:07,947 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 21:54:07,947 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 21:54:07,950 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:07] "GET /round/ HTTP/1.1" 200 -
+2025-10-24 21:54:07,966 - INFO - 127.0.0.1 - - [24/Oct/2025 21:54:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 21:57:55,000 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:57:55,001 - INFO - Database is up to date.
+2025-10-24 21:57:55,306 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 21:57:55,306 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 21:57:55,307 - INFO -  * Restarting with stat
+2025-10-24 21:57:55,639 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:57:55,640 - INFO - Database is up to date.
+2025-10-24 21:57:55,907 - WARNING -  * Debugger is active!
+2025-10-24 21:57:55,910 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 21:59:45,076 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 21:59:45,125 - INFO -  * Restarting with stat
+2025-10-24 21:59:45,470 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 21:59:45,471 - INFO - Database is up to date.
+2025-10-24 21:59:45,736 - WARNING -  * Debugger is active!
+2025-10-24 21:59:45,738 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 22:00:01,072 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\brick_types.py', reloading
+2025-10-24 22:00:01,131 - INFO -  * Restarting with stat
+2025-10-24 22:00:01,476 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:00:01,476 - INFO - Database is up to date.
+2025-10-24 22:00:01,753 - WARNING -  * Debugger is active!
+2025-10-24 22:00:01,756 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 22:00:28,870 - ERROR - Query Failed: SELECT id, pot_name, quantity_shaped FROM pot_entries WHERE status = 'Ready for Firing' | Params: () | Error: no such column: pot_name
+2025-10-24 22:00:28,871 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: pot_name
+
+2025-10-24 22:00:28,871 - ERROR - Query Failed: 
+        SELECT r.id, r.date, r.round_name, p.pot_name, r.bricks_loaded, r.coal_cost, r.firing_status, r.notes
+        FROM round_entries r
+        LEFT JOIN pot_entries p ON r.pot_id = p.id
+        ORDER BY r.date DESC, r.id DESC
+     | Params: () | Error: no such column: r.round_name
+2025-10-24 22:00:28,872 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: r.round_name
+
+2025-10-24 22:00:28,956 - INFO - 127.0.0.1 - - [24/Oct/2025 22:00:28] "GET /round/ HTTP/1.1" 200 -
+2025-10-24 22:00:29,017 - INFO - 127.0.0.1 - - [24/Oct/2025 22:00:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:00:29,971 - INFO - 127.0.0.1 - - [24/Oct/2025 22:00:29] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:00:29,984 - INFO - 127.0.0.1 - - [24/Oct/2025 22:00:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:01,692 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:01] "[32mPOST /brick-types/add HTTP/1.1[0m" 302 -
+2025-10-24 22:01:01,699 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:01] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:01:01,717 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:06,784 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:06] "[32mPOST /brick-types/delete/4 HTTP/1.1[0m" 302 -
+2025-10-24 22:01:06,790 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:06] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:01:06,806 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:09,022 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:09] "[32mPOST /brick-types/delete/1 HTTP/1.1[0m" 302 -
+2025-10-24 22:01:09,027 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:09] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:01:09,043 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:10,859 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:10] "[32mPOST /brick-types/delete/2 HTTP/1.1[0m" 302 -
+2025-10-24 22:01:10,865 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:10] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:01:10,880 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:12,742 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:12] "[32mPOST /brick-types/delete/3 HTTP/1.1[0m" 302 -
+2025-10-24 22:01:12,747 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:12] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:01:12,762 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:18,221 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:18] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:01:18,237 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:22,876 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:22] "GET /categories/ HTTP/1.1" 200 -
+2025-10-24 22:01:22,890 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:26,846 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:26] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:01:26,861 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:44,870 - ERROR - Query Failed: SELECT * FROM owners ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 22:01:44,871 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 22:01:44,879 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:44] "GET /owner/ HTTP/1.1" 200 -
+2025-10-24 22:01:44,893 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:01:47,872 - ERROR - Query Failed: SELECT id, name FROM owners WHERE status = 'Active' ORDER BY name | Params: () | Error: no such table: owners
+2025-10-24 22:01:47,873 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 22:01:47,873 - ERROR - Query Failed: 
+        SELECT o.date, own.name, o.voucher_no, o.description, o.amount, o.type, o.id
+        FROM owner_cash o
+        LEFT JOIN owners own ON o.owner_id = own.id
+     ORDER BY o.date DESC, o.id DESC | Params: () | Error: no such table: owners
+2025-10-24 22:01:47,873 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: owners
+
+2025-10-24 22:01:47,887 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:47] "GET /owner/cash HTTP/1.1" 200 -
+2025-10-24 22:01:47,902 - INFO - 127.0.0.1 - - [24/Oct/2025 22:01:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:02:05,561 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:05] "GET /brick-types/ HTTP/1.1" 200 -
+2025-10-24 22:02:05,575 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:02:07,863 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:07] "GET /brick-types/?name=&code=&category=&status= HTTP/1.1" 200 -
+2025-10-24 22:02:07,879 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:02:12,614 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:12] "GET /brick-types/?name=&code=&category=Bricks&status= HTTP/1.1" 200 -
+2025-10-24 22:02:12,629 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:02:32,665 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:32] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 22:02:32,681 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:02:34,206 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:34] "GET /sales/add HTTP/1.1" 200 -
+2025-10-24 22:02:34,220 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:02:41,622 - INFO - 127.0.0.1 - - [24/Oct/2025 22:02:41] "GET /api/customer_balance/23 HTTP/1.1" 200 -
+2025-10-24 22:07:30,213 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 22:07:30,267 - INFO -  * Restarting with stat
+2025-10-24 22:07:30,647 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:07:30,647 - INFO - DB requires migration. Current: 15, Target: 16
+2025-10-24 22:07:30,880 - INFO - Upgraded database to version 16
+2025-10-24 22:07:30,880 - INFO - All migrations applied successfully.
+2025-10-24 22:07:31,205 - WARNING -  * Debugger is active!
+2025-10-24 22:07:31,209 - INFO -  * Debugger PIN: 536-270-118

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Owner\'s cash management') }}{% endblock %}
+{% block header_title %}{{ _('Owner\'s cash') }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ _('Owner\'s cash') }}</h5>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addModal">
+            {{ _('Add new') }}
+        </button>
+    </div>
+    <div class="card-body">
+
+        <form method="GET" action="{{ url_for('owner.cash_management') }}" class="row g-3 mb-3">
+            <div class="col-md-4">
+                <label for="date" class="form-label">{{ _('Select your date') }}</label>
+                <input type="date" class="form-control" id="date" name="date" value="{{ date_filter }}">
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary">{{ _('Filter') }}</button>
+            </div>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ _('No.') }}</th>
+                        <th>{{ _('Name') }}</th>
+                        <th>{{ _('Voucher No.') }}</th>
+                        <th>{{ _('Date') }}</th>
+                        <th>{{ _('Description') }}</th>
+                        <th>{{ _('Amount') }}</th>
+                        <th>{{ _('Status') }}</th>
+                        <th>{{ _('Action') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in entries %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ entry[1] }}</td> <td>{{ entry[2] }}</td> <td>{{ entry[0] }}</td> <td>{{ entry[3] }}</td> <td>
+                            {% if entry[5] == 'Deposit' %}
+                                <span class="text-success">{{ "%.2f"|format(entry[4]) }}</span>
+                            {% else %}
+                                <span class="text-danger">{{ "%.2f"|format(entry[4]) }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if entry[5] == 'Deposit' %}
+                                <span class="badge bg-success">{{ _('Deposit') }}</span>
+                            {% else %}
+                                <span class="badge bg-danger">{{ _('Withdrawal') }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <form action="{{ url_for('owner.delete_cash_entry', entry_id=entry[6]) }}" method="POST" style="display: inline;" onsubmit="return confirm('{{ _('Are you sure?') }}');">
+                                <button type="submit" class="btn btn-danger btn-sm">{{ _('Delete') }}</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="8" class="text-center">{{ _('No Data Found') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ _('Add new owner cash') }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <form method="POST" action="{{ url_for('owner.add_cash_entry') }}">
+        <div class="modal-body">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="voucher_no" class="form-label">{{ _('Voucher No.') }} *</label>
+                    <input type="text" class="form-control" id="voucher_no" name="voucher_no" value="WIC-{{ today.replace('-', '') }}-" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="date" class="form-label">{{ _('Date') }} *</label>
+                    <input type="date" class="form-control" id="date" name="date" value="{{ today }}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="owner_id" class="form-label">{{ _('Owner') }} *</label>
+                    <select class="form-select" id="owner_id" name="owner_id" required>
+                        <option value="">-- {{ _('Please select') }} --</option>
+                        {% for owner in owners %}
+                        <option value="{{ owner[0] }}">{{ owner[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="payment_method" class="form-label">{{ _('Payment Method') }} *</label>
+                    <select class="form-select" id="payment_method" name="payment_method" required>
+                        <option value="Cash">{{ _('Cash') }}</option>
+                        <option value="Bank">{{ _('Bank') }}</option>
+                        <option value="Mobile">{{ _('Mobile') }}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="account" class="form-label">{{ _('Account') }} *</label>
+                    <select class="form-select" id="account" name="account" required>
+                        <option value="Cash In Hand">{{ _('Cash In Hand') }}</option>
+                        <option value="Cash In Bank">{{ _('Cash In Bank') }}</option>
+                        <option value="Cash In Mobile">{{ _('Cash In Mobile') }}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="amount" class="form-label">{{ _('Amount') }} *</label>
+                    <input type="number" step="0.01" class="form-control" id="amount" name="amount" required>
+                </div>
+                <div class="col-12">
+                    <label for="remarks" class="form-label">{{ _('Remarks') }}</label>
+                    <textarea class="form-control" id="remarks" name="remarks" rows="2"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button>
+          <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
