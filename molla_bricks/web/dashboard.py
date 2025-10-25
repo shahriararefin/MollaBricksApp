@@ -25,6 +25,7 @@ def _get_date_range(period_str):
 def _safe_sum_query(query, params=()):
     """ Helper function to safely run a SUM query and return 0 if None. """
     result = db_controller_instance.execute_query(query, params, fetch="one")
+    # This is the fix: check if result is None before trying to access result[0]
     return (result[0] or 0) if result else 0
 
 @bp.route('/')
@@ -37,7 +38,7 @@ def index():
     
     # --- Build WHERE clause for date filtering ---
     date_filter = f"WHERE date BETWEEN '{start_date}' AND '{end_date}'"
-    date_filter_sales = f"WHERE date(timestamp) BETWEEN '{start_date}' AND '{end_date}'"
+    date_filter_sales = f"WHERE sale_date BETWEEN '{start_date}' AND '{end_date}'"
     date_filter_expenses = f"WHERE date(expense_date) BETWEEN '{start_date}' AND '{end_date}'"
     date_filter_salary = f"WHERE date(payment_date) BETWEEN '{start_date}' AND '{end_date}'"
     date_filter_lu = f"WHERE date BETWEEN '{start_date}' AND '{end_date}'"
@@ -45,12 +46,12 @@ def index():
     if period == "All Time":
         date_filter = date_filter_sales = date_filter_expenses = date_filter_salary = date_filter_lu = ""
 
-    # --- 1. Income Stats ---
-    total_income = _safe_sum_query(f"SELECT SUM(total_amount) FROM nagad_khata {date_filter_sales}")
-    total_paid = _safe_sum_query(f"SELECT SUM(paid_amount) FROM nagad_khata {date_filter_sales}")
-    total_outstanding = _safe_sum_query(f"SELECT SUM(due_amount) FROM nagad_khata {'' if period == 'All Time' else date_filter}")
+    # --- 1. Income Stats (Points to new sales_invoices table) ---
+    total_income = _safe_sum_query(f"SELECT SUM(total) FROM sales_invoices {date_filter_sales}")
+    total_paid = _safe_sum_query(f"SELECT SUM(paid) FROM sales_invoices {date_filter_sales}")
+    total_outstanding = _safe_sum_query("SELECT SUM(due) FROM sales_invoices") # Always show all outstanding
 
-    # --- 2. Cost Stats ---
+    # --- 2. Cost Stats (All queries are now safe) ---
     exp_daily = _safe_sum_query(f"SELECT SUM(amount) FROM daily_expenses {date_filter_expenses}")
     exp_salary = _safe_sum_query(f"SELECT SUM(paid_amount) FROM salary_payments {date_filter_salary}")
     exp_contractor = _safe_sum_query(f"SELECT SUM(amount) FROM contractor_payments {date_filter_salary}")
@@ -59,28 +60,36 @@ def index():
     
     total_costs = exp_daily + exp_salary + exp_contractor + exp_load_unload + exp_coal
     
-    # --- 3. Production Stats ---
-    q_shaped = _safe_sum_query(f"SELECT SUM(quantity_shaped) FROM pot_entries {date_filter}")
-    q_loaded = _safe_sum_query(f"SELECT SUM(bricks_loaded) FROM round_entries {date_filter}")
-    
-    count_query = f"SELECT COUNT(id) FROM round_entries {date_filter}"
-    total_rounds_result = db_controller_instance.execute_query(count_query, fetch="one")
-    total_rounds = (total_rounds_result[0] or 0) if total_rounds_result else 0
+    # --- 3. Production Stats (Points to new sales_items table) ---
+    prod_query = f"SELECT si.product_name, SUM(si.quantity) FROM sales_items si JOIN sales_invoices s ON si.invoice_id = s.id {date_filter_sales} GROUP BY si.product_name"
+    prod_data = db_controller_instance.execute_query(prod_query, fetch="all") or []
+    production_stats = {row[0]: row[1] for row in prod_data}
 
-    # --- 4. Final Summary ---
+    # --- 4. Round Stats (Safe query) ---
+    round_query = f"SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' {date_filter.replace('WHERE', 'AND') if date_filter else ''}"
+    round_stats = db_controller_instance.execute_query(round_query, fetch="one")
+    
     summary = {
         'total_income': total_income,
         'total_outstanding': total_outstanding,
-        'net_profit': total_income - total_costs,
+        'balance': total_paid - total_costs, # Simple balance calculation
         'total_costs': total_costs,
-        'cost_load_unload': exp_load_unload,
+        'cost_load': _safe_sum_query(f"SELECT SUM(total_cost) FROM load_unload {date_filter_lu} {'AND' if date_filter_lu else 'WHERE'} type = 'Load'"),
+        'cost_unload': _safe_sum_query(f"SELECT SUM(total_cost) FROM load_unload {date_filter_lu} {'AND' if date_filter_lu else 'WHERE'} type = 'Unload'"),
         'cost_coal': exp_coal,
-        'cost_daily': exp_daily,
-        'cost_salary': exp_salary + exp_contractor,
-        'prod_shaped': q_shaped,
-        'prod_loaded': q_loaded,
-        'prod_rounds': total_rounds,
-        'period': period
+        'cost_firing': exp_salary + exp_contractor, # Combined labor costs
+        'cost_soil': 0, # Placeholder
+        'cost_oil': 0, # Placeholder
+        'cost_electricity': 0, # Placeholder
+        # Match product names from db
+        'prod_first_class': production_stats.get('1st Class', 0) + production_stats.get('Class 1', 0),
+        'prod_second_class': production_stats.get('2nd Class', 0) + production_stats.get('Class 2', 0),
+        'prod_picket': production_stats.get('Picket', 0),
+        'prod_adla': production_stats.get('Adla', 0), # Placeholder name
+        'round_count': (round_stats[0] or 0) if round_stats else 0,
+        'round_date': round_stats[1] if round_stats and round_stats[1] else 'N/A',
+        'period': period,
+        'filter_date': (datetime.strptime(start_date, '%Y-%m-%d') if period != 'All Time' else datetime.now()).strftime('%m/%d/%Y')
     }
     
     return render_template('dashboard.html', summary=summary, alerts=_get_alerts())
@@ -88,7 +97,8 @@ def index():
 def _get_alerts():
     alerts = []
     thirty_days_ago = (datetime.now() - timedelta(days=30)).strftime('%Y-%m-%d')
-    overdue_query = "SELECT COUNT(id) FROM nagad_khata WHERE due_amount > 0.01 AND date <= ?"
+    # FIXED: Point to sales_invoices
+    overdue_query = "SELECT COUNT(id) FROM sales_invoices WHERE due > 0.01 AND sale_date <= ?"
     overdue_count_result = db_controller_instance.execute_query(overdue_query, (thirty_days_ago,), fetch="one")
     overdue_count = (overdue_count_result[0] or 0) if overdue_count_result else 0
     if overdue_count > 0:

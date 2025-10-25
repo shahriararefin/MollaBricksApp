@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Manage Income') }}{% endblock %}
+{% block header_title %}{{ _('Sales Management') }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{ _('Sales Management') }}</h5>
+        <a href="{{ url_for('income.add_income_form') }}" class="btn btn-primary btn-sm">{{ _('Add new') }}</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ _('No.') }}</th>
+                        <th>{{ _('Invoice No.') }}</th>
+                        <th>{{ _('Sale date') }}</th>
+                        <th>{{ _('Party name') }}</th>
+                        <th>{{ _('Sales volume') }}</th>
+                        <th>{{ _('Amount paid') }}</th>
+                        <th>{{ _('The remaining amount') }}</th>
+                        <th>{{ _('Transaction status') }}</th>
+                        <th>{{ _('Action') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for inv in invoices %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ inv[1] }}</td> <td>{{ inv[2] }}</td> <td>{{ inv[3] }}</td> <td>{{ "%.2f"|format(inv[4]) }}</td> <td>{{ "%.2f"|format(inv[5]) }}</td> <td>{{ "%.2f"|format(inv[6]) }}</td> <td>
+                            {% if inv[7] == 'Paid' %}
+                                <span class="badge bg-success">{{ _('Paid') }}</span>
+                            {% elif inv[7] == 'Due' %}
+                                <span class="badge bg-danger">{{ _('Due') }}</span>
+                            {% else %}
+                                <span class="badge bg-warning">{{ _('Partial') }}</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">{{ _('Edit') }}</button>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="9" class="text-center">{{ _('No income records found.') }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

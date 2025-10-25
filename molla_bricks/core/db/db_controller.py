@@ -144,6 +144,7 @@ class DBController:
                 invoice_no TEXT NOT NULL UNIQUE,
                 sale_date TEXT NOT NULL,
                 party_id INTEGER NOT NULL,
+                party_name TEXT,
                 vehicle_no TEXT,
                 total REAL,
                 paid REAL,

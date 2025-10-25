@@ -1,17 +1,8 @@
 <div class="sidebar">
-    <div class="sidebar-header">
-        <a href="{{ url_for('dashboard.index') }}">{{ _('Molla Bricks') }}</a>
-    </div>
-    
+    <div class="sidebar-header"><a href="{{ url_for('dashboard.index') }}">{{ _('Molla Bricks') }}</a></div>
     <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-            <a class="nav-link {% if 'dashboard.' in request.endpoint %}active{% endif %}" href="{{ url_for('dashboard.index') }}">
-                {{ _('Dashboard') }}
-            </a>
-        </li>
-        
+        <li class="nav-item"><a class="nav-link {% if 'dashboard.' in request.endpoint %}active{% endif %}" href="{{ url_for('dashboard.index') }}">{{ _('Dashboard') }}</a></li>
         <li class="nav-item menu-heading"><span>{{ _('MENU') }}</span></li>
-        
         <li class="nav-item">
             <a class="nav-link {% if 'fiscal_year.' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#fiscalYearSubmenu" role="button" aria-expanded="{% if 'fiscal_year.' in request.endpoint %}true{% else %}false{% endif %}">
                 <span class="submenu-toggle">{{ _('Fiscal year') }}</span>
@@ -21,19 +12,15 @@
                 <li class="nav-item"><a class="nav-link {% if request.endpoint == 'fiscal_year.financial_year_end' %}active{% endif %}" href="{{ url_for('fiscal_year.financial_year_end') }}">{{ _('Financial year end') }}</a></li>
             </ul>
         </li>
+        <li class="nav-item"><a class="nav-link {% if 'categories.' in request.endpoint %}active{% endif %}" href="{{ url_for('categories.index') }}">{{ _('Category') }}</a></li>
+        <li class="nav-item"><a class="nav-link {% if 'brick_types.' in request.endpoint %}active{% endif %}" href="{{ url_for('brick_types.index') }}">{{ _('Class') }}</a></li>
         <li class="nav-item">
-            <a class="nav-link {% if 'categories.' in request.endpoint %}active{% endif %}" href="{{ url_for('categories.index') }}">{{ _('Category') }}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if 'brick_types.' in request.endpoint %}active{% endif %}" href="{{ url_for('brick_types.index') }}">{{ _('Class') }}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if 'sales.' in request.endpoint or 'dues.' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#incomeSubmenu" role="button" aria-expanded="false">
+            <a class="nav-link {% if 'income.' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#incomeSubmenu" role="button" aria-expanded="{% if 'income.' in request.endpoint %}true{% else %}false{% endif %}">
                 <span class="submenu-toggle">{{ _('Income') }}</span>
             </a>
-            <ul class="nav flex-column nav-second-level collapse" id="incomeSubmenu">
-                <li class="nav-item"><a class="nav-link {% if 'sales.' in request.endpoint %}active{% endif %}" href="{{ url_for('sales.nagad_khata') }}">{{ _('Nagad Khata (Sales)') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if 'dues.' in request.endpoint %}active{% endif %}" href="{{ url_for('dues.baki_khata') }}">{{ _('Baki Khata (Dues)') }}</a></li>
+            <ul class="nav flex-column nav-second-level collapse {% if 'income.' in request.endpoint %}show{% endif %}" id="incomeSubmenu">
+                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'income.add_income_form' %}active{% endif %}" href="{{ url_for('income.add_income_form') }}">{{ _('Add income') }}</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'income.manage_income' %}active{% endif %}" href="{{ url_for('income.manage_income') }}">{{ _('Manage income') }}</a></li>
             </ul>
         </li>
         <li class="nav-item">
@@ -54,11 +41,7 @@
                 <li class="nav-item"><a class="nav-link {% if request.endpoint == 'pot.pot_report' %}active{% endif %}" href="{{ url_for('pot.pot_report') }}">{{ _('Pot Report') }}</a></li>
             </ul>
         </li>
-        <li class="nav-item">
-            <a class="nav-link {% if 'round.' in request.endpoint %}active{% endif %}" href="{{ url_for('round.index') }}">
-                {{ _('Round') }}
-            </a>
-        </li>
+        <li class="nav-item"><a class="nav-link {% if 'round.' in request.endpoint %}active{% endif %}" href="{{ url_for('round.index') }}">{{ _('Round') }}</a></li>
         <li class="nav-item">
             <a class="nav-link {% if 'load_unload.' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#loadUnloadSubmenu" role="button" aria-expanded="{% if 'load_unload.' in request.endpoint %}true{% else %}false{% endif %}">
                 <span class="submenu-toggle">{{ _('Load Unload') }}</span>
@@ -77,14 +60,12 @@
                 <li class="nav-item"><a class="nav-link {% if request.endpoint == 'owner.cash_management' %}active{% endif %}" href="{{ url_for('owner.cash_management') }}">{{ _('Owner\'s cash management') }}</a></li>
             </ul>
         </li>
-
         <li class="nav-item menu-heading"><span>{{ _('ACCOUNTS & HRM & REPORTS') }}</span></li>
-
         <li class="nav-item">
-            <a class="nav-link {% if 'accounts.' in request.endpoint or 'ledger.' in request.endpoint or 'transactions.' in request.endpoint or 'reports.brick_statement' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#accountSubmenu" role="button" aria-expanded="{% if 'accounts.' in request.endpoint or 'ledger.' in request.endpoint or 'transactions.' in request.endpoint or 'reports.brick_statement' in request.endpoint %}true{% else %}false{% endif %}">
+            <a class="nav-link {% if 'accounts.' in request.endpoint or 'reports.brick_statement' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#accountSubmenu" role="button" aria-expanded="{% if 'accounts.' in request.endpoint or 'reports.brick_statement' in request.endpoint %}true{% else %}false{% endif %}">
                 <span class="submenu-toggle">{{ _('Account') }}</span>
             </a>
-            <ul class="nav flex-column nav-second-level collapse {% if 'accounts.' in request.endpoint or 'ledger.' in request.endpoint or 'transactions.' in request.endpoint or 'reports.brick_statement' in request.endpoint %}show{% endif %}" id="accountSubmenu">
+            <ul class="nav flex-column nav-second-level collapse {% if 'accounts.' in request.endpoint or 'reports.brick_statement' in request.endpoint %}show{% endif %}" id="accountSubmenu">
                 <li class="nav-item"><a class="nav-link {% if request.endpoint == 'accounts.chart_of_head' %}active{% endif %}" href="{{ url_for('accounts.chart_of_head') }}">{{ _('Chart of Head') }}</a></li>
                 <li class="nav-item">
                      <a class="nav-link {% if 'transactions.' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#transactionSubmenu" role="button" aria-expanded="false">
@@ -93,75 +74,4 @@
                     <ul class="nav flex-column nav-second-level collapse {% if 'transactions.' in request.endpoint %}show{% endif %}" id="transactionSubmenu">
                         <li><a class="nav-link" href="{{ url_for('transactions.opening_balance') }}">{{ _('Opening balance') }}</a></li>
                         <li><a class="nav-link" href="{{ url_for('transactions.payment') }}">{{ _('Payment') }}</a></li>
-                        <li><a class="nav-link" href="{{ url_for('transactions.collection') }}">{{ _('Collection') }}</a></li>
-                        <li><a class="nav-link" href="{{ url_for('transactions.receipt') }}">{{ _('Receipt') }}</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.brick_statement' %}active{% endif %}" href="{{ url_for('reports.brick_statement') }}">{{ _('Brick statement') }}</a></li>
-                <li class="nav-item">
-                    <a class="nav-link {% if 'accounts.bank' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#bankSubmenu" role="button" aria-expanded="{% if 'accounts.bank' in request.endpoint %}true{% else %}false{% endif %}">
-                        <span class="submenu-toggle">{{ _('Bank') }}</span>
-                    </a>
-                    <ul class="nav flex-column nav-second-level collapse {% if 'accounts.bank' in request.endpoint %}show{% endif %}" id="bankSubmenu">
-                        <li><a class="nav-link {% if request.endpoint == 'accounts.bank' %}active{% endif %}" href="{{ url_for('accounts.bank') }}">{{ _('Manage the bank') }}</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if 'accounts.mobile_bank' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#mobileBankSubmenu" role="button" aria-expanded="{% if 'accounts.mobile_bank' in request.endpoint %}true{% else %}false{% endif %}">
-                        <span class="submenu-toggle">{{ _('Mobile Bank') }}</span>
-                    </a>
-                    <ul classS="nav flex-column nav-second-level collapse {% if 'accounts.mobile_bank' in request.endpoint %}show{% endif %}" id="mobileBankSubmenu">
-                        <li><a class="nav-link {% if request.endpoint == 'accounts.mobile_bank' %}active{% endif %}" href="{{ url_for('accounts.mobile_bank') }}">{{ _('Manage mobile banking') }}</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link {% if 'ledger.' in request.endpoint %}active{% endif %}" href="{{ url_for('ledger.ledger_book') }}">{{ _('Laser') }}</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link {% if 'insights.' in request.endpoint or 'reports.' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#reportSubmenu" role="button" aria-expanded="{% if 'insights.' in request.endpoint or 'reports.' in request.endpoint %}true{% else %}false{% endif %}">
-                <span class="submenu-toggle">{{ _('Report') }}</span>
-            </a>
-            <ul class="nav flex-column nav-second-level collapse {% if 'insights.' in request.endpoint or 'reports.' in request.endpoint %}show{% endif %}" id="reportSubmenu">
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.coal_statement' %}active{% endif %}" href="{{ url_for('reports.coal_statement') }}">{{ _('Coal statement') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.owner_cash_report' %}active{% endif %}" href="{{ url_for('reports.owner_cash_report') }}">{{ _('Owner Cash Report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.cash_book' %}active{% endif %}" href="{{ url_for('reports.cash_book') }}">{{ _('Cash book') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.bank_book' %}active{% endif %}" href="{{ url_for('reports.bank_book') }}">{{ _('Bank book') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.income_report' %}active{% endif %}" href="{{ url_for('reports.income_report') }}">{{ _('Income report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.expense_report' %}active{% endif %}" href="{{ url_for('reports.expense_report') }}">{{ _('Expense report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.profit_and_loss_report' %}active{% endif %}" href="{{ url_for('reports.profit_and_loss_report') }}">{{ _('Profit and loss report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.summary_report' %}active{% endif %}" href="{{ url_for('reports.summary_report') }}">{{ _('Summary report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.closing_report' %}active{% endif %}" href="{{ url_for('reports.closing_report') }}">{{ _('Closing report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.income_due_report' %}active{% endif %}" href="{{ url_for('reports.income_due_report') }}">{{ _('Income Due Report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if request.endpoint == 'reports.expense_due_report' %}active{% endif %}" href="{{ url_for('reports.expense_due_report') }}">{{ _('Expense Due Report') }}</a></li>
-                <li class="nav-item"><a class="nav-link {% if 'insights.' in request.endpoint %}active{% endif %}" href="{{ url_for('insights.index') }}">{{ _('Insights') }}</a></li>
-            </ul>
-        </li>
-
-        <li class="nav-item menu-heading"><span>{{ _('PROFILE') }}</span></li>
-        <li class="nav-item">
-            <a class="nav-link {% if 'customers.' in request.endpoint %}active{% endif %}" data-bs-toggle="collapse" href="#partySubmenu" role="button" aria-expanded="{% if 'customers.' in request.endpoint %}true{% else %}false{% endif %}">
-                <span class="submenu-toggle">{{ _('Party') }}</span>
-            </a>
-            <ul class="nav flex-column nav-second-level collapse {% if 'customers.' in request.endpoint %}show{% endif %}" id="partySubmenu">
-                <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == 'customers.index' %}active{% endif %}" href="{{ url_for('customers.index') }}">
-                        {{ _('Manage the party') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.endpoint == 'ledger.ledger_book' %}active{% endif %}" href="{{ url_for('ledger.ledger_book') }}">
-                        {{ _('Party laser') }}
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="nav-item menu-heading"><span>{{ _('ACCESS CONTROL') }}</span></li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">{{ _('User') }}</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">{{ _('Introduction') }}</a>
-        </li>
-    </ul>
-</div>
+                        <li><a class...

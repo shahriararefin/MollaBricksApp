@@ -30,13 +30,14 @@ def create_app():
     
     babel.locale_selector = get_locale
 
-    from . import auth, customers, sales, api, dues, ledger, salary, expenses, insights, language, categories, brick_types, pot, round, load_unload, fiscal_year, owner, accounts, reports, transactions
-    from . import dashboard  # <-- ADD THIS LINE
+    # --- MODIFIED: Removed 'sales', added 'income' ---
+    from . import auth, dashboard, customers, api, dues, ledger, salary, expenses, insights, language, categories, brick_types, pot, round, load_unload, fiscal_year, owner, accounts, reports, transactions
+    from . import income  # <-- ADDED
 
     app.register_blueprint(auth.bp)
-    app.register_blueprint(dashboard.bp) # <-- ADD THIS LINE
+    app.register_blueprint(dashboard.bp) 
     app.register_blueprint(customers.bp)
-    app.register_blueprint(sales.bp)
+    # app.register_blueprint(sales.bp) # <-- REMOVED
     app.register_blueprint(api.bp)
     app.register_blueprint(dues.bp)
     app.register_blueprint(ledger.bp)
@@ -54,5 +55,6 @@ def create_app():
     app.register_blueprint(accounts.bp)
     app.register_blueprint(reports.bp)
     app.register_blueprint(transactions.bp)
+    app.register_blueprint(income.bp) # <-- ADDED
 
     return app

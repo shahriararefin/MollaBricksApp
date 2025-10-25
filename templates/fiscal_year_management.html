@@ -1,140 +1,86 @@
 {% extends "base.html" %}
-
 {% block title %}{{ _('Fiscal Year Management') }}{% endblock %}
 {% block header_title %}{{ _('Fiscal Year Management') }}{% endblock %}
-
 {% block content %}
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
         <h5 class="mb-0">{{ _('Fiscal year') }}</h5>
-        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addModal">
-            {{ _('Add new') }}
-        </button>
+        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addModal">{{ _('Add new') }}</button>
     </div>
     <div class="card-body">
-        
         <form method="GET" action="{{ url_for('fiscal_year.management') }}" class="row g-3 mb-3">
+            <div class="col-md-4"><label class="form-label">{{ _('Name') }}</label><input type="text" class="form-control" name="name" value="{{ name_filter }}"></div>
             <div class="col-md-4">
-                <label for="name" class="form-label">{{ _('Name') }}</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ name_filter }}">
-            </div>
-            <div class="col-md-4">
-                <label for="status" class="form-label">{{ _('Status') }}</label>
-                <select class="form-select" id="status" name="status">
+                <label class="form-label">{{ _('Status') }}</label>
+                <select class="form-select" name="status">
                     <option value="">{{ _('Please select') }}</option>
                     <option value="Active" {% if status_filter == 'Active' %}selected{% endif %}>{{ _('Active') }}</option>
                     <option value="Inactive" {% if status_filter == 'Inactive' %}selected{% endif %}>{{ _('Inactive') }}</option>
                 </select>
             </div>
-            <div class="col-md-4 d-flex align-items-end">
-                <button type="submit" class="btn btn-primary">{{ _('Filter') }}</button>
-            </div>
+            <div class="col-md-4 d-flex align-items-end"><button type="submit" class="btn btn-primary">{{ _('Filter') }}</button></div>
         </form>
-
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>{{ _('No.') }}</th>
-                        <th>{{ _('Name') }}</th>
-                        <th>{{ _('Start date') }}</th>
-                        <th>{{ _('Deadline') }}</th>
-                        <th>{{ _('Status') }}</th>
-                        <th>{{ _('Action') }}</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>{{ _('No.') }}</th><th>{{ _('Name') }}</th><th>{{ _('Start date') }}</th><th>{{ _('Deadline') }}</th><th>{{ _('Status') }}</th><th>{{ _('Action') }}</th></tr></thead>
                 <tbody>
                     {% for row in records %}
                     <tr>
                         <td>{{ loop.index }}</td>
-                        <td>{{ row[1] }}</td> <td>{{ row[2] }}</td> <td>{{ row[3] if row[3] else 'N/A' }}</td> <td>
-                            {% if row[4] == 'Active' %}
-                                <span class="badge bg-success">{{ _('Active') }}</span>
-                            {% else %}
-                                <span class="badge bg-danger">{{ _('Inactive') }}</span>
-                            {% endif %}
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] if row[3] else 'N/A' }}</td>
+                        <td>
+                            {% if row[4] == 'Active' %}<span class="badge bg-success">{{ _('Active') }}</span>
+                            {% else %}<span class="badge bg-danger">{{ _('Inactive') }}</span>{% endif %}
                         </td>
                         <td>
-                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal-{{ row[0] }}">
-                                {{ _('Edit') }}
-                            </button>
+                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal-{{ row[0] }}">{{ _('Edit') }}</button>
                             <form action="{{ url_for('fiscal_year.delete', year_id=row[0]) }}" method="POST" style="display: inline;" onsubmit="return confirm('{{ _('Are you sure?') }}');">
                                 <button type="submit" class="btn btn-danger btn-sm">{{ _('Delete') }}</button>
                             </form>
                         </td>
                     </tr>
                     {% else %}
-                    <tr>
-                        <td colspan="6" class="text-center">{{ _('No Data Found') }}</td>
-                    </tr>
+                    <tr><td colspan="6" class="text-center">{{ _('No Data Found') }}</td></tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-
 <div class="modal fade" id="addModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{{ _('Add new fiscal year') }}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+      <div class="modal-header"><h5 class="modal-title">{{ _('Add new fiscal year') }}</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
       <form method="POST" action="{{ url_for('fiscal_year.add') }}">
         <div class="modal-body">
+            <div class="mb-3"><label for="add-name" class="form-label">{{ _('Name') }} *</label><input type="text" class="form-control" id="add-name" name="name" required></div>
+            <div class="mb-3"><label for="add-start_date" class="form-label">{{ _('Start date') }} *</label><input type="date" class="form-control" id="add-start_date" name="start_date" value="{{ today }}" required></div>
+            <div class="mb-3"><label for="add-end_date" class="form-label">{{ _('Deadline') }}</label><input type="date" class="form-control" id="add-end_date" name="end_date"></div>
             <div class="mb-3">
-                <label for="name" class="form-label">{{ _('Name') }} *</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="mb-3">
-                <label for="start_date" class="form-label">{{ _('Start date') }} *</label>
-                <input type="date" class="form-control" id="start_date" name="start_date" value="{{ today }}" required>
-            </div>
-            <div class="mb-3">
-                <label for="end_date" class="form-label">{{ _('Deadline') }}</label>
-                <input type="date" class="form-control" id="end_date" name="end_date">
-            </div>
-            <div class="mb-3">
-                <label for="status" class="form-label">{{ _('Status') }} *</label>
-                <select class="form-select" id="status" name="status" required>
-                    <option value="Active" selected>{{ _('Active') }}</option>
-                    <option value="Inactive">{{ _('Inactive') }}</option>
+                <label for="add-status" class="form-label">{{ _('Status') }} *</label>
+                <select class="form-select" id="add-status" name="status" required>
+                    <option value="Active" selected>{{ _('Active') }}</option><option value="Inactive">{{ _('Inactive') }}</option>
                 </select>
             </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button>
-          <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
-        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button><button type="submit" class="btn btn-primary">{{ _('Save') }}</button></div>
       </form>
     </div>
   </div>
 </div>
-
 {% for row in records %}
 <div class="modal fade" id="editModal-{{ row[0] }}" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{{ _('Edit fiscal year') }}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+      <div class="modal-header"><h5 class="modal-title">{{ _('Edit fiscal year') }}</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
       <form method="POST" action="{{ url_for('fiscal_year.edit') }}">
         <input type="hidden" name="id" value="{{ row[0] }}">
-        <div class="modal-body">
-            <div class="mb-3">
-                <label for="name-{{ row[0] }}" class="form-label">{{ _('Name') }} *</label>
-                <input type="text" class="form-control" id="name-{{ row[0] }}" name="name" value="{{ row[1] }}" required>
-            </div>
-            <div class="mb-3">
-                <label for="start_date-{{ row[0] }}" class="form-label">{{ _('Start date') }} *</label>
-                <input type="date" class="form-control" id="start_date-{{ row[0] }}" name="start_date" value="{{ row[2] }}" required>
-            </div>
-            <div class="mb-3">
-                <label for="end_date-{{ row[0] }}" class="form-label">{{ _('Deadline') }}</label>
-                <input type="date" class="form-control" id="end_date-{{ row[0] }}" name="end_date" value="{{ row[3] }}">
-            </div>
+        <div class.modal-body">
+            <div class="mb-3"><label for="name-{{ row[0] }}" class="form-label">{{ _('Name') }} *</label><input type="text" class="form-control" id="name-{{ row[0] }}" name="name" value="{{ row[1] }}" required></div>
+            <div class="mb-3"><label for="start_date-{{ row[0] }}" class="form-label">{{ _('Start date') }} *</label><input type="date" class="form-control" id="start_date-{{ row[0] }}" name="start_date" value="{{ row[2] }}" required></div>
+            <div class="mb-3"><label for="end_date-{{ row[0] }}" class="form-label">{{ _('Deadline') }}</label><input type="date" class="form-control" id="end_date-{{ row[0] }}" name="end_date" value="{{ row[3] if row[3] }}"></div>
             <div class="mb-3">
                 <label for="status-{{ row[0] }}" class="form-label">{{ _('Status') }} *</label>
                 <select class="form-select" id="status-{{ row[0] }}" name="status" required>
@@ -143,10 +89,7 @@
                 </select>
             </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button>
-          <button type="submit" class="btn btn-primary">{{ _('Save Changes') }}</button>
-        </div>
+        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ _('Close') }}</button><button type="submit" class="btn btn-primary">{{ _('Save Changes') }}</button></div>
       </form>
     </div>
   </div>

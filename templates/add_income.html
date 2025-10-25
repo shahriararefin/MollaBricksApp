@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _('Add income') }}{% endblock %}
+{% block header_title %}{{ _('Sell') }}{% endblock %}
+
+{% block content %}
+<form method="POST" action="{{ url_for('income.add_income_submit') }}">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">{{ _('Sell') }}</h5>
+            <a href="{{ url_for('income.manage_income') }}" class="btn btn-warning btn-sm">{{ _('Back') }}</a>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label for="invoice_no" class="form-label">{{ _('Invoice No.') }} *</label>
+                    <input type="text" class="form-control" id="invoice_no" name="invoice_no" value="{{ invoice_no }}" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label for="sale_date" class="form-label">{{ _('Sale date') }} *</label>
+                    <input type="date" class="form-control" id="sale_date" name="sale_date" value="{{ today }}" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="party_id" class="form-label">{{ _('Party') }} *</label>
+                    <select class="form-select" id="party_id" name="party_id" required>
+                        <option value="">{{ _('Please select..') }}</option>
+                        {% for customer in customers %}
+                        <option value="{{ customer[0] }}">{{ customer[1] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="vehicle_no" class="form-label">{{ _('Vehicle No.') }}</label>
+                    <input type="text" class="form-control" id="vehicle_no" name="vehicle_no">
+                </div>
+            </div>
+            
+            <div class="table-responsive mt-4">
+                <table class="table table-bordered" id="product-table">
+                    <thead class="table-light">
+                        <tr>
+                            <th>{{ _('Class') }} *</th>
+                            <th>{{ _('Quantity') }} *</th>
+                            <th>{{ _('Rate') }} *</th>
+                            <th>{{ _('Subtotal') }}</th>
+                            <th>{{ _('Action') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="product-row">
+                            <td>
+                                <select class="form-select product-select" name="product_id[]" required onchange="calculateRow(this)">
+                                    <option value="">{{ _('Please Select') }}</option>
+                                    {% for prod in products %}
+                                    <option value="{{ prod[0] }}">{{ prod[1] }} ({{ prod[3] }})</option>
+                                    {% endfor %}
+                                </select>
+                            </td>
+                            <td><input type="number" class="form-control quantity" name="quantity[]" value="0" oninput="calculateRow(this)" required></td>
+                            <td><input type="number" step="0.01" class="form-control rate" name="rate[]" value="0.00" oninput="calculateRow(this)" required></td>
+                            <td><input type="text" class="form-control subtotal" name="subtotal[]" value="0.00" readonly></td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">-</button>
+                                <button type="button" class="btn btn-success btn-sm" onclick="addRow()">+</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-end"><strong>{{ _('Total') }}</strong></td>
+                            <td colspan="2"><input type="text" class="form-control" id="total" name="total" value="0.00" readonly></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <div class="col-md-4">
+                    <label for="transaction_status" class="form-label">{{ _('Transaction status') }} *</label>
+                    <select class="form-select" id="transaction_status" name="transaction_status" required>
+                        <option value="Paid">{{ _('Paid') }}</option>
+                        <option value="Due">{{ _('Due') }}</option>
+                        <option value="Partial">{{ _('Partial') }}</option>
+                    </select>
+                </div>
+                <div class="col-md-8">
+                    <label for="notes" class="form-label">{{ _('Notes') }}</label>
+                    <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="col-12 text-center mt-4">
+                <button type="reset" class="btn btn-danger">{{ _('Reset') }}</button>
+                <button type="submit" class="btn btn-primary">{{ _('Save') }}</button>
+                <button type="button" class="btn btn-success" onclick="addRow()">{{ _('Save and add another one') }}</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // This is the JavaScript that makes the form dynamic
+    
+    // Store product data from Flask
+    const products = [
+        {% for prod in products %}
+        { id: {{ prod[0] }}, name: "{{ prod[1] }}", unit: "{{ prod[3] }}" },
+        {% endfor %}
+    ];
+
+    function calculateRow(element) {
+        let row = element.closest('.product-row');
+        let quantity = parseFloat(row.querySelector('.quantity').value) || 0;
+        let rate = parseFloat(row.querySelector('.rate').value) || 0;
+        let subtotal = quantity * rate;
+        row.querySelector('.subtotal').value = subtotal.toFixed(2);
+        updateTotal();
+    }
+
+    function updateTotal() {
+        let total = 0;
+        document.querySelectorAll('.subtotal').forEach(function(sub) {
+            total += parseFloat(sub.value) || 0;
+        });
+        document.getElementById('total').value = total.toFixed(2);
+    }
+
+    function addRow() {
+        let tableBody = document.getElementById('product-table').getElementsByTagName('tbody')[0];
+        let firstRow = tableBody.rows[0];
+        let newRow = firstRow.cloneNode(true);
+        
+        // Clear values in the new row
+        newRow.querySelector('.product-select').selectedIndex = 0;
+        newRow.querySelector('.quantity').value = 0;
+        newRow.querySelector('.rate').value = "0.00";
+        newRow.querySelector('.subtotal').value = "0.00";
+        
+        tableBody.appendChild(newRow);
+    }
+
+    function removeRow(button) {
+        let row = button.closest('.product-row');
+        let tableBody = row.parentNode;
+        if (tableBody.rows.length > 1) {
+            row.remove();
+        } else {
+            // If it's the last row, just clear it
+            row.querySelector('.product-select').selectedIndex = 0;
+            row.querySelector('.quantity').value = 0;
+            row.querySelector('.rate').value = "0.00";
+            row.querySelector('.subtotal').value = "0.00";
+        }
+        updateTotal();
+    }
+    
+    // Initial calculation on page load
+    document.addEventListener('DOMContentLoaded', (event) => {
+        calculateRow(document.querySelector('.product-row'));
+    });
+</script>
+{% endblock %}

@@ -1,8 +1,42 @@
 # molla_bricks/ui/views/salary_tab.py
 import tkinter as tk
-from tkinter import ttk, messagebox, simpledialog
+# --- MODIFIED: Import ttkbootstrap ---
+import ttkbootstrap as ttk
+from tkinter import messagebox, simpledialog
 from datetime import datetime, timedelta
 from molla_bricks.ui.custom_calendar import CalendarPopup
+
+class RecordPaymentWindow(tk.Toplevel):
+    """A dedicated window to record a payment with full details."""
+    def __init__(self, parent, db_controller, payee_id, payee_name, payee_type, callback):
+        super().__init__(parent); self.transient(parent); self.title(f"Record Payment for {payee_name}"); self.db_controller = db_controller
+        self.payee_id = payee_id; self.payee_name = payee_name; self.payee_type = payee_type; self.callback = callback
+        self.date_var = tk.StringVar(value=datetime.now().strftime('%Y-%m-%d')); self.amount_var = tk.DoubleVar(); self.notes_var = tk.StringVar()
+        self.create_widgets(); self.grab_set(); self.wait_window()
+    def create_widgets(self):
+        form_frame = ttk.Frame(self, padding=20); form_frame.pack(expand=True, fill="both")
+        ttk.Label(form_frame, text=f"Paying: {self.payee_name}", font=("", 12, "bold")).grid(row=0, column=0, columnspan=2, pady=(0, 10))
+        ttk.Label(form_frame, text="Payment Date:").grid(row=1, column=0, sticky="w", pady=5); date_entry_frame = ttk.Frame(form_frame); date_entry_frame.grid(row=1, column=1, sticky="ew", pady=5)
+        ttk.Entry(date_entry_frame, textvariable=self.date_var).pack(side="left"); ttk.Button(date_entry_frame, text="📅", width=3, command=lambda: CalendarPopup(self, self.date_var)).pack(side="left", padx=5)
+        ttk.Label(form_frame, text="Amount Paid:").grid(row=2, column=0, sticky="w", pady=5); ttk.Entry(form_frame, textvariable=self.amount_var).grid(row=2, column=1, sticky="ew", pady=5)
+        ttk.Label(form_frame, text="Notes/Description:").grid(row=3, column=0, sticky="w", pady=5); ttk.Entry(form_frame, textvariable=self.notes_var).grid(row=3, column=1, sticky="ew", pady=5)
+        ttk.Button(form_frame, text="Save Payment", command=self.save_payment, bootstyle="primary").grid(row=4, column=1, sticky="e", pady=10)
+    def save_payment(self):
+        payment_date = self.date_var.get(); notes = self.notes_var.get()
+        try:
+            amount = round(self.amount_var.get(), 2)
+            if not amount > 0: messagebox.showerror("Input Error", "Payment amount must be greater than zero.", parent=self); return
+        except tk.TclError: messagebox.showerror("Input Error", "Please enter a valid number for the amount.", parent=self); return
+        if self.payee_type == "Staff":
+            new_id = self.db_controller.execute_query("INSERT INTO salary_payments (staff_id, payment_date, paid_amount, notes) VALUES (?, ?, ?, ?)", (self.payee_id, payment_date, amount, notes))
+            ledger_desc = f"Salary: {notes or 'Payment'} to {self.payee_name} [SALARY_PAYMENT_ID:{new_id}]"
+        else: # Contractor
+            new_id = self.db_controller.execute_query("INSERT INTO contractor_payments (contractor_id, payment_date, amount, description) VALUES (?, ?, ?, ?)", (self.payee_id, payment_date, amount, notes))
+            ledger_desc = f"Contractor: {notes or 'Work Pmt'} to {self.payee_name} [CON_PAY_ID:{new_id}]"
+        self.db_controller.execute_query("INSERT INTO ledger_book (date, party_name, description, debit) VALUES (?, ?, ?, ?)", (payment_date, self.payee_name, ledger_desc, amount))
+        messagebox.showinfo("Success", "Payment saved and recorded in ledger.", parent=self.master)
+        if self.callback: self.callback()
+        self.destroy()
 
 class EditPersonnelWindow(tk.Toplevel):
     """A window to edit Staff or Contractor details."""
@@ -26,12 +60,12 @@ class EditPersonnelWindow(tk.Toplevel):
         if self.person_type == "Staff":
             ttk.Label(form_frame, text="Monthly Salary:").grid(row=1, column=0, sticky="w", pady=5)
             ttk.Entry(form_frame, textvariable=self.detail_var).grid(row=1, column=1, sticky="ew", pady=5)
-        else: # Contractor
+        else:
             ttk.Label(form_frame, text="Section:").grid(row=1, column=0, sticky="w", pady=5)
             ttk.Combobox(form_frame, textvariable=self.detail_var, state="readonly", values=["Mill Sardar", "Loader", "Unloader", "Burner", "Other"]).grid(row=1, column=1, sticky="ew", pady=5)
             ttk.Label(form_frame, text="Phone:").grid(row=2, column=0, sticky="w", pady=5)
             ttk.Entry(form_frame, textvariable=self.phone_var).grid(row=2, column=1, sticky="ew", pady=5)
-        ttk.Button(form_frame, text="Save Changes", command=self.save_changes).grid(row=3, column=1, sticky="e", pady=10)
+        ttk.Button(form_frame, text="Save Changes", command=self.save_changes, bootstyle="primary").grid(row=3, column=1, sticky="e", pady=10)
     def save_changes(self):
         name = self.name_var.get(); detail = self.detail_var.get()
         if not name or not detail: messagebox.showerror("Error", "All fields are required.", parent=self); return
@@ -39,7 +73,7 @@ class EditPersonnelWindow(tk.Toplevel):
             try: salary = float(detail)
             except ValueError: messagebox.showerror("Error", "Salary must be a number.", parent=self); return
             self.db_controller.execute_query("UPDATE staff SET name = ?, monthly_salary = ? WHERE id = ?", (name, salary, self.person_id))
-        else: # Contractor
+        else:
             self.db_controller.execute_query("UPDATE contractors SET name = ?, section = ?, phone = ? WHERE id = ?", (name, detail, self.phone_var.get(), self.person_id))
         messagebox.showinfo("Success", "Details updated successfully.", parent=self.master); self.callback(); self.destroy()
 
@@ -64,6 +98,7 @@ class SalaryTab(ttk.Frame):
     def refresh_data(self): self.on_tab_changed()
 
 class MonthlyPaymentsFrame(ttk.Frame):
+    # --- MODIFIED: Fixed __init__ to accept parent and db_controller ---
     def __init__(self, parent, db_controller):
         super().__init__(parent, padding=15); self.db_controller = db_controller; self.staff_map = {}
         self.staff_var = tk.StringVar(); self.date_var = tk.StringVar(value=datetime.now().strftime('%Y-%m-%d')); self.amount_var = tk.DoubleVar(); self.notes_var = tk.StringVar()
@@ -71,12 +106,11 @@ class MonthlyPaymentsFrame(ttk.Frame):
         self.summary_salary_var = tk.StringVar(value="Monthly Salary: 0.00"); self.summary_paid_var = tk.StringVar(value="Total Paid: 0.00"); self.summary_due_var = tk.StringVar(value="Amount Due: 0.00")
         self.create_widgets()
     def create_widgets(self):
-        left_frame = ttk.Frame(self); left_frame.grid(row=0, column=0, padx=(0, 10), sticky="ns"); right_frame = ttk.Frame(self); right_frame.grid(row=0, column=1, sticky="nsew"); self.grid_columnconfigure(1, weight=1)
-        form_frame = ttk.LabelFrame(left_frame, text="Record Payment", padding=15); form_frame.pack(fill="x", anchor="n"); ttk.Label(form_frame, text="Staff Member:").grid(row=0, column=0, sticky="w"); self.staff_combo = ttk.Combobox(form_frame, textvariable=self.staff_var, state="readonly", width=30); self.staff_combo.grid(row=0, column=1, pady=5, sticky="ew"); ttk.Label(form_frame, text="Payment Date:").grid(row=1, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.date_var).grid(row=1, column=1, pady=5, sticky="ew"); ttk.Label(form_frame, text="Amount Paid:").grid(row=2, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.amount_var).grid(row=2, column=1, pady=5, sticky="ew"); ttk.Label(form_frame, text="Notes:").grid(row=3, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.notes_var).grid(row=3, column=1, pady=5, sticky="ew"); ttk.Button(form_frame, text="Save Payment", command=self.save_payment).grid(row=4, column=1, sticky="e", pady=10)
-        summary_frame = ttk.LabelFrame(left_frame, text="Monthly Summary", padding=15); summary_frame.pack(fill="x", pady=10, anchor="n"); ttk.Label(summary_frame, textvariable=self.summary_salary_var, font=("Arial", 11, "bold")).pack(anchor="w"); ttk.Label(summary_frame, textvariable=self.summary_paid_var, font=("Arial", 11, "bold"), foreground="green").pack(anchor="w"); ttk.Label(summary_frame, textvariable=self.summary_due_var, font=("Arial", 11, "bold"), foreground="red").pack(anchor="w")
-        filter_frame = ttk.LabelFrame(right_frame, text="Filter View", padding=10); filter_frame.pack(fill="x"); months = [datetime(2000, m, 1).strftime('%B') for m in range(1, 13)]; ttk.Label(filter_frame, text="Staff:").pack(side="left", padx=5); self.filter_staff_combo = ttk.Combobox(filter_frame, textvariable=self.filter_staff_var, state="readonly", width=20); self.filter_staff_combo.pack(side="left", padx=5); self.filter_staff_combo.bind("<<ComboboxSelected>>", self.refresh_payment_history); ttk.Label(filter_frame, text="Month:").pack(side="left", padx=5); self.month_combo = ttk.Combobox(filter_frame, textvariable=self.filter_month_var, values=months, state="readonly", width=12); self.month_combo.pack(side="left", padx=5); ttk.Label(filter_frame, text="Year:").pack(side="left", padx=5); self.year_entry = ttk.Entry(filter_frame, textvariable=self.filter_year_var, width=6); self.year_entry.pack(side="left", padx=5); ttk.Button(filter_frame, text="Filter", command=self.refresh_payment_history).pack(side="left", padx=5); ttk.Button(filter_frame, text="Show All Time", command=self.show_all_time).pack(side="left", padx=5)
+        left_frame = ttk.Frame(self); left_frame.grid(row=0, column=0, padx=(0, 10), sticky="ns"); right_frame = ttk.Frame(self); right_frame.grid(row=0, column=1, sticky="nsew"); self.grid_columnconfigure(1, weight=1); form_frame = ttk.LabelFrame(left_frame, text="Record Payment", padding=15); form_frame.pack(fill="x", anchor="n"); ttk.Label(form_frame, text="Staff Member:").grid(row=0, column=0, sticky="w"); self.staff_combo = ttk.Combobox(form_frame, textvariable=self.staff_var, state="readonly", width=30); self.staff_combo.grid(row=0, column=1, pady=5, sticky="ew"); ttk.Label(form_frame, text="Payment Date:").grid(row=1, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.date_var).grid(row=1, column=1, pady=5, sticky="ew"); ttk.Label(form_frame, text="Amount Paid:").grid(row=2, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.amount_var).grid(row=2, column=1, pady=5, sticky="ew"); ttk.Label(form_frame, text="Notes:").grid(row=3, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.notes_var).grid(row=3, column=1, pady=5, sticky="ew"); ttk.Button(form_frame, text="Save Payment", command=self.save_payment, bootstyle="primary").grid(row=4, column=1, sticky="e", pady=10)
+        summary_frame = ttk.LabelFrame(left_frame, text="Monthly Summary", padding=15); summary_frame.pack(fill="x", pady=10, anchor="n"); ttk.Label(summary_frame, textvariable=self.summary_salary_var, font=("Arial", 11, "bold")).pack(anchor="w"); ttk.Label(summary_frame, textvariable=self.summary_paid_var, font=("Arial", 11, "bold"), bootstyle="success").pack(anchor="w"); ttk.Label(summary_frame, textvariable=self.summary_due_var, font=("Arial", 11, "bold"), bootstyle="danger").pack(anchor="w")
+        filter_frame = ttk.LabelFrame(right_frame, text="Filter View", padding=10); filter_frame.pack(fill="x"); months = [datetime(2000, m, 1).strftime('%B') for m in range(1, 13)]; ttk.Label(filter_frame, text="Staff:").pack(side="left", padx=5); self.filter_staff_combo = ttk.Combobox(filter_frame, textvariable=self.filter_staff_var, state="readonly", width=20); self.filter_staff_combo.pack(side="left", padx=5); self.filter_staff_combo.bind("<<ComboboxSelected>>", self.refresh_payment_history); ttk.Label(filter_frame, text="Month:").pack(side="left", padx=5); self.month_combo = ttk.Combobox(filter_frame, textvariable=self.filter_month_var, values=months, state="readonly", width=12); self.month_combo.pack(side="left", padx=5); ttk.Label(filter_frame, text="Year:").pack(side="left", padx=5); self.year_entry = ttk.Entry(filter_frame, textvariable=self.filter_year_var, width=6); self.year_entry.pack(side="left", padx=5); ttk.Button(filter_frame, text="Filter", command=self.refresh_payment_history, bootstyle="primary-outline").pack(side="left", padx=5); ttk.Button(filter_frame, text="Show All Time", command=self.show_all_time, bootstyle="secondary").pack(side="left", padx=5)
         history_frame = ttk.LabelFrame(right_frame, text="Payment History", padding=10); history_frame.pack(fill="both", expand=True, pady=10)
-        columns = ("id", "date", "name", "amount", "notes"); self.tree = ttk.Treeview(history_frame, columns=columns, show="headings"); self.tree.heading("id", text="ID"); self.tree.column("id", width=40); self.tree.heading("date", text="Payment Date"); self.tree.column("date", width=100); self.tree.heading("name", text="Staff Name"); self.tree.column("name", width=150); self.tree.heading("amount", text="Amount Paid"); self.tree.column("amount", width=100, anchor="e"); self.tree.heading("notes", text="Notes"); self.tree.column("notes", width=250); self.tree.pack(fill="both", expand=True)
+        columns = ("id", "date", "name", "amount", "notes"); self.tree = ttk.Treeview(history_frame, columns=columns, show="headings", bootstyle="primary"); self.tree.heading("id", text="ID"); self.tree.column("id", width=40); self.tree.heading("date", text="Payment Date"); self.tree.column("date", width=100); self.tree.heading("name", text="Staff Name"); self.tree.column("name", width=150); self.tree.heading("amount", text="Amount Paid"); self.tree.column("amount", width=100, anchor="e"); self.tree.heading("notes", text="Notes"); self.tree.column("notes", width=250); self.tree.pack(fill="both", expand=True)
     def refresh_data(self): self.refresh_staff_dropdown()
     def show_all_time(self): self.month_combo.set(""); self.year_entry.delete(0, tk.END); self.refresh_payment_history()
     def save_payment(self):
@@ -111,6 +145,7 @@ class MonthlyPaymentsFrame(ttk.Frame):
             paid_query = "SELECT SUM(paid_amount) FROM salary_payments WHERE staff_id = ?"; paid_record = self.db_controller.execute_query(paid_query, (self.staff_map[staff_name],), fetch="one"); total_paid = paid_record[0] or 0; self.summary_paid_var.set(f"Total Paid (All Time): {total_paid:,.2f}"); self.summary_due_var.set("")
 
 class ContractorPaymentsFrame(ttk.Frame):
+    # --- MODIFIED: Fixed __init__ to accept parent and db_controller ---
     def __init__(self, parent, db_controller):
         super().__init__(parent, padding=15); self.db_controller = db_controller; self.contractor_map = {}
         self.contractor_var = tk.StringVar(); self.date_var = tk.StringVar(value=datetime.now().strftime('%Y-%m-%d')); self.amount_var = tk.DoubleVar(); self.notes_var = tk.StringVar()
@@ -123,15 +158,15 @@ class ContractorPaymentsFrame(ttk.Frame):
         ttk.Label(form_frame, text="Payment Date:").grid(row=1, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.date_var).grid(row=1, column=1, pady=5, sticky="ew")
         ttk.Label(form_frame, text="Amount Paid:").grid(row=2, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.amount_var).grid(row=2, column=1, pady=5, sticky="ew")
         ttk.Label(form_frame, text="Description:").grid(row=3, column=0, sticky="w"); ttk.Entry(form_frame, textvariable=self.notes_var).grid(row=3, column=1, pady=5, sticky="ew")
-        ttk.Button(form_frame, text="Save Payment", command=self.save_payment).grid(row=4, column=1, sticky="e", pady=10)
+        ttk.Button(form_frame, text="Save Payment", command=self.save_payment, bootstyle="primary").grid(row=4, column=1, sticky="e", pady=10)
         summary_frame = ttk.LabelFrame(left_frame, text="Period Summary", padding=15); summary_frame.pack(fill="x", pady=10, anchor="n"); ttk.Label(summary_frame, textvariable=self.summary_total_var, font=("Arial", 12, "bold")).pack(anchor="w")
         filter_frame = ttk.LabelFrame(right_frame, text="Filter Contractor Payments", padding=10); filter_frame.pack(fill="x")
         ttk.Label(filter_frame, text="Contractor:").pack(side="left", padx=5); self.filter_contractor_combo = ttk.Combobox(filter_frame, textvariable=self.filter_contractor_var, state="readonly", width=30); self.filter_contractor_combo.pack(side="left", padx=5); self.filter_contractor_combo.bind("<<ComboboxSelected>>", self.refresh_payment_history)
         ttk.Label(filter_frame, text="From:").pack(side="left", padx=5); ttk.Entry(filter_frame, textvariable=self.filter_start_date_var, width=12).pack(side="left"); ttk.Button(filter_frame, text="📅", width=3, command=lambda: CalendarPopup(self, self.filter_start_date_var)).pack(side="left")
         ttk.Label(filter_frame, text="To:").pack(side="left", padx=5); ttk.Entry(filter_frame, textvariable=self.filter_end_date_var, width=12).pack(side="left"); ttk.Button(filter_frame, text="📅", width=3, command=lambda: CalendarPopup(self, self.filter_end_date_var)).pack(side="left")
-        ttk.Button(filter_frame, text="Filter", command=self.refresh_payment_history).pack(side="left", padx=5)
+        ttk.Button(filter_frame, text="Filter", command=self.refresh_payment_history, bootstyle="primary-outline").pack(side="left", padx=5)
         history_frame = ttk.LabelFrame(right_frame, text="Payment History", padding=10); history_frame.pack(fill="both", expand=True, pady=10)
-        columns = ("id", "date", "name", "section", "amount", "description"); self.tree = ttk.Treeview(history_frame, columns=columns, show="headings");
+        columns = ("id", "date", "name", "section", "amount", "description"); self.tree = ttk.Treeview(history_frame, columns=columns, show="headings", bootstyle="primary");
         for col in columns: self.tree.heading(col, text=col.title()); self.tree.column(col, width=120)
         self.tree.pack(fill="both", expand=True)
     def refresh_data(self): self.refresh_contractor_dropdown()
@@ -161,25 +196,37 @@ class ContractorPaymentsFrame(ttk.Frame):
         self.summary_total_var.set(f"Total Paid in Period: {total_paid:,.2f} BDT")
 
 class ManagePersonnelFrame(ttk.Frame):
+    # --- MODIFIED: Fixed __init__ to accept parent and db_controller ---
     def __init__(self, parent, db_controller, monthly_tab, contractor_tab):
         super().__init__(parent, padding=15); self.db_controller = db_controller; self.monthly_tab = monthly_tab; self.contractor_tab = contractor_tab
         self.staff_name_var = tk.StringVar(); self.salary_var = tk.DoubleVar(); self.contractor_name_var = tk.StringVar(); self.section_var = tk.StringVar(); self.phone_var = tk.StringVar()
         self.create_widgets()
     def create_widgets(self):
         container = ttk.Frame(self); container.pack(fill="both", expand=True); container.grid_columnconfigure(1, weight=1); container.grid_rowconfigure(1, weight=1)
-        staff_form = ttk.LabelFrame(container, text="Manage Monthly Staff", padding=15); staff_form.grid(row=0, column=0, sticky="ew", padx=5, pady=(0,10)); ttk.Label(staff_form, text="Name:").grid(row=0, column=0); ttk.Entry(staff_form, textvariable=self.staff_name_var).grid(row=0, column=1, padx=5, pady=2, sticky="ew"); ttk.Label(staff_form, text="Salary:").grid(row=1, column=0); ttk.Entry(staff_form, textvariable=self.salary_var).grid(row=1, column=1, padx=5, pady=2, sticky="ew"); ttk.Button(staff_form, text="Add Staff", command=self.add_staff).grid(row=2, column=1, sticky="e", pady=5)
-        staff_list = ttk.LabelFrame(container, text="Staff List", padding=10); staff_list.grid(row=1, column=0, sticky="nsew", padx=5, pady=10); self.staff_tree = self.create_personnel_tree(staff_list, ("id", "name", "salary"), ("ID", "Name", "Monthly Salary"), "Staff"); staff_form.grid_columnconfigure(1, weight=1)
-        contractor_form = ttk.LabelFrame(container, text="Manage Contractors (Sardars)", padding=15); contractor_form.grid(row=0, column=1, sticky="ew", padx=5); ttk.Label(contractor_form, text="Name:").grid(row=0, column=0); ttk.Entry(contractor_form, textvariable=self.contractor_name_var).grid(row=0, column=1, padx=5, pady=2, sticky="ew"); ttk.Label(contractor_form, text="Section:").grid(row=1, column=0); ttk.Combobox(contractor_form, textvariable=self.section_var, state="readonly", values=["Mill Sardar", "Loader", "Unloader", "Burner", "Other"]).grid(row=1, column=1, padx=5, pady=2, sticky="ew"); ttk.Label(contractor_form, text="Phone:").grid(row=2, column=0); ttk.Entry(contractor_form, textvariable=self.phone_var).grid(row=2, column=1, padx=5, pady=2, sticky="ew"); ttk.Button(contractor_form, text="Add Contractor", command=self.add_contractor).grid(row=3, column=1, sticky="e", pady=5)
-        contractor_list_frame = ttk.LabelFrame(container, text="Contractor List", padding=10); contractor_list_frame.grid(row=1, column=1, sticky="nsew", padx=5, pady=10); self.contractor_tree = self.create_personnel_tree(contractor_list_frame, ("id", "name", "section", "phone"), ("ID", "Name", "Section", "Phone"), "Contractor"); contractor_form.grid_columnconfigure(1, weight=1)
+        staff_form = ttk.LabelFrame(container, text="Manage Monthly Staff", padding=15); staff_form.grid(row=0, column=0, sticky="ew", padx=5, pady=(0,10)); ttk.Label(staff_form, text="Name:").grid(row=0, column=0); ttk.Entry(staff_form, textvariable=self.staff_name_var).grid(row=0, column=1, padx=5, pady=2, sticky="ew"); ttk.Label(staff_form, text="Salary:").grid(row=1, column=0); ttk.Entry(staff_form, textvariable=self.salary_var).grid(row=1, column=1, padx=5, pady=2, sticky="ew"); ttk.Button(staff_form, text="Add Staff", command=self.add_staff, bootstyle="primary").grid(row=2, column=1, sticky="e", pady=5); staff_list = ttk.LabelFrame(container, text="Staff List", padding=10); staff_list.grid(row=1, column=0, sticky="nsew", padx=5, pady=10); self.staff_tree = self.create_personnel_tree(staff_list, ("id", "name", "salary"), ("ID", "Name", "Monthly Salary"), "Staff"); staff_form.grid_columnconfigure(1, weight=1)
+        contractor_form = ttk.LabelFrame(container, text="Manage Contractors (Sardars)", padding=15); contractor_form.grid(row=0, column=1, sticky="ew", padx=5); ttk.Label(contractor_form, text="Name:").grid(row=0, column=0); ttk.Entry(contractor_form, textvariable=self.contractor_name_var).grid(row=0, column=1, padx=5, pady=2, sticky="ew"); ttk.Label(contractor_form, text="Section:").grid(row=1, column=0); ttk.Combobox(contractor_form, textvariable=self.section_var, state="readonly", values=["Mill Sardar", "Loader", "Unloader", "Burner", "Other"]).grid(row=1, column=1, padx=5, pady=2, sticky="ew"); ttk.Label(contractor_form, text="Phone:").grid(row=2, column=0); ttk.Entry(contractor_form, textvariable=self.phone_var).grid(row=2, column=1, padx=5, pady=2, sticky="ew"); ttk.Button(contractor_form, text="Add Contractor", command=self.add_contractor, bootstyle="primary").grid(row=3, column=1, sticky="e", pady=5); contractor_list_frame = ttk.LabelFrame(container, text="Contractor List", padding=10); contractor_list_frame.grid(row=1, column=1, sticky="nsew", padx=5, pady=10); self.contractor_tree = self.create_personnel_tree(contractor_list_frame, ("id", "name", "section", "phone"), ("ID", "Name", "Section", "Phone"), "Contractor"); contractor_form.grid_columnconfigure(1, weight=1)
     def create_personnel_tree(self, parent, columns, headings, p_type):
         parent.grid_rowconfigure(0, weight=1); parent.grid_columnconfigure(0, weight=1)
-        tree = ttk.Treeview(parent, columns=columns, show="headings"); tree.grid(row=0, column=0, columnspan=2, sticky="nsew"); scrollbar = ttk.Scrollbar(parent, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scrollbar.set); scrollbar.grid(row=0, column=1, sticky="ns")
+        tree = ttk.Treeview(parent, columns=columns, show="headings", bootstyle="primary"); tree.grid(row=0, column=0, columnspan=2, sticky="nsew"); scrollbar = ttk.Scrollbar(parent, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scrollbar.set); scrollbar.grid(row=0, column=1, sticky="ns")
         btn_frame = ttk.Frame(parent); btn_frame.grid(row=1, column=0, columnspan=2, pady=5, sticky="e")
+        
+        # --- ADDED: Record Payment Button ---
+        ttk.Button(btn_frame, text="Record Payment", command=lambda: self.record_payment(p_type), bootstyle="success").pack(side="left", padx=5)
+        
         if p_type == "Staff":
-            ttk.Button(btn_frame, text="Edit Selected", command=self.edit_staff).pack(side="left", padx=5); ttk.Button(btn_frame, text="Delete Selected", command=self.delete_staff).pack(side="left")
+            ttk.Button(btn_frame, text="Edit Selected", command=self.edit_staff, bootstyle="warning").pack(side="left", padx=5); ttk.Button(btn_frame, text="Delete Selected", command=self.delete_staff, bootstyle="danger").pack(side="left")
         else:
-            ttk.Button(btn_frame, text="Edit Selected", command=self.edit_contractor).pack(side="left", padx=5); ttk.Button(btn_frame, text="Delete Selected", command=self.delete_contractor).pack(side="left")
+            ttk.Button(btn_frame, text="Edit Selected", command=self.edit_contractor, bootstyle="warning").pack(side="left", padx=5); ttk.Button(btn_frame, text="Delete Selected", command=self.delete_contractor, bootstyle="danger").pack(side="left")
         return tree
+    
+    # --- NEW: Function to open payment window ---
+    def record_payment(self, payee_type):
+        tree = self.staff_tree if payee_type == "Staff" else self.contractor_tree; item = tree.focus()
+        if not item: messagebox.showwarning("Error", f"Please select a {payee_type.lower()} from the list.", parent=self); return
+        item_id, name, *_ = tree.item(item, "values"); 
+        callback = self.monthly_tab.refresh_data if payee_type == "Staff" else self.contractor_tab.refresh_data
+        RecordPaymentWindow(self, self.db_controller, item_id, name, payee_type, callback)
+
     def refresh_data(self): self.refresh_staff_list(); self.refresh_contractor_list()
     def refresh_staff_list(self):
         for i in self.staff_tree.get_children(): self.staff_tree.delete(i)
@@ -212,7 +259,7 @@ class ManagePersonnelFrame(ttk.Frame):
         if messagebox.askyesno("Confirm", f"Are you sure you want to delete {name}? ALL their payment records will be permanently deleted!"):
             payment_ids = self.db_controller.execute_query("SELECT id FROM salary_payments WHERE staff_id = ?", (item_id,), fetch="all") or []
             for pid_tuple in payment_ids: self.db_controller.execute_query("DELETE FROM ledger_book WHERE description LIKE ?", (f"%[SALARY_PAYMENT_ID:{pid_tuple[0]}]%",))
-            self.db_controller.execute_query("DELETE FROM staff WHERE id = ?", (item_id,)); self.refresh_data()
+            self.db_controller.execute_query("DELETE FROM staff WHERE id = ?", (item_id,)); self.refresh_data(); self.monthly_tab.refresh_data()
     def delete_contractor(self):
         item = self.contractor_tree.focus();
         if not item: messagebox.showwarning("Error", "Please select a contractor to delete.", parent=self); return
@@ -220,4 +267,4 @@ class ManagePersonnelFrame(ttk.Frame):
         if messagebox.askyesno("Confirm", f"Are you sure you want to delete {name} ({section})? ALL their payment records will be deleted!"):
             payment_ids = self.db_controller.execute_query("SELECT id FROM contractor_payments WHERE contractor_id = ?", (item_id,), fetch="all") or []
             for pid_tuple in payment_ids: self.db_controller.execute_query("DELETE FROM ledger_book WHERE description LIKE ?", (f"%[CON_PAY_ID:{pid_tuple[0]}]%",))
-            self.db_controller.execute_query("DELETE FROM contractors WHERE id = ?", (item_id,)); self.refresh_data()
+            self.db_controller.execute_query("DELETE FROM contractors WHERE id = ?", (item_id,)); self.refresh_data(); self.contractor_tab.refresh_data()

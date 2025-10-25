@@ -2784,3 +2784,117 @@ sqlite3.OperationalError: no such table: owners
 2025-10-24 22:07:30,880 - INFO - All migrations applied successfully.
 2025-10-24 22:07:31,205 - WARNING -  * Debugger is active!
 2025-10-24 22:07:31,209 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 22:07:37,750 - INFO - 127.0.0.1 - - [24/Oct/2025 22:07:37] "GET /sales/add HTTP/1.1" 200 -
+2025-10-24 22:07:37,810 - INFO - 127.0.0.1 - - [24/Oct/2025 22:07:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:07:48,694 - INFO - 127.0.0.1 - - [24/Oct/2025 22:07:48] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 22:07:48,708 - INFO - 127.0.0.1 - - [24/Oct/2025 22:07:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:10:07,096 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\core\\db\\db_controller.py', reloading
+2025-10-24 22:10:07,157 - INFO -  * Restarting with stat
+2025-10-24 22:10:07,523 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:10:07,524 - INFO - Database is up to date.
+2025-10-24 22:10:07,911 - WARNING -  * Debugger is active!
+2025-10-24 22:10:07,915 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 22:10:14,500 - INFO - 127.0.0.1 - - [24/Oct/2025 22:10:14] "GET /dues/ HTTP/1.1" 200 -
+2025-10-24 22:10:14,562 - INFO - 127.0.0.1 - - [24/Oct/2025 22:10:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:10:17,334 - INFO - 127.0.0.1 - - [24/Oct/2025 22:10:17] "GET /sales/ HTTP/1.1" 200 -
+2025-10-24 22:10:17,349 - INFO - 127.0.0.1 - - [24/Oct/2025 22:10:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:10:20,448 - INFO - 127.0.0.1 - - [24/Oct/2025 22:10:20] "GET /sales/add HTTP/1.1" 200 -
+2025-10-24 22:10:20,463 - INFO - 127.0.0.1 - - [24/Oct/2025 22:10:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:15:14,795 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\income.py', reloading
+2025-10-24 22:15:14,853 - INFO -  * Restarting with stat
+2025-10-24 22:15:15,198 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:15:15,199 - INFO - Database is up to date.
+2025-10-24 22:31:20,656 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:31:20,656 - INFO - Database is up to date.
+2025-10-24 22:31:20,971 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-24 22:31:20,971 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 22:31:20,972 - INFO -  * Restarting with stat
+2025-10-24 22:31:21,303 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:31:21,304 - INFO - Database is up to date.
+2025-10-24 22:31:21,560 - WARNING -  * Debugger is active!
+2025-10-24 22:31:21,563 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 22:31:23,353 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 22:31:23,354 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 22:31:23,426 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 22:31:23,516 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:23] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:31:23,517 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:23] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 22:31:23,567 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:23] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=VBDLJhEGuCljJP8eV9ky HTTP/1.1" 200 -
+2025-10-24 22:31:23,646 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:23] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 22:31:24,338 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 22:31:24,338 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 22:31:24,349 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 22:31:24,361 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:24] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:31:24,365 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:24] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 22:31:24,382 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:24] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VBDLJhEGuCljJP8eV9ky HTTP/1.1[0m" 304 -
+2025-10-24 22:31:24,410 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:24] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 22:31:26,486 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 22:31:26,486 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 22:31:26,495 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:26] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 22:31:26,513 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:26] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:31:26,515 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:26] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 22:31:26,541 - INFO - 127.0.0.1 - - [24/Oct/2025 22:31:26] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=VBDLJhEGuCljJP8eV9ky HTTP/1.1[0m" 304 -
+2025-10-24 22:34:22,060 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\dashboard.py', reloading
+2025-10-24 22:34:22,122 - INFO -  * Restarting with stat
+2025-10-24 22:34:22,475 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:34:22,476 - INFO - Database is up to date.
+2025-10-24 22:34:22,757 - WARNING -  * Debugger is active!
+2025-10-24 22:34:22,759 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 22:34:34,019 - INFO -  * Detected change in 'D:\\MollaBricksApp\\molla_bricks\\web\\brick_types.py', reloading
+2025-10-24 22:34:34,074 - INFO -  * Restarting with stat
+2025-10-24 22:34:34,425 - INFO - Successfully connected to database at data/app_data.db
+2025-10-24 22:34:34,426 - INFO - Database is up to date.
+2025-10-24 22:34:34,709 - WARNING -  * Debugger is active!
+2025-10-24 22:34:34,711 - INFO -  * Debugger PIN: 536-270-118
+2025-10-24 22:34:55,789 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 22:34:55,790 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 22:34:55,853 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 22:34:55,939 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:55] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 22:34:55,940 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:55] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:34:55,956 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:55] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=9xSqEyuWvX5VLa3LlnS9 HTTP/1.1" 200 -
+2025-10-24 22:34:56,018 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 22:34:56,628 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 22:34:56,628 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 22:34:56,641 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:56] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 22:34:56,654 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:56] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:34:56,657 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:56] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 22:34:56,679 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=9xSqEyuWvX5VLa3LlnS9 HTTP/1.1[0m" 304 -
+2025-10-24 22:34:56,705 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-24 22:34:57,654 - ERROR - Query Failed: SELECT COUNT(id), MIN(date) FROM round_entries WHERE firing_status = 'Firing' AND date BETWEEN '2025-10-01' AND '2025-10-24' | Params: () | Error: no such column: firing_status
+2025-10-24 22:34:57,654 - ERROR - Traceback (most recent call last):
+  File "D:\MollaBricksApp\molla_bricks\core\db\db_controller.py", line 22, in execute_query
+    cursor.execute(query, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: firing_status
+
+2025-10-24 22:34:57,665 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-24 22:34:57,681 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:57] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:34:57,683 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:57] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-24 22:34:57,705 - INFO - 127.0.0.1 - - [24/Oct/2025 22:34:57] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=9xSqEyuWvX5VLa3LlnS9 HTTP/1.1[0m" 304 -
+2025-10-24 22:35:14,904 - INFO - 127.0.0.1 - - [24/Oct/2025 22:35:14] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-24 22:35:14,920 - INFO - 127.0.0.1 - - [24/Oct/2025 22:35:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
